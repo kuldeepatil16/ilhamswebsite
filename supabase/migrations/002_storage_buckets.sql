@@ -1,5 +1,5 @@
 -- ============================================
--- Vereen Electro Froid — Storage Buckets
+-- Vereen Electro Froid - Storage Buckets
 -- Run after 001_initial_schema.sql
 -- ============================================
 

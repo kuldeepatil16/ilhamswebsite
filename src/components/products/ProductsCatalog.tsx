@@ -1,6 +1,5 @@
 "use client";
 
-﻿"use client";
 
 import { useMemo, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";

@@ -1,6 +1,6 @@
 "use client";
 
-﻿import Link from "next/link";
+import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 import { Snowflake, Sun, Wind, Wrench, Building2, Shield } from "lucide-react";
 import type { Locale } from "@/types";

@@ -28,12 +28,12 @@ INSERT INTO spare_parts (
   description_fr, description_ar, description_en,
   price_mad, in_stock, is_active, sort_order
 ) VALUES
-('ac-compressor', 'COMP-AC-001', ARRAY['whirlpool','samsung','daikin'], ARRAY['climatisation'], 'Compresseur AC', 'ضاغط مكيف', 'AC Compressor', 'Compresseur pour climatiseur split.', 'ضاغط لمكيف سبليت.', 'Compressor for split AC units.', 1200, true, true, 1),
-('r410a-gas', 'GAS-R410A', ARRAY['aux','carrier','lg'], ARRAY['climatisation'], 'Gaz R410A', 'غاز R410A', 'R410A Gas', 'Recharge gaz R410A.', 'إعادة تعبئة غاز R410A.', 'R410A refill.', 450, true, true, 2),
-('wm-motor', 'MOT-WM-230', ARRAY['whirlpool','samsung','bosch'], ARRAY['washing_machine'], 'Moteur machine à laver', 'محرك غسالة', 'Washing Machine Motor', 'Moteur pour lave-linge.', 'محرك للغسالة.', 'Motor for washing machine.', 980, true, true, 3),
-('thermostat-universal', 'THERM-UNI-1', ARRAY['ariston','bosch','lg'], ARRAY['refrigeration','water_heater'], 'Thermostat universel', 'ثرموستات عالمي', 'Universal Thermostat', 'Thermostat pour froid et chauffe-eau.', 'ثرموستات للتبريد وسخان المياه.', 'Thermostat for refrigeration/water heater.', 220, true, true, 4),
-('ac-remote', 'REMOTE-AC-01', ARRAY['aux','daikin','carrier'], ARRAY['climatisation'], 'Télécommande AC', 'ريموت مكيف', 'AC Remote Control', 'Télécommande de remplacement.', 'جهاز تحكم بديل.', 'Replacement remote.', 180, true, true, 5),
-('water-pump', 'PUMP-WTR-10', ARRAY['ariston','bosch','whirlpool'], ARRAY['dishwasher','washing_machine'], 'Pompe à eau', 'مضخة مياه', 'Water Pump', 'Pompe pour appareils ménagers.', 'مضخة للأجهزة المنزلية.', 'Pump for home appliances.', 260, true, true, 6);
+('ac-compressor', 'COMP-AC-001', ARRAY['whirlpool','samsung','daikin'], ARRAY['climatisation'::product_category], 'Compresseur AC', 'ضاغط مكيف', 'AC Compressor', 'Compresseur pour climatiseur split.', 'ضاغط لمكيف سبليت.', 'Compressor for split AC units.', 1200, true, true, 1),
+('r410a-gas', 'GAS-R410A', ARRAY['aux','carrier','lg'], ARRAY['climatisation'::product_category], 'Gaz R410A', 'غاز R410A', 'R410A Gas', 'Recharge gaz R410A.', 'إعادة تعبئة غاز R410A.', 'R410A refill.', 450, true, true, 2),
+('wm-motor', 'MOT-WM-230', ARRAY['whirlpool','samsung','bosch'], ARRAY['washing_machine'::product_category], 'Moteur machine à laver', 'محرك غسالة', 'Washing Machine Motor', 'Moteur pour lave-linge.', 'محرك للغسالة.', 'Motor for washing machine.', 980, true, true, 3),
+('thermostat-universal', 'THERM-UNI-1', ARRAY['ariston','bosch','lg'], ARRAY['refrigeration'::product_category,'water_heater'::product_category], 'Thermostat universel', 'ثرموستات عالمي', 'Universal Thermostat', 'Thermostat pour froid et chauffe-eau.', 'ثرموستات للتبريد وسخان المياه.', 'Thermostat for refrigeration/water heater.', 220, true, true, 4),
+('ac-remote', 'REMOTE-AC-01', ARRAY['aux','daikin','carrier'], ARRAY['climatisation'::product_category], 'Télécommande AC', 'ريموت مكيف', 'AC Remote Control', 'Télécommande de remplacement.', 'جهاز تحكم بديل.', 'Replacement remote.', 180, true, true, 5),
+('water-pump', 'PUMP-WTR-10', ARRAY['ariston','bosch','whirlpool'], ARRAY['dishwasher'::product_category,'washing_machine'::product_category], 'Pompe à eau', 'مضخة مياه', 'Water Pump', 'Pompe pour appareils ménagers.', 'مضخة للأجهزة المنزلية.', 'Pump for home appliances.', 260, true, true, 6);
 
 INSERT INTO blog_posts (
   slug,

@@ -1,6 +1,6 @@
 "use client";
 
-﻿import Link from "next/link";
+import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 import { createClient } from "@/lib/supabase/client";
 import { useEffect, useState } from "react";

@@ -4,7 +4,7 @@
 -- ============================================
 
 -- Enable UUID extension
-CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+CREATE EXTENSION IF NOT EXISTS "pgcrypto";
 
 -- ============================================
 -- ENUMS
@@ -50,7 +50,7 @@ CREATE TYPE request_status AS ENUM (
 -- PRODUCTS TABLE
 -- ============================================
 CREATE TABLE products (
-  id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
   slug TEXT UNIQUE NOT NULL,
   category product_category NOT NULL,
   brand TEXT NOT NULL,
@@ -89,7 +89,7 @@ CREATE TABLE products (
 -- SPARE PARTS TABLE
 -- ============================================
 CREATE TABLE spare_parts (
-  id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
   slug TEXT UNIQUE NOT NULL,
   -- Part info
   part_number TEXT,                   -- Manufacturer part number
@@ -119,7 +119,7 @@ CREATE TABLE spare_parts (
 -- CONTACT LEADS TABLE
 -- ============================================
 CREATE TABLE contact_leads (
-  id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
   -- Contact info
   name TEXT NOT NULL,
   email TEXT,
@@ -142,7 +142,7 @@ CREATE TABLE contact_leads (
 -- SERVICE REQUESTS TABLE
 -- ============================================
 CREATE TABLE service_requests (
-  id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
   -- Customer info
   name TEXT NOT NULL,
   email TEXT,
@@ -169,7 +169,7 @@ CREATE TABLE service_requests (
 -- QUOTE REQUESTS TABLE (for parts & bulk orders)
 -- ============================================
 CREATE TABLE quote_requests (
-  id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
   -- Customer info
   name TEXT NOT NULL,
   email TEXT,
@@ -191,7 +191,7 @@ CREATE TABLE quote_requests (
 -- BLOG POSTS TABLE
 -- ============================================
 CREATE TABLE blog_posts (
-  id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
   slug TEXT UNIQUE NOT NULL,
   -- Multilingual content
   title_fr TEXT NOT NULL,
@@ -226,7 +226,7 @@ CREATE TABLE blog_posts (
 -- BRAND PARTNERS TABLE
 -- ============================================
 CREATE TABLE brand_partners (
-  id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
   name TEXT NOT NULL,
   logo_url TEXT,                      -- Supabase Storage URL
   website_url TEXT,

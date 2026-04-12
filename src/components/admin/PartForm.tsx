@@ -1,6 +1,5 @@
 "use client";
 
-﻿"use client";
 
 import type { SparePart } from "@/types";
 

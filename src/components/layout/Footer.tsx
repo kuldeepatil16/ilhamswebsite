@@ -1,6 +1,6 @@
 "use client";
 
-﻿import Link from "next/link";
+import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 import { Globe, MessageCircle, Phone, Mail, MapPin, Printer } from "lucide-react";
 import { COMPANY } from "@/lib/constants";

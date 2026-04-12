@@ -88,3 +88,8 @@ export const STORAGE_BUCKETS = {
   blogImages: "blog-images",
   siteAssets: "site-assets",
 } as const;
+
+export const ADMIN_EMAILS = [
+  "ilhamassi98@gmail.com",
+  "kuldeepspatil16@gmail.com",
+] as const;

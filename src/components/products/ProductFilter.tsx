@@ -1,6 +1,5 @@
 "use client";
 
-﻿"use client";
 
 import { useTranslations } from "next-intl";
 import { BRANDS, PRODUCT_CATEGORIES } from "@/lib/constants";

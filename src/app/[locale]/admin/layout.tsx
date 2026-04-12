@@ -2,6 +2,7 @@ import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import AdminSidebar from "@/components/admin/AdminSidebar";
 import AdminLogin from "@/components/admin/AdminLogin";
+import { ADMIN_EMAILS } from "@/lib/constants";
 
 export default async function AdminLayout({
   children,
@@ -15,6 +16,10 @@ export default async function AdminLayout({
 
   if (!user) {
     return <AdminLogin />;
+  }
+
+  if (!user.email || !ADMIN_EMAILS.includes(user.email as (typeof ADMIN_EMAILS)[number])) {
+    redirect("/");
   }
 
   return (

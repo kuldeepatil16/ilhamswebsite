@@ -1,6 +1,5 @@
 "use client";
 
-﻿"use client";
 
 import type { Product } from "@/types";
 

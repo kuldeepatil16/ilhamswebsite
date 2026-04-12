@@ -1,6 +1,6 @@
 "use client";
 
-﻿import { useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import { ShieldCheck, Zap, Timer, Wallet } from "lucide-react";
 
 const icons = [Zap, Timer, ShieldCheck, Wallet];

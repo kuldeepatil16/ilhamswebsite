@@ -1,6 +1,6 @@
 "use client";
 
-﻿import { useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import { BRANDS } from "@/lib/constants";
 
 export default function BrandsSection() {

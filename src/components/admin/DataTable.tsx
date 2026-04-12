@@ -1,6 +1,6 @@
 "use client";
 
-﻿interface DataTableProps<T extends Record<string, unknown>> {
+interface DataTableProps<T extends Record<string, unknown>> {
   rows: T[];
   columns: { key: keyof T; label: string }[];
 }

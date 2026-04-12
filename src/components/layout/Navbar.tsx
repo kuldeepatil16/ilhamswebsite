@@ -1,6 +1,5 @@
 "use client";
 
-﻿"use client";
 
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
@@ -10,6 +9,7 @@ import { useState } from "react";
 import { COMPANY } from "@/lib/constants";
 import { cn, getBasePathWithoutLocale } from "@/lib/utils";
 import type { Locale } from "@/types";
+import ThemeToggle from "./ThemeToggle";
 
 const locales: Locale[] = ["fr", "ar", "en"];
 
@@ -57,6 +57,7 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden items-center gap-2 lg:flex">
+          <ThemeToggle />
           <div className="rounded-full bg-white/10 p-1">
             {locales.map((loc) => (
               <Link
@@ -104,6 +105,9 @@ export default function Navbar() {
             })}
           </div>
           <div className="mt-4 flex gap-2">
+            <div className="flex flex-1 items-center justify-center rounded-md bg-white/10 py-2">
+              <ThemeToggle />
+            </div>
             {locales.map((loc) => (
               <Link
                 key={loc}
