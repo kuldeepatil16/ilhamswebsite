@@ -51,7 +51,7 @@ export default function Footer() {
         <div>
           <h3 className="mb-3 text-sm font-bold uppercase tracking-wide">{t("footer.followUs")}</h3>
           <div className="flex gap-3">
-            <a href={COMPANY.whatsappUrl} className="rounded-full bg-[#25D366] p-2" aria-label={t("accessibility.whatsappContact")}>
+            <a href={COMPANY.whatsappUrl} className="bg-whatsapp rounded-full p-2" aria-label={t("accessibility.whatsappContact")}>
               <MessageCircle size={16} />
             </a>
             <a href={COMPANY.instagramUrl} className="rounded-full bg-white/15 p-2" aria-label="Instagram">

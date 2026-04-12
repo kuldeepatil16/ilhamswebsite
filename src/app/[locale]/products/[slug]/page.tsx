@@ -46,7 +46,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
           <p className="mt-4 text-2xl font-black text-accent">{product.price_mad ? formatPrice(product.price_mad, typedLocale) : "MAD"}</p>
           <a
             href={getWhatsAppLink("212663572130", `Bonjour, je veux un devis pour ${product.name_fr}`)}
-            className="mt-5 inline-block rounded-full bg-[#25D366] px-6 py-3 font-bold text-white"
+            className="bg-whatsapp mt-5 inline-block rounded-full px-6 py-3 font-bold text-white"
           >
             WhatsApp
           </a>
