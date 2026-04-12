@@ -32,12 +32,16 @@ body {
   transition: background-color 220ms ease, color 220ms ease;
 }
 
-html[dir="rtl"] body {
-  font-family: "Noto Sans Arabic", sans-serif;
-}
-
 * {
   box-sizing: border-box;
+}
+
+.font-dm {
+  font-family: "DM Sans", sans-serif;
+}
+
+.font-arabic {
+  font-family: "Noto Sans Arabic", sans-serif;
 }
 
 :focus-visible {

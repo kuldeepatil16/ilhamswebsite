@@ -7,6 +7,7 @@ import type { Locale } from "@/types";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import WhatsAppFloat from "@/components/layout/WhatsAppFloat";
+import LocaleDocumentSync from "@/components/layout/LocaleDocumentSync";
 import { buildPageMetadata } from "@/lib/seo";
 
 export async function generateStaticParams() {
@@ -44,28 +45,14 @@ export default async function LocaleLayout({
   const isRTL = locale === "ar";
 
   return (
-    <html lang={locale} dir={isRTL ? "rtl" : "ltr"}>
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();`,
-          }}
-        />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body>
-        <NextIntlClientProvider messages={messages}>
-          <Navbar />
-          <main className="pt-16 lg:pt-20">{children}</main>
-          <Footer />
-          <WhatsAppFloat />
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider messages={messages}>
+      <div dir={isRTL ? "rtl" : "ltr"} lang={locale} className={isRTL ? "font-arabic" : "font-dm"}>
+        <LocaleDocumentSync locale={locale} dir={isRTL ? "rtl" : "ltr"} />
+        <Navbar />
+        <main className="pt-16 lg:pt-20">{children}</main>
+        <Footer />
+        <WhatsAppFloat />
+      </div>
+    </NextIntlClientProvider>
   );
 }
