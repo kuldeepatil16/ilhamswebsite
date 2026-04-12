@@ -39,10 +39,10 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
   return (
     <div className="mx-auto max-w-7xl px-4 py-10 lg:px-8">
       <div className="grid gap-6 lg:grid-cols-2">
-        <img src={product.image_url || "/images/og-image.jpg"} alt={getLocalizedField(product, "name", typedLocale)} className="w-full rounded-xl border border-slate-200 object-cover" />
+        <img src={product.image_url || "/images/og-image.jpg"} alt={getLocalizedField(product, "name", typedLocale)} className="ui-border w-full rounded-xl object-cover" />
         <div>
-          <h1 className="text-3xl font-extrabold text-dark-blue">{getLocalizedField(product, "name", typedLocale)}</h1>
-          <p className="mt-3 text-slate-600">{getLocalizedField(product, "description", typedLocale)}</p>
+          <h1 className="ui-text text-3xl font-extrabold">{getLocalizedField(product, "name", typedLocale)}</h1>
+          <p className="ui-muted mt-3">{getLocalizedField(product, "description", typedLocale)}</p>
           <p className="mt-4 text-2xl font-black text-accent">{product.price_mad ? formatPrice(product.price_mad, typedLocale) : "MAD"}</p>
           <a
             href={getWhatsAppLink("212663572130", `Bonjour, je veux un devis pour ${product.name_fr}`)}
@@ -54,11 +54,11 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
       </div>
 
       <section className="mt-10">
-        <h2 className="mb-4 text-xl font-bold text-dark-blue">{t("relatedProducts")}</h2>
+        <h2 className="ui-text mb-4 text-xl font-bold">{t("relatedProducts")}</h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {(related as Product[] | null)?.map((item) => (
-            <Link key={item.id} href={`/${locale}/products/${item.slug}`} className="rounded-xl border border-slate-200 bg-white p-4">
-              <p className="font-semibold text-dark-blue">{getLocalizedField(item, "name", typedLocale)}</p>
+            <Link key={item.id} href={`/${locale}/products/${item.slug}`} className="ui-surface rounded-xl p-4">
+              <p className="ui-text font-semibold">{getLocalizedField(item, "name", typedLocale)}</p>
             </Link>
           ))}
         </div>

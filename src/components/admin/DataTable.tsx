@@ -7,12 +7,12 @@ interface DataTableProps<T extends Record<string, unknown>> {
 
 export default function DataTable<T extends Record<string, unknown>>({ rows, columns }: DataTableProps<T>) {
   return (
-    <div className="overflow-x-auto rounded-xl border border-slate-200 bg-white">
+    <div className="ui-surface overflow-x-auto rounded-xl">
       <table className="min-w-full text-sm">
         <thead className="bg-slate-50">
           <tr>
             {columns.map((column) => (
-              <th key={String(column.key)} className="px-3 py-2 text-left font-semibold text-slate-700">
+              <th key={String(column.key)} className="ui-text px-3 py-2 text-left font-semibold">
                 {column.label}
               </th>
             ))}
@@ -20,9 +20,9 @@ export default function DataTable<T extends Record<string, unknown>>({ rows, col
         </thead>
         <tbody>
           {rows.map((row, index) => (
-            <tr key={index} className="border-t border-slate-100">
+            <tr key={index} className="ui-border border-t">
               {columns.map((column) => (
-                <td key={String(column.key)} className="px-3 py-2 text-slate-700">
+                <td key={String(column.key)} className="ui-muted px-3 py-2">
                   {String(row[column.key] ?? "")}
                 </td>
               ))}

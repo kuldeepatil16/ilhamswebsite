@@ -13,7 +13,7 @@ export default async function AboutPage() {
   const values = t.raw("values.items") as string[];
 
   return (
-    <div className="bg-slate-50">
+    <div className="ui-page">
       <section className="bg-gradient-to-br from-navy via-dark-blue to-blue py-20 text-white">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <h1 className="text-4xl font-extrabold">{t("title")}</h1>
@@ -21,20 +21,20 @@ export default async function AboutPage() {
         </div>
       </section>
       <section className="mx-auto grid max-w-7xl gap-5 px-4 py-12 lg:grid-cols-2 lg:px-8">
-        <article className="rounded-xl border border-slate-200 bg-white p-6">
-          <h2 className="text-2xl font-bold text-dark-blue">{t("mission.title")}</h2>
-          <p className="mt-2 text-slate-600">{t("mission.content")}</p>
+        <article className="ui-surface rounded-xl p-6">
+          <h2 className="ui-text text-2xl font-bold">{t("mission.title")}</h2>
+          <p className="ui-muted mt-2">{t("mission.content")}</p>
         </article>
-        <article className="rounded-xl border border-slate-200 bg-white p-6">
-          <h2 className="text-2xl font-bold text-dark-blue">{t("vision.title")}</h2>
-          <p className="mt-2 text-slate-600">{t("vision.content")}</p>
+        <article className="ui-surface rounded-xl p-6">
+          <h2 className="ui-text text-2xl font-bold">{t("vision.title")}</h2>
+          <p className="ui-muted mt-2">{t("vision.content")}</p>
         </article>
       </section>
       <section className="mx-auto max-w-7xl px-4 pb-12 lg:px-8">
-        <h3 className="mb-3 text-xl font-bold text-dark-blue">{t("values.title")}</h3>
+        <h3 className="ui-text mb-3 text-xl font-bold">{t("values.title")}</h3>
         <div className="flex flex-wrap gap-2">
           {values.map((value) => (
-            <span key={value} className="rounded-full bg-ice px-4 py-2 text-sm text-dark-blue">{value}</span>
+            <span key={value} className="rounded-full bg-ice px-4 py-2 text-sm ui-text">{value}</span>
           ))}
         </div>
       </section>

@@ -26,9 +26,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ local
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-10">
-      <Link href={`/${locale}/blog`} className="text-sm font-semibold text-blue">{t("backToBlog")}</Link>
-      <h1 className="mt-2 text-4xl font-extrabold text-dark-blue">{getLocalizedField(post, "title", locale as Locale)}</h1>
-      <img src={post.cover_image_url || "/images/og-image.jpg"} alt={getLocalizedField(post, "title", locale as Locale)} className="my-5 w-full rounded-xl border border-slate-200" />
+      <Link href={`/${locale}/blog`} className="ui-link text-sm font-semibold">{t("backToBlog")}</Link>
+      <h1 className="ui-text mt-2 text-4xl font-extrabold">{getLocalizedField(post, "title", locale as Locale)}</h1>
+      <img src={post.cover_image_url || "/images/og-image.jpg"} alt={getLocalizedField(post, "title", locale as Locale)} className="ui-border my-5 w-full rounded-xl" />
       <BlogContent content={getLocalizedField(post, "content", locale as Locale)} />
     </div>
   );

@@ -24,14 +24,14 @@ export default function PartSearch({
   const t = useTranslations("parts");
 
   return (
-    <div className="grid gap-3 rounded-xl border border-slate-200 bg-white p-4 sm:grid-cols-3">
+    <div className="ui-surface grid gap-3 rounded-xl p-4 sm:grid-cols-3">
       <input
         value={search}
         onChange={(e) => onSearch(e.target.value)}
         placeholder={t("search")}
-        className="rounded-lg border border-slate-200 px-3 py-2"
+        className="ui-input"
       />
-      <select value={brand} onChange={(e) => onBrand(e.target.value)} className="rounded-lg border border-slate-200 px-3 py-2">
+      <select value={brand} onChange={(e) => onBrand(e.target.value)} className="ui-input">
         <option value="">{t("allBrands")}</option>
         {brands.map((item) => (
           <option key={item} value={item}>
@@ -39,7 +39,7 @@ export default function PartSearch({
           </option>
         ))}
       </select>
-      <select value={category} onChange={(e) => onCategory(e.target.value)} className="rounded-lg border border-slate-200 px-3 py-2">
+      <select value={category} onChange={(e) => onCategory(e.target.value)} className="ui-input">
         <option value="">{t("allCategories")}</option>
         {PRODUCT_CATEGORIES.map((item) => (
           <option key={item} value={item}>

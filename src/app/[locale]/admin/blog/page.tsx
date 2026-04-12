@@ -25,11 +25,11 @@ export default async function AdminBlogPage() {
 
   return (
     <div className="space-y-5">
-      <form action={addPost} className="space-y-3 rounded-xl border border-slate-200 bg-white p-4">
-        <input name="title_fr" placeholder="Title" className="w-full rounded-lg border border-slate-200 px-3 py-2" />
-        <textarea name="excerpt_fr" rows={3} placeholder="Excerpt" className="w-full rounded-lg border border-slate-200 px-3 py-2" />
+      <form action={addPost} className="ui-surface space-y-3 rounded-xl p-4">
+        <input name="title_fr" placeholder="Title" className="ui-input" />
+        <textarea name="excerpt_fr" rows={3} placeholder="Excerpt" className="ui-input" />
         <BlogEditor />
-        <button className="rounded-full bg-accent px-4 py-2 text-sm font-bold text-navy">Save</button>
+        <button className="ui-btn-accent px-4 py-2 text-sm">Save</button>
       </form>
       <DataTable rows={(data as Record<string, unknown>[]) || []} columns={[{ key: "slug", label: "Slug" }, { key: "title_fr", label: "Title" }, { key: "is_published", label: "Published" }, { key: "published_at", label: "Date" }]} />
     </div>

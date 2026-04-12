@@ -3,14 +3,14 @@ export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://vereenelectrofroid.ma";
 
 export const COMPANY = {
-  name: "Société Vereen Electro Froid",
+  name: "Societe Vereen Electro Froid",
   nameShort: "Vereen Electro Froid",
   phone1: "0663572130",
   phone2: "0637237869",
   fax: "0539982020",
   email: "vereenelectrofroid@gmail.com",
   address: "Al Hoceima, Maroc",
-  addressFull: "Al Hoceima, Région de Tanger-Tétouan-Al Hoceima, Maroc",
+  addressFull: "Al Hoceima, Region de Tanger-Tetouan-Al Hoceima, Maroc",
   instagram: "ste.vereen_electrofroid",
   instagramUrl: "https://instagram.com/ste.vereen_electrofroid",
   whatsapp: "212663572130",
@@ -66,7 +66,7 @@ export const STATS = [
 
 export const WHATSAPP_DEFAULT_MESSAGE = {
   fr: "Bonjour, je souhaite obtenir un devis pour ",
-  ar: "مرحباً، أريد الحصول على عرض سعر لـ",
+  ar: "?????? ???? ?????? ??? ??? ??? ??",
   en: "Hello, I would like to get a quote for ",
 };
 

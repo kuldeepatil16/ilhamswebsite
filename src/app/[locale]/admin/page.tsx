@@ -17,9 +17,9 @@ export default async function AdminDashboardPage() {
   return (
     <div className="grid gap-4 sm:grid-cols-3">
       {cards.map(([label, value]) => (
-        <article key={label} className="rounded-xl border border-slate-200 bg-white p-5">
-          <p className="text-sm text-slate-500">{label}</p>
-          <p className="mt-1 text-3xl font-extrabold text-dark-blue">{value}</p>
+        <article key={label} className="ui-surface rounded-xl p-5">
+          <p className="ui-soft text-sm">{label}</p>
+          <p className="ui-text mt-1 text-3xl font-extrabold">{value}</p>
         </article>
       ))}
     </div>

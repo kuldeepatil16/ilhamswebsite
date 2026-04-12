@@ -8,12 +8,12 @@ export default function Error({ reset }: { error: Error; reset: () => void }) {
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-24 text-center">
-      <h2 className="mb-4 text-3xl font-bold text-dark-blue">{t("title")}</h2>
+      <h2 className="ui-text mb-4 text-3xl font-bold">{t("title")}</h2>
       <div className="flex justify-center gap-3">
-        <button onClick={() => reset()} className="rounded-full bg-blue px-5 py-2.5 text-white">
+        <button onClick={() => reset()} className="ui-btn-primary px-5 py-2.5">
           {t("retry")}
         </button>
-        <Link href="/fr" className="rounded-full bg-accent px-5 py-2.5 font-semibold text-navy">
+        <Link href="/fr" className="ui-btn-accent px-5 py-2.5">
           {t("backHome")}
         </Link>
       </div>

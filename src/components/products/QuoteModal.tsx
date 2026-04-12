@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import type { QuoteItem } from "@/types";
+import { API_ENDPOINTS } from "@/lib/api-endpoints";
 
 export default function QuoteModal({ open, onClose, item }: { open: boolean; onClose: () => void; item: QuoteItem | null }) {
   const t = useTranslations("quote");
@@ -24,7 +25,7 @@ export default function QuoteModal({ open, onClose, item }: { open: boolean; onC
       items: [item],
     };
 
-    const res = await fetch("/api/quote", {
+    const res = await fetch(API_ENDPOINTS.quote, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
@@ -36,23 +37,23 @@ export default function QuoteModal({ open, onClose, item }: { open: boolean; onC
 
   return (
     <div className="fixed inset-0 z-50 grid place-items-center bg-black/50 p-4" onClick={onClose}>
-      <div className="w-full max-w-md rounded-xl bg-white p-5" onClick={(e) => e.stopPropagation()}>
-        <h3 className="mb-4 text-lg font-bold text-dark-blue">{t("title")}</h3>
+      <div className="ui-surface w-full max-w-md rounded-xl p-5" onClick={(e) => e.stopPropagation()}>
+        <h3 className="ui-text mb-4 text-lg font-bold">{t("title")}</h3>
         <form action={submit} className="space-y-3">
-          <input name="name" required placeholder={t("name")} className="w-full rounded-lg border border-slate-200 px-3 py-2" />
-          <input name="phone" required placeholder={t("phone")} className="w-full rounded-lg border border-slate-200 px-3 py-2" />
-          <input name="email" placeholder={t("email")} className="w-full rounded-lg border border-slate-200 px-3 py-2" />
-          <textarea name="message" placeholder={t("message")} className="w-full rounded-lg border border-slate-200 px-3 py-2" />
+          <input name="name" required placeholder={t("name")} className="ui-input" />
+          <input name="phone" required placeholder={t("phone")} className="ui-input" />
+          <input name="email" placeholder={t("email")} className="ui-input" />
+          <textarea name="message" placeholder={t("message")} className="ui-input" />
           <div className="flex gap-2">
-            <button type="submit" disabled={loading} className="rounded-full bg-accent px-4 py-2 text-sm font-bold text-navy">
+            <button type="submit" disabled={loading} className="ui-btn-accent px-4 py-2 text-sm">
               {loading ? t("submitting") : t("submit")}
             </button>
-            <button type="button" onClick={onClose} className="rounded-full border border-slate-300 px-4 py-2 text-sm">
+            <button type="button" onClick={onClose} className="ui-btn-outline px-4 py-2 text-sm">
               {tc("close")}
             </button>
           </div>
         </form>
-        {result ? <p className="mt-3 text-sm text-slate-600">{result}</p> : null}
+        {result ? <p className="ui-muted mt-3 text-sm">{result}</p> : null}
       </div>
     </div>
   );

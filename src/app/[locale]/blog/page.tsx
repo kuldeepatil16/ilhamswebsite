@@ -24,14 +24,14 @@ export default async function BlogPage({ params }: { params: Promise<{ locale: s
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-10 lg:px-8">
-      <h1 className="text-3xl font-extrabold text-dark-blue">{t("title")}</h1>
-      <p className="mt-2 text-slate-600">{t("subtitle")}</p>
+      <h1 className="ui-text text-3xl font-extrabold">{t("title")}</h1>
+      <p className="ui-muted mt-2">{t("subtitle")}</p>
       <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {(data as BlogPost[] | null)?.map((post) => (
           <BlogCard key={post.id} post={post} locale={locale as Locale} />
         ))}
       </div>
-      <Link href={`/${locale}`} className="mt-6 inline-block text-sm font-semibold text-blue">
+      <Link href={`/${locale}`} className="ui-link mt-6 inline-block text-sm font-semibold">
         {t("backToBlog")}
       </Link>
     </div>

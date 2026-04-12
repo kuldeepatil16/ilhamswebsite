@@ -4,6 +4,7 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { SERVICE_TYPES } from "@/lib/constants";
+import { API_ENDPOINTS } from "@/lib/api-endpoints";
 
 export default function ServiceRequestForm() {
   const t = useTranslations("serviceRequest");
@@ -15,7 +16,7 @@ export default function ServiceRequestForm() {
     setMessage(null);
 
     const payload = Object.fromEntries(formData.entries());
-    const res = await fetch("/api/service-request", {
+    const res = await fetch(API_ENDPOINTS.serviceRequest, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
@@ -32,16 +33,16 @@ export default function ServiceRequestForm() {
   }
 
   return (
-    <form id="service-request-form" action={onSubmit} className="space-y-4 rounded-xl border border-slate-200 bg-white p-5">
+    <form id="service-request-form" action={onSubmit} className="ui-surface space-y-4 rounded-xl p-5">
       <div className="grid gap-4 sm:grid-cols-2">
-        <input name="name" required placeholder={t("name")} className="rounded-xl border border-slate-200 px-3 py-2" />
-        <input name="phone" required placeholder={t("phone")} className="rounded-xl border border-slate-200 px-3 py-2" />
+        <input name="name" required placeholder={t("name")} className="ui-input" />
+        <input name="phone" required placeholder={t("phone")} className="ui-input" />
       </div>
       <div className="grid gap-4 sm:grid-cols-2">
-        <input name="email" placeholder={t("email")} className="rounded-xl border border-slate-200 px-3 py-2" />
-        <input name="city" placeholder={t("city")} className="rounded-xl border border-slate-200 px-3 py-2" />
+        <input name="email" placeholder={t("email")} className="ui-input" />
+        <input name="city" placeholder={t("city")} className="ui-input" />
       </div>
-      <select name="service_type" required className="w-full rounded-xl border border-slate-200 px-3 py-2">
+      <select name="service_type" required className="ui-input">
         <option value="">{t("serviceType")}</option>
         {SERVICE_TYPES.map((option) => (
           <option key={option} value={option}>
@@ -49,11 +50,11 @@ export default function ServiceRequestForm() {
           </option>
         ))}
       </select>
-      <textarea name="problem_description" rows={3} placeholder={t("problemDesc")} className="w-full rounded-xl border border-slate-200 px-3 py-2" />
-      <button className="rounded-full bg-accent px-5 py-2.5 font-bold text-navy" disabled={loading}>
+      <textarea name="problem_description" rows={3} placeholder={t("problemDesc")} className="ui-input" />
+      <button className="ui-btn-accent px-5 py-2.5" disabled={loading}>
         {loading ? t("submitting") : t("submit")}
       </button>
-      {message ? <p className="text-sm text-slate-600">{message}</p> : null}
+      {message ? <p className="ui-muted text-sm">{message}</p> : null}
     </form>
   );
 }
