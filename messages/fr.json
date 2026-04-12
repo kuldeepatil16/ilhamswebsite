@@ -1,0 +1,497 @@
+{
+  "metadata": {
+    "siteName": "Vereen Electro Froid",
+    "siteDescription": "Solutions professionnelles en froid, climatisation, énergie solaire et pièces de rechange à Al Hoceima, Maroc. Distributeur agréé Whirlpool, Samsung, Ariston, Bosch, AUX, LG, Daikin, Carrier.",
+    "home": {
+      "title": "Vereen Electro Froid | Climatisation & Réfrigération Al Hoceima",
+      "description": "Expert en climatisation, réfrigération, énergie solaire et pièces de rechange à Al Hoceima. Distributeur agréé Whirlpool, Samsung, Ariston, Bosch."
+    },
+    "services": {
+      "title": "Nos Services | Vereen Electro Froid",
+      "description": "Installation, maintenance et réparation de climatiseurs, réfrigérateurs, chauffe-eaux solaires et systèmes HVAC à Al Hoceima et au Maroc."
+    },
+    "products": {
+      "title": "Nos Produits | Climatiseurs, Réfrigérateurs, Chauffe-eaux",
+      "description": "Découvrez notre catalogue de climatiseurs, réfrigérateurs, machines à laver, lave-vaisselle et chauffe-eaux solaires à Al Hoceima."
+    },
+    "parts": {
+      "title": "Pièces de Rechange | Vereen Electro Froid",
+      "description": "Large gamme de pièces détachées authentiques pour Whirlpool, Samsung, Ariston, Bosch et toutes les grandes marques d'électroménager."
+    },
+    "about": {
+      "title": "À Propos | Vereen Electro Froid",
+      "description": "Découvrez Vereen Electro Froid, votre partenaire de confiance pour le froid, la climatisation et l'énergie solaire au Maroc depuis plus de 10 ans."
+    },
+    "contact": {
+      "title": "Contactez-Nous | Vereen Electro Froid",
+      "description": "Contactez Vereen Electro Froid à Al Hoceima. Devis gratuit, intervention rapide. Tél: 0663572130"
+    },
+    "blog": {
+      "title": "Blog & Conseils | Vereen Electro Froid",
+      "description": "Conseils d'experts sur l'entretien de votre climatiseur, le choix d'un chauffe-eau solaire et les bonnes pratiques HVAC au Maroc."
+    }
+  },
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "products": "Produits",
+    "parts": "Pièces",
+    "about": "À Propos",
+    "contact": "Contact",
+    "blog": "Blog",
+    "requestQuote": "Demander un Devis",
+    "admin": "Admin"
+  },
+  "hero": {
+    "tagline": "Confort · Performance · Fiabilité",
+    "title1": "Votre Confort,",
+    "title2": "Notre Expertise.",
+    "subtitle": "Solutions professionnelles en froid, climatisation, énergie solaire et pièces de rechange pour vos appareils électroménagers à Al Hoceima et dans tout le Maroc.",
+    "cta1": "Demander un Devis",
+    "cta2": "Nos Services",
+    "scrollDown": "Défiler vers le bas"
+  },
+  "stats": {
+    "years": "Années d'Expérience",
+    "clients": "Clients Satisfaits",
+    "brands": "Marques Partenaires",
+    "cities": "Villes Desservies",
+    "yearsValue": "10",
+    "clientsValue": "2000",
+    "brandsValue": "8",
+    "citiesValue": "15"
+  },
+  "services": {
+    "title": "Nos Services",
+    "subtitle": "Des solutions complètes pour votre confort",
+    "learnMore": "En savoir plus",
+    "requestService": "Demander ce service",
+    "items": [
+      {
+        "icon": "snowflake",
+        "title": "Froid & Réfrigération",
+        "desc": "Installation, entretien et dépannage de systèmes frigorifiques résidentiels et industriels.",
+        "fullDesc": "Notre équipe de techniciens certifiés prend en charge l'installation, l'entretien préventif et le dépannage de tous types de systèmes frigorifiques: réfrigérateurs ménagers, chambres froides commerciales, vitrines réfrigérées, congélateurs industriels. Nous intervenons sur toutes les marques.",
+        "includes": [
+          "Installation et mise en service",
+          "Entretien préventif annuel",
+          "Dépannage d'urgence",
+          "Recharge de gaz réfrigérant",
+          "Remplacement de compresseurs",
+          "Diagnostic électronique"
+        ]
+      },
+      {
+        "icon": "wind",
+        "title": "Climatisation",
+        "desc": "Installation et maintenance de climatiseurs split, centralisés et commerciaux de toutes marques.",
+        "fullDesc": "Spécialistes de la climatisation, nous installons et maintenons des systèmes split pour résidences, des unités commerciales multi-zones, et des systèmes VRF pour grands espaces. Distributeur agréé AUX, Daikin, Carrier, LG et plus.",
+        "includes": [
+          "Installation split résidentiel",
+          "Climatisation multi-split",
+          "Maintenance contrat",
+          "Nettoyage filtres et serpentins",
+          "Recharge R410A / R32",
+          "Diagnostic et réparation"
+        ]
+      },
+      {
+        "icon": "sun",
+        "title": "Énergie Solaire",
+        "desc": "Chauffe-eau solaires et systèmes d'énergie solaire pour réduire vos coûts énergétiques.",
+        "fullDesc": "Réduisez votre facture d'énergie jusqu'à 70% avec nos chauffe-eau solaires thermiques et nos systèmes hybrides. Installation professionnelle sur toute la région du Rif, avec garantie fabricant et suivi.",
+        "includes": [
+          "Chauffe-eau solaire 100L-300L",
+          "Systèmes solaires thermiques",
+          "Installation sur toit plat ou incliné",
+          "Maintenance annuelle",
+          "Conseil en énergie solaire",
+          "Garantie 5 ans équipement"
+        ]
+      },
+      {
+        "icon": "wrench",
+        "title": "Pièces de Rechange",
+        "desc": "Large gamme de pièces détachées authentiques pour Whirlpool, Samsung, Ariston, Bosch et plus.",
+        "fullDesc": "Centre de distribution agréé pour pièces détachées originales. Nous disposons d'un stock permanent de compresseurs, thermostats, moteurs, cartes électroniques, et consommables pour toutes les grandes marques d'électroménager et HVAC.",
+        "includes": [
+          "Compresseurs AC et froid",
+          "Gaz R410A, R32, R134a",
+          "Moteurs et thermostats",
+          "Cartes électroniques",
+          "Télécommandes et afficheurs",
+          "Consommables et filtres"
+        ]
+      },
+      {
+        "icon": "building",
+        "title": "Climatisation Centralisée",
+        "desc": "Solutions sur mesure pour grands espaces: hôtels, bureaux, entrepôts et centres commerciaux.",
+        "fullDesc": "Pour les projets d'envergure, notre équipe d'ingénieurs conçoit et installe des systèmes de climatisation centralisée VRF/VRV, des chillers, et des centrales de traitement d'air adaptés aux hôtels, complexes commerciaux, établissements scolaires et industriels.",
+        "includes": [
+          "Étude et dimensionnement",
+          "Systèmes VRF/VRV",
+          "Centrales de traitement d'air",
+          "Chillers eau glacée",
+          "Automatisation et régulation",
+          "Contrat de maintenance annuel"
+        ]
+      },
+      {
+        "icon": "tool",
+        "title": "Service Après-Vente",
+        "desc": "Centre de service agréé avec contrats de maintenance pour les plus grandes marques mondiales.",
+        "fullDesc": "En tant que centre de service après-vente agréé par Whirlpool, Samsung, Ariston et Bosch, nous effectuons les réparations sous garantie et post-garantie avec des pièces originales. Contrats de maintenance préventive disponibles pour particuliers et professionnels.",
+        "includes": [
+          "SAV Whirlpool agréé",
+          "SAV Samsung agréé",
+          "SAV Ariston agréé",
+          "SAV Bosch agréé",
+          "Contrats maintenance annuels",
+          "Garantie sur interventions"
+        ]
+      }
+    ]
+  },
+  "brands": {
+    "title": "Nos Partenaires de Confiance",
+    "subtitle": "Distributeur et centre de service agréé pour les plus grandes marques mondiales"
+  },
+  "products": {
+    "title": "Nos Produits",
+    "subtitle": "Équipements de qualité professionnelle",
+    "viewAll": "Voir tous les produits",
+    "requestQuote": "Demander un Devis",
+    "addToQuote": "Ajouter au Devis",
+    "viewDetails": "Voir les détails",
+    "filterByCategory": "Filtrer par catégorie",
+    "filterByBrand": "Filtrer par marque",
+    "allCategories": "Toutes les catégories",
+    "allBrands": "Toutes les marques",
+    "noProducts": "Aucun produit trouvé",
+    "priceFrom": "À partir de",
+    "contactForPrice": "Contactez-nous pour le prix",
+    "inStock": "En stock",
+    "outOfStock": "Rupture de stock",
+    "relatedProducts": "Produits similaires",
+    "categories": {
+      "climatisation": "Climatisation",
+      "refrigeration": "Réfrigération",
+      "solar": "Énergie Solaire",
+      "washing_machine": "Machines à Laver",
+      "dishwasher": "Lave-Vaisselle",
+      "freezer": "Congélateurs",
+      "water_heater": "Chauffe-Eau",
+      "other": "Autre"
+    }
+  },
+  "parts": {
+    "title": "Pièces de Rechange",
+    "subtitle": "Pièces détachées authentiques pour toutes les grandes marques",
+    "search": "Rechercher une pièce...",
+    "searchByPartNumber": "Numéro de référence...",
+    "filterByBrand": "Marque",
+    "filterByCategory": "Catégorie",
+    "allBrands": "Toutes les marques",
+    "allCategories": "Toutes les catégories",
+    "requestQuote": "Demander un Devis",
+    "partNumber": "Réf.",
+    "compatibleWith": "Compatible avec",
+    "inStock": "En stock",
+    "outOfStock": "Sur commande",
+    "noParts": "Aucune pièce trouvée",
+    "quoteForm": {
+      "title": "Demande de Devis Pièce",
+      "subtitle": "Remplissez ce formulaire pour recevoir un devis personnalisé",
+      "partName": "Nom de la pièce",
+      "partNumber": "Référence (si connue)",
+      "brand": "Marque de l'appareil",
+      "model": "Modèle de l'appareil",
+      "quantity": "Quantité",
+      "name": "Votre Nom",
+      "phone": "Votre Téléphone",
+      "email": "Votre Email",
+      "message": "Informations supplémentaires",
+      "submit": "Envoyer la demande"
+    }
+  },
+  "why": {
+    "title": "Pourquoi Nous Choisir",
+    "subtitle": "Notre engagement envers l'excellence depuis plus de 10 ans",
+    "items": [
+      {
+        "icon": "zap",
+        "title": "Expertise Technique",
+        "desc": "Techniciens certifiés avec des années d'expérience sur toutes les marques. Formation continue chez les fabricants."
+      },
+      {
+        "icon": "clock",
+        "title": "Réactivité Rapide",
+        "desc": "Intervention rapide sous 24h et devis gratuit. Service d'urgence disponible pour les pannes critiques."
+      },
+      {
+        "icon": "shield-check",
+        "title": "Qualité Garantie",
+        "desc": "Pièces authentiques d'origine et garantie sur toutes nos interventions. Satisfaction client assurée."
+      },
+      {
+        "icon": "tag",
+        "title": "Prix Compétitifs",
+        "desc": "Tarifs wholesale accessibles grâce à nos partenariats directs avec les fabricants. Devis transparent."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contactez-Nous",
+    "subtitle": "Parlons de votre projet",
+    "name": "Votre Nom *",
+    "email": "Votre Email",
+    "phone": "Votre Téléphone *",
+    "service": "Service Souhaité",
+    "message": "Votre Message",
+    "send": "Envoyer le Message",
+    "sending": "Envoi en cours...",
+    "whatsapp": "Ou contactez-nous sur WhatsApp",
+    "address": "Al Hoceima, Maroc",
+    "addressFull": "Al Hoceima, Région de Tanger-Tétouan-Al Hoceima, Maroc",
+    "phone1": "0663572130",
+    "phone2": "0637237869",
+    "fax": "0539982020",
+    "emailAddress": "vereenelectrofroid@gmail.com",
+    "instagram": "@ste.vereen_electrofroid",
+    "openHours": "Lun - Sam: 8h00 - 18h00",
+    "serviceOptions": [
+      "Climatisation",
+      "Réfrigération",
+      "Énergie Solaire",
+      "Pièces de Rechange",
+      "Maintenance",
+      "Climatisation Centralisée",
+      "Autre"
+    ],
+    "successMessage": "Votre message a été envoyé avec succès! Nous vous contacterons dans les plus brefs délais.",
+    "errorMessage": "Une erreur s'est produite. Veuillez réessayer ou nous contacter directement.",
+    "validation": {
+      "nameRequired": "Le nom est requis",
+      "phoneRequired": "Le téléphone est requis",
+      "phoneInvalid": "Numéro de téléphone invalide",
+      "emailInvalid": "Adresse email invalide",
+      "messageMinLength": "Le message doit contenir au moins 10 caractères"
+    }
+  },
+  "about": {
+    "title": "À Propos de Nous",
+    "subtitle": "Votre partenaire de confiance depuis plus de 10 ans",
+    "story": {
+      "title": "Notre Histoire",
+      "content": "Vereen Electro Froid est une société spécialisée dans la vente, l'installation et la maintenance de systèmes de climatisation, de réfrigération, d'énergie solaire et d'appareils électroménagers. Basée à Al Hoceima, au cœur de la région du Rif, notre entreprise s'est imposée comme le partenaire de référence pour les professionnels et les particuliers dans toute la région nord du Maroc."
+    },
+    "mission": {
+      "title": "Notre Mission",
+      "content": "Offrir des solutions de confort thermique de qualité professionnelle à des prix compétitifs, grâce à notre expertise technique et nos partenariats privilégiés avec les plus grandes marques mondiales."
+    },
+    "vision": {
+      "title": "Notre Vision",
+      "content": "Devenir le leader national indépendant du HVAC et du service après-vente électroménager au Maroc, en étendant notre réseau de service à toutes les grandes villes marocaines."
+    },
+    "values": {
+      "title": "Nos Valeurs",
+      "items": [
+        "Excellence technique",
+        "Honnêteté et transparence",
+        "Satisfaction client",
+        "Innovation continue",
+        "Engagement environnemental"
+      ]
+    },
+    "certifications": {
+      "title": "Nos Certifications",
+      "subtitle": "Centre de service agréé pour les plus grandes marques"
+    },
+    "team": {
+      "title": "Notre Équipe",
+      "subtitle": "Des techniciens certifiés à votre service",
+      "content": "Notre équipe est composée de techniciens qualifiés, formés directement par les fabricants partenaires. Chaque membre de notre équipe suit des formations régulières pour rester au fait des dernières technologies et des meilleures pratiques de l'industrie."
+    },
+    "coverage": {
+      "title": "Zone de Service",
+      "subtitle": "Al Hoceima et toute la région nord du Maroc",
+      "content": "Nous intervenons principalement dans la région de Tanger-Tétouan-Al Hoceima, avec une expansion en cours vers les grandes villes marocaines: Casablanca, Rabat, Fès, Marrakech et Agadir."
+    }
+  },
+  "blog": {
+    "title": "Blog & Conseils",
+    "subtitle": "Nos experts partagent leurs connaissances",
+    "readMore": "Lire la suite",
+    "backToBlog": "Retour au blog",
+    "publishedOn": "Publié le",
+    "by": "Par",
+    "tags": "Tags",
+    "noPostsFound": "Aucun article trouvé",
+    "shareOn": "Partager sur",
+    "relatedPosts": "Articles similaires"
+  },
+  "footer": {
+    "tagline": "Solutions professionnelles en froid, climatisation, énergie solaire et pièces de rechange.",
+    "quickLinks": "Liens Rapides",
+    "services": "Nos Services",
+    "contact": "Contact",
+    "followUs": "Suivez-Nous",
+    "rights": "Tous droits réservés",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "madeWith": "Fait avec ❤️ au Maroc"
+  },
+  "whatsapp": {
+    "tooltip": "Discutez avec nous sur WhatsApp"
+  },
+  "serviceRequest": {
+    "title": "Demande de Service",
+    "subtitle": "Planifiez votre intervention",
+    "name": "Votre Nom *",
+    "phone": "Votre Téléphone *",
+    "email": "Votre Email",
+    "address": "Votre Adresse",
+    "city": "Ville",
+    "serviceType": "Type de Service *",
+    "applianceBrand": "Marque de l'appareil",
+    "applianceModel": "Modèle de l'appareil",
+    "problemDesc": "Description du problème",
+    "preferredDate": "Date souhaitée",
+    "preferredTime": "Heure souhaitée",
+    "submit": "Soumettre la demande",
+    "submitting": "Envoi...",
+    "successMessage": "Votre demande de service a été soumise. Nous vous contacterons rapidement pour confirmer le rendez-vous.",
+    "errorMessage": "Erreur lors de l'envoi. Veuillez réessayer."
+  },
+  "quote": {
+    "title": "Demander un Devis",
+    "subtitle": "Obtenez un devis personnalisé gratuit",
+    "productName": "Produit",
+    "quantity": "Quantité",
+    "name": "Votre Nom *",
+    "phone": "Votre Téléphone *",
+    "email": "Votre Email",
+    "company": "Entreprise (facultatif)",
+    "message": "Message ou spécifications",
+    "submit": "Envoyer la demande",
+    "submitting": "Envoi...",
+    "successMessage": "Votre demande de devis a été envoyée. Nous vous répondrons dans les 24 heures.",
+    "errorMessage": "Erreur lors de l'envoi. Veuillez réessayer."
+  },
+  "notFound": {
+    "title": "Page Introuvable",
+    "subtitle": "La page que vous recherchez n'existe pas ou a été déplacée.",
+    "backHome": "Retour à l'Accueil"
+  },
+  "loading": "Chargement...",
+  "error": {
+    "title": "Une erreur s'est produite",
+    "retry": "Réessayer",
+    "backHome": "Retour à l'Accueil"
+  },
+  "admin": {
+    "login": {
+      "title": "Connexion Admin",
+      "email": "Email",
+      "password": "Mot de passe",
+      "submit": "Se connecter",
+      "error": "Email ou mot de passe incorrect"
+    },
+    "dashboard": {
+      "title": "Tableau de Bord",
+      "newLeads": "Nouveaux Prospects",
+      "pendingRequests": "Demandes en Attente",
+      "totalProducts": "Total Produits",
+      "totalParts": "Total Pièces",
+      "recentLeads": "Prospects Récents",
+      "recentRequests": "Demandes Récentes"
+    },
+    "products": {
+      "title": "Gestion des Produits",
+      "add": "Ajouter un Produit",
+      "edit": "Modifier",
+      "delete": "Supprimer",
+      "confirmDelete": "Êtes-vous sûr de vouloir supprimer ce produit?"
+    },
+    "parts": {
+      "title": "Gestion des Pièces",
+      "add": "Ajouter une Pièce",
+      "edit": "Modifier",
+      "delete": "Supprimer"
+    },
+    "leads": {
+      "title": "Prospects & Contacts",
+      "status": "Statut",
+      "updateStatus": "Mettre à jour le statut",
+      "statuses": {
+        "new": "Nouveau",
+        "contacted": "Contacté",
+        "quoted": "Devisé",
+        "won": "Gagné",
+        "lost": "Perdu"
+      }
+    },
+    "serviceRequests": {
+      "title": "Demandes de Service",
+      "statuses": {
+        "pending": "En attente",
+        "confirmed": "Confirmé",
+        "in_progress": "En cours",
+        "completed": "Terminé",
+        "cancelled": "Annulé"
+      }
+    },
+    "blog": {
+      "title": "Gestion du Blog",
+      "add": "Nouvel Article",
+      "edit": "Modifier",
+      "publish": "Publier",
+      "unpublish": "Dépublier",
+      "delete": "Supprimer"
+    },
+    "nav": {
+      "dashboard": "Tableau de Bord",
+      "products": "Produits",
+      "parts": "Pièces",
+      "leads": "Prospects",
+      "serviceRequests": "Demandes de Service",
+      "blog": "Blog",
+      "logout": "Déconnexion",
+      "viewSite": "Voir le Site"
+    },
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "saving": "Enregistrement...",
+    "saved": "Enregistré!",
+    "deleteConfirm": "Supprimer",
+    "noData": "Aucune donnée disponible"
+  },
+  "cookie": {
+    "message": "Nous utilisons des cookies pour améliorer votre expérience. En continuant, vous acceptez notre politique de confidentialité.",
+    "accept": "Accepter",
+    "decline": "Refuser"
+  },
+  "accessibility": {
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "changeLanguage": "Changer la langue",
+    "scrollToTop": "Retour en haut",
+    "whatsappContact": "Contacter sur WhatsApp",
+    "logoAlt": "Vereen Electro Froid - Logo",
+    "productImageAlt": "Image de"
+  },
+  "common": {
+    "learnMore": "En savoir plus",
+    "viewAll": "Voir tous les produits",
+    "loading": "Chargement...",
+    "back": "Retour",
+    "home": "Accueil",
+    "submit": "Envoyer",
+    "close": "Fermer"
+  },
+  "seo": {
+    "defaultTitle": "Vereen Electro Froid | Climatisation & Réfrigération Al Hoceima",
+    "defaultDescription": "Solutions professionnelles en froid, climatisation, énergie solaire et pièces de rechange à Al Hoceima, Maroc. Distributeur agréé Whirlpool, Samsung, Ariston, Bosch, AUX, LG, Daikin, Carrier."
+  }
+}
