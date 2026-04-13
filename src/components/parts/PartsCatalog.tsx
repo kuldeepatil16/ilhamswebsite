@@ -33,16 +33,18 @@ export default function PartsCatalog() {
   );
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-10 lg:px-8">
-      <PartSearch
-        search={search}
-        brand={brand}
-        category={category}
-        onSearch={setSearch}
-        onBrand={setBrand}
-        onCategory={setCategory}
-        brands={brands}
-      />
+    <div className="ui-page mx-auto max-w-7xl px-4 py-10 lg:px-8">
+      <div className="ui-surface rounded-xl p-5">
+        <PartSearch
+          search={search}
+          brand={brand}
+          category={category}
+          onSearch={setSearch}
+          onBrand={setBrand}
+          onCategory={setCategory}
+          brands={brands}
+        />
+      </div>
       <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {filtered.map((part) => (
           <PartCard key={part.id} part={part} locale={locale} onQuote={setSelected} />

@@ -21,25 +21,25 @@ export default function Footer() {
   ] as const;
 
   return (
-    <footer className="bg-navy text-white">
+    <footer className="border-t border-border bg-surface-soft text-foreground">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 md:grid-cols-4 lg:px-8">
         <div>
           <img src="/images/logo.svg" alt={t("accessibility.logoAlt")} className="mb-4 h-10 w-auto" />
-          <p className="text-sm text-white/70">{t("footer.tagline")}</p>
+          <p className="text-sm text-muted-foreground">{t("footer.tagline")}</p>
         </div>
 
         <div>
           <h3 className="mb-3 text-sm font-bold uppercase tracking-wide">{t("footer.quickLinks")}</h3>
-          <div className="space-y-2 text-sm text-white/75">
+          <div className="space-y-2 text-sm text-muted-foreground">
             {quickLinks.map(([path, label]) => (
-              <Link key={path} href={`/${locale}${path}`} className="block hover:text-accent">
+              <Link key={path} href={`/${locale}${path}`} className="block hover:text-foreground">
                 {label}
               </Link>
             ))}
           </div>
         </div>
 
-        <div className="space-y-2 text-sm text-white/75">
+        <div className="space-y-2 text-sm text-muted-foreground">
           <h3 className="mb-3 text-sm font-bold uppercase tracking-wide">{t("footer.contact")}</h3>
           <p className="flex items-center gap-2"><Phone size={14} /> {COMPANY.phone1}</p>
           <p className="flex items-center gap-2"><Phone size={14} /> {COMPANY.phone2}</p>
@@ -51,17 +51,17 @@ export default function Footer() {
         <div>
           <h3 className="mb-3 text-sm font-bold uppercase tracking-wide">{t("footer.followUs")}</h3>
           <div className="flex gap-3">
-            <a href={COMPANY.whatsappUrl} className="bg-whatsapp rounded-full p-2" aria-label={t("accessibility.whatsappContact")}>
+            <a href={COMPANY.whatsappUrl} className="bg-whatsapp rounded-full p-2 text-contrast" aria-label={t("accessibility.whatsappContact")}>
               <MessageCircle size={16} />
             </a>
-            <a href={COMPANY.instagramUrl} className="rounded-full bg-white/15 p-2" aria-label="Instagram">
+            <a href={COMPANY.instagramUrl} className="rounded-full bg-muted p-2 text-foreground" aria-label="Instagram">
               <Globe size={16} />
             </a>
           </div>
         </div>
       </div>
-      <div className="border-t border-white/10 py-4 text-center text-xs text-white/60">
-        © {new Date().getFullYear()} {COMPANY.name}. {t("footer.rights")}
+      <div className="border-t border-border py-4 text-center text-xs text-muted-foreground">
+        Â© {new Date().getFullYear()} {COMPANY.name}. {t("footer.rights")}
       </div>
     </footer>
   );

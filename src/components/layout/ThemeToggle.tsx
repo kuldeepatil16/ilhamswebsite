@@ -32,7 +32,7 @@ export default function ThemeToggle() {
         setTheme(next);
         applyTheme(next);
       }}
-      className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white/90 transition hover:bg-white/20"
+      className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-muted text-foreground transition hover:bg-surface"
       aria-label={t("toggleTheme")}
       title={t("toggleTheme")}
     >
@@ -40,4 +40,3 @@ export default function ThemeToggle() {
     </button>
   );
 }
-

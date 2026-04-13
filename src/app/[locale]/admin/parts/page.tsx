@@ -26,6 +26,10 @@ export default async function AdminPartsPage() {
 
   return (
     <div className="space-y-5">
+      <div>
+        <h1 className="ui-text text-3xl font-extrabold">Parts</h1>
+        <p className="ui-muted mt-2">Manage spare parts inventory and compatibility data.</p>
+      </div>
       <form action={addPart}>
         <PartForm actionLabel="Save" />
       </form>

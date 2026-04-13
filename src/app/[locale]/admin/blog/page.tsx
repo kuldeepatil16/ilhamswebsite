@@ -25,6 +25,10 @@ export default async function AdminBlogPage() {
 
   return (
     <div className="space-y-5">
+      <div>
+        <h1 className="ui-text text-3xl font-extrabold">Blog</h1>
+        <p className="ui-muted mt-2">Publish updates and maintenance notes.</p>
+      </div>
       <form action={addPost} className="ui-surface space-y-3 rounded-xl p-4">
         <input name="title_fr" placeholder="Title" className="ui-input" />
         <textarea name="excerpt_fr" rows={3} placeholder="Excerpt" className="ui-input" />

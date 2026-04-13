@@ -23,9 +23,11 @@ export default async function BlogPage({ params }: { params: Promise<{ locale: s
     .order("published_at", { ascending: false });
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-10 lg:px-8">
-      <h1 className="ui-text text-3xl font-extrabold">{t("title")}</h1>
-      <p className="ui-muted mt-2">{t("subtitle")}</p>
+    <div className="ui-page mx-auto max-w-7xl px-4 py-10 lg:px-8">
+      <div className="ui-surface rounded-xl p-5">
+        <h1 className="ui-text text-3xl font-extrabold">{t("title")}</h1>
+        <p className="ui-muted mt-2">{t("subtitle")}</p>
+      </div>
       <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {(data as BlogPost[] | null)?.map((post) => (
           <BlogCard key={post.id} post={post} locale={locale as Locale} />

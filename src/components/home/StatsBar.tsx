@@ -44,12 +44,12 @@ export default function StatsBar() {
   const t = useTranslations("stats");
 
   return (
-    <section className="bg-gradient-to-r from-dark-blue to-blue py-12">
-      <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 text-center text-white md:grid-cols-4 lg:px-8">
+    <section className="ui-hero py-12">
+      <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 text-center text-contrast md:grid-cols-4 lg:px-8">
         {STATS.map((item) => (
           <div key={item.key}>
             <Counter end={item.value} suffix={item.suffix} />
-            <p className="mt-2 text-sm text-white/80">{t(item.key as never)}</p>
+            <p className="mt-2 text-sm text-contrast-muted">{t(item.key as never)}</p>
           </div>
         ))}
       </div>

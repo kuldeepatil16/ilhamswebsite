@@ -26,7 +26,7 @@ export default function AdminLogin() {
       <input type="email" name="email" required placeholder="Email" className="ui-input" />
       <input type="password" name="password" required placeholder="Password" className="ui-input" />
       <button className="ui-btn-primary px-4 py-2 text-sm" type="submit">Sign in</button>
-      {error ? <p className="text-sm text-red-600">{error}</p> : null}
+      {error ? <p className="text-sm text-danger">{error}</p> : null}
     </form>
   );
 }

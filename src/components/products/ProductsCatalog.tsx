@@ -28,11 +28,14 @@ export default function ProductsCatalog() {
   );
 
   return (
-    <div className="mx-auto grid max-w-7xl gap-6 px-4 py-10 lg:grid-cols-[280px_1fr] lg:px-8">
+    <div className="ui-page mx-auto grid max-w-7xl gap-6 px-4 py-10 lg:grid-cols-[280px_1fr] lg:px-8">
       <ProductFilter category={category} brand={brand} onCategory={setCategory} onBrand={setBrand} />
-      <section>
-        <h1 className="ui-text mb-4 text-3xl font-extrabold">{t("title")}</h1>
-        {loading ? <p>{t("noProducts")}</p> : null}
+      <section className="space-y-4">
+        <div className="ui-surface rounded-xl p-5">
+          <h1 className="ui-text text-3xl font-extrabold">{t("title")}</h1>
+          <p className="ui-muted mt-2">{t("subtitle")}</p>
+        </div>
+        {loading ? <p className="ui-muted">{t("noProducts")}</p> : null}
         <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
           {filtered.map((product) => (
             <div key={product.id}>

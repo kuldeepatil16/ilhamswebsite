@@ -33,7 +33,7 @@ export default function PartQuoteForm({ part, onClose }: { part: SparePart | nul
   }
 
   return (
-    <div className="fixed inset-0 z-50 grid place-items-center bg-black/50 p-4" onClick={onClose}>
+    <div className="fixed inset-0 z-50 grid place-items-center bg-overlay/60 p-4 backdrop-blur-sm" onClick={onClose}>
       <div className="ui-surface w-full max-w-md rounded-xl p-5" onClick={(e) => e.stopPropagation()}>
         <h3 className="mb-3 text-lg font-bold">{t("title")}</h3>
         <form action={onSubmit} className="space-y-3">

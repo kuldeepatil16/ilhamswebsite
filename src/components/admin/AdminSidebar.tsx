@@ -31,7 +31,7 @@ export default function AdminSidebar() {
     <aside className="ui-surface w-full rounded-xl p-4 lg:w-64">
       <nav className="space-y-1">
         {links.map(([path, label]) => (
-          <Link key={path} href={`/${locale}/admin${path}`} className="ui-muted hover:bg-slate-50 block rounded-lg px-3 py-2 text-sm">
+          <Link key={path} href={`/${locale}/admin${path}`} className="ui-muted hover:bg-muted block rounded-lg px-3 py-2 text-sm hover:text-foreground">
             {label}
           </Link>
         ))}

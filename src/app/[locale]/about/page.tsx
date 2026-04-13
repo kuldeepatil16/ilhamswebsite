@@ -14,10 +14,10 @@ export default async function AboutPage() {
 
   return (
     <div className="ui-page">
-      <section className="bg-gradient-to-br from-navy via-dark-blue to-blue py-20 text-white">
+      <section className="ui-hero py-20">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <h1 className="text-4xl font-extrabold">{t("title")}</h1>
-          <p className="mt-3 max-w-3xl text-white/75">{t("story.content")}</p>
+          <p className="mt-3 max-w-3xl text-contrast-muted">{t("story.content")}</p>
         </div>
       </section>
       <section className="mx-auto grid max-w-7xl gap-5 px-4 py-12 lg:grid-cols-2 lg:px-8">
@@ -34,7 +34,7 @@ export default async function AboutPage() {
         <h3 className="ui-text mb-3 text-xl font-bold">{t("values.title")}</h3>
         <div className="flex flex-wrap gap-2">
           {values.map((value) => (
-            <span key={value} className="rounded-full bg-ice px-4 py-2 text-sm ui-text">{value}</span>
+            <span key={value} className="rounded-full bg-muted px-4 py-2 text-sm ui-text">{value}</span>
           ))}
         </div>
       </section>

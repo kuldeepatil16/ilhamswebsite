@@ -58,12 +58,12 @@ export default function ContactForm({ sourcePage = "contact" }: { sourcePage?: s
         <div>
           <label className="ui-text mb-1 block text-sm font-medium">{t("name")}</label>
           <input {...register("name")} className="ui-input" />
-          {errors.name ? <p className="mt-1 text-xs text-red-600">{t("validation.nameRequired")}</p> : null}
+          {errors.name ? <p className="mt-1 text-xs text-danger">{t("validation.nameRequired")}</p> : null}
         </div>
         <div>
           <label className="ui-text mb-1 block text-sm font-medium">{t("phone")}</label>
           <input {...register("phone")} className="ui-input" />
-          {errors.phone ? <p className="mt-1 text-xs text-red-600">{t("validation.phoneRequired")}</p> : null}
+          {errors.phone ? <p className="mt-1 text-xs text-danger">{t("validation.phoneRequired")}</p> : null}
         </div>
       </div>
 

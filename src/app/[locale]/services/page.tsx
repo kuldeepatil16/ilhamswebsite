@@ -16,10 +16,10 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
 
   return (
     <div className="ui-page">
-      <section className="bg-gradient-to-br from-navy via-dark-blue to-blue py-20 text-white">
+      <section className="ui-hero py-20">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <h1 className="text-4xl font-extrabold">{t("title")}</h1>
-          <p className="mt-3 text-white/75">{t("subtitle")}</p>
+          <p className="mt-3 text-contrast-muted">{t("subtitle")}</p>
         </div>
       </section>
 

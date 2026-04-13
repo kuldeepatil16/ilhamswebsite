@@ -3,5 +3,9 @@
 import ReactMarkdown from "react-markdown";
 
 export default function BlogContent({ content }: { content: string }) {
-  return <article className="prose max-w-none"><ReactMarkdown>{content}</ReactMarkdown></article>;
+  return (
+    <article className="prose prose-slate max-w-none prose-headings:text-foreground prose-p:text-foreground/90 prose-a:text-blue dark:prose-invert">
+      <ReactMarkdown>{content}</ReactMarkdown>
+    </article>
+  );
 }

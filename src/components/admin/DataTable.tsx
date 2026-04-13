@@ -9,7 +9,7 @@ export default function DataTable<T extends Record<string, unknown>>({ rows, col
   return (
     <div className="ui-surface overflow-x-auto rounded-xl">
       <table className="min-w-full text-sm">
-        <thead className="bg-slate-50">
+        <thead className="bg-muted">
           <tr>
             {columns.map((column) => (
               <th key={String(column.key)} className="ui-text px-3 py-2 text-left font-semibold">

@@ -25,6 +25,10 @@ export default async function AdminProductsPage() {
 
   return (
     <div className="space-y-5">
+      <div>
+        <h1 className="ui-text text-3xl font-extrabold">Products</h1>
+        <p className="ui-muted mt-2">Create and review published product entries.</p>
+      </div>
       <form action={addProduct}>
         <ProductForm actionLabel="Save" />
       </form>

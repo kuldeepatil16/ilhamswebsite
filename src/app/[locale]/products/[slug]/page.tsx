@@ -26,7 +26,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
   const product = data as Product | null;
 
   if (!product) {
-    return <div className="mx-auto max-w-5xl px-4 py-16">Not found</div>;
+    return <div className="ui-page mx-auto max-w-5xl px-4 py-16">Not found</div>;
   }
 
   const { data: related } = await supabase
@@ -37,16 +37,16 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
     .limit(3);
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-10 lg:px-8">
+    <div className="ui-page mx-auto max-w-7xl px-4 py-10 lg:px-8">
       <div className="grid gap-6 lg:grid-cols-2">
         <img src={product.image_url || "/images/og-image.jpg"} alt={getLocalizedField(product, "name", typedLocale)} className="ui-border w-full rounded-xl object-cover" />
-        <div>
+        <div className="ui-surface rounded-xl p-6">
           <h1 className="ui-text text-3xl font-extrabold">{getLocalizedField(product, "name", typedLocale)}</h1>
           <p className="ui-muted mt-3">{getLocalizedField(product, "description", typedLocale)}</p>
           <p className="mt-4 text-2xl font-black text-accent">{product.price_mad ? formatPrice(product.price_mad, typedLocale) : "MAD"}</p>
           <a
             href={getWhatsAppLink("212663572130", `Bonjour, je veux un devis pour ${product.name_fr}`)}
-            className="bg-whatsapp mt-5 inline-block rounded-full px-6 py-3 font-bold text-white"
+            className="bg-whatsapp mt-5 inline-block rounded-full px-6 py-3 font-bold text-contrast"
           >
             WhatsApp
           </a>
