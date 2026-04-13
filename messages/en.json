@@ -155,7 +155,9 @@
   },
   "brands": {
     "title": "Our Trusted Partners",
-    "subtitle": "Authorized distributor and service center for the world's leading brands"
+    "subtitle": "Authorized distributor and service center for the world's leading brands",
+    "officialPartner": "Official partner",
+    "capabilities": "HVAC, refrigeration and appliances"
   },
   "products": {
     "title": "Our Products",
@@ -400,10 +402,12 @@
     },
     "dashboard": {
       "title": "Dashboard",
+      "subtitle": "Track leads, service requests, content, and catalog health at a glance.",
       "newLeads": "New Leads",
       "pendingRequests": "Pending Requests",
       "totalProducts": "Total Products",
       "totalParts": "Total Parts",
+      "totalBlogPosts": "Published Posts",
       "recentLeads": "Recent Leads",
       "recentRequests": "Recent Requests"
     },
@@ -449,6 +453,28 @@
       "publish": "Publish",
       "unpublish": "Unpublish",
       "delete": "Delete"
+    },
+    "form": {
+      "slug": "Slug",
+      "brand": "Brand",
+      "category": "Category",
+      "priceMad": "Price in MAD",
+      "nameFr": "French name",
+      "descriptionFr": "French description",
+      "imageUrl": "Main image URL",
+      "galleryUrls": "Gallery image URLs",
+      "metaTitleFr": "French meta title",
+      "metaDescriptionFr": "French meta description",
+      "sortOrder": "Sort order",
+      "active": "Active",
+      "featured": "Featured",
+      "partNumber": "Part number",
+      "compatibleBrands": "Compatible brands",
+      "compatibleCategories": "Compatible categories",
+      "inStock": "In stock",
+      "titleFr": "French title",
+      "excerptFr": "French excerpt",
+      "contentFr": "French content"
     },
     "nav": {
       "dashboard": "Dashboard",

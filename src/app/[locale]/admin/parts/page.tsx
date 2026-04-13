@@ -1,39 +1,137 @@
+import Link from "next/link";
 import { revalidatePath } from "next/cache";
-import DataTable from "@/components/admin/DataTable";
+import { getTranslations } from "next-intl/server";
 import PartForm from "@/components/admin/PartForm";
 import { createAdminClient } from "@/lib/supabase/admin";
-import { sanitizeText } from "@/lib/utils";
+import { sanitizeOptionalText, sanitizeText, slugify } from "@/lib/utils";
+import type { SparePart } from "@/types";
 
-async function addPart(formData: FormData) {
-  "use server";
-  const admin = createAdminClient();
-  await admin.from("spare_parts").insert({
-    slug: sanitizeText(formData.get("slug")),
-    name_fr: sanitizeText(formData.get("name_fr")),
-    part_number: sanitizeText(formData.get("part_number")),
-    compatible_brands: ["whirlpool"],
-    compatible_categories: ["climatisation"],
-    price_mad: Number(formData.get("price_mad") || 0),
-    is_active: true,
-    in_stock: true,
-  });
-  revalidatePath("/fr/admin/parts");
+function parseList(value: FormDataEntryValue | null) {
+  return String(value || "")
+    .split(/[\n,]/)
+    .map((item) => sanitizeText(item))
+    .filter(Boolean);
 }
 
-export default async function AdminPartsPage() {
+export default async function AdminPartsPage({
+  params,
+  searchParams,
+}: {
+  params: Promise<{ locale: string }>;
+  searchParams?: Promise<{ edit?: string }>;
+}) {
+  const { locale } = await params;
+  const { edit } = (await searchParams) || {};
+  const t = await getTranslations({ locale, namespace: "admin.parts" });
+  const tc = await getTranslations({ locale, namespace: "admin" });
   const admin = createAdminClient();
-  const { data } = await admin.from("spare_parts").select("slug,part_number,name_fr,price_mad").order("created_at", { ascending: false });
+
+  async function upsertPart(formData: FormData) {
+    "use server";
+    const admin = createAdminClient();
+    const id = String(formData.get("id") || "").trim();
+    const payload = {
+      slug: sanitizeText(formData.get("slug")) || slugify(String(formData.get("name_fr") || "")),
+      part_number: sanitizeOptionalText(formData.get("part_number")),
+      name_fr: sanitizeText(formData.get("name_fr")),
+      description_fr: sanitizeOptionalText(formData.get("description_fr")),
+      price_mad: Number(formData.get("price_mad") || 0),
+      image_url: sanitizeOptionalText(formData.get("image_url")),
+      compatible_brands: parseList(formData.get("compatible_brands")).map((brand) => brand.toLowerCase()),
+      compatible_categories: parseList(formData.get("compatible_categories")).map((category) => category.toLowerCase()),
+      sort_order: Number(formData.get("sort_order") || 0),
+      in_stock: formData.get("in_stock") === "on",
+      is_active: formData.get("is_active") === "on",
+    };
+
+    if (id) {
+      await admin.from("spare_parts").update(payload).eq("id", id);
+    } else {
+      await admin.from("spare_parts").insert(payload);
+    }
+
+    revalidatePath(`/${locale}/admin/parts`);
+  }
+
+  async function deletePart(formData: FormData) {
+    "use server";
+    const admin = createAdminClient();
+    const id = String(formData.get("id") || "").trim();
+    if (!id) return;
+    await admin.from("spare_parts").delete().eq("id", id);
+    revalidatePath(`/${locale}/admin/parts`);
+  }
+
+  const [{ data }, { data: editRow }] = await Promise.all([
+    admin.from("spare_parts").select("id,slug,part_number,name_fr,description_fr,price_mad,image_url,compatible_brands,compatible_categories,sort_order,in_stock,is_active").order("created_at", { ascending: false }),
+    edit
+      ? admin
+          .from("spare_parts")
+          .select("id,slug,part_number,name_fr,description_fr,price_mad,image_url,compatible_brands,compatible_categories,sort_order,in_stock,is_active")
+          .eq("id", edit)
+          .maybeSingle()
+      : Promise.resolve({ data: null }),
+  ]);
+
+  const part = editRow as SparePart | null;
 
   return (
-    <div className="space-y-5">
-      <div>
-        <h1 className="ui-text text-3xl font-extrabold">Parts</h1>
-        <p className="ui-muted mt-2">Manage spare parts inventory and compatibility data.</p>
+    <div className="space-y-6">
+      <div className="flex flex-wrap items-start justify-between gap-4">
+        <div>
+          <h1 className="ui-text text-3xl font-extrabold">{t("title")}</h1>
+          <p className="ui-muted mt-2">Full CRUD for spare parts with compatibility data and stock control.</p>
+        </div>
+        {edit ? (
+          <Link href={`/${locale}/admin/parts`} className="ui-btn-outline px-4 py-2 text-sm">
+            {tc("cancel")}
+          </Link>
+        ) : null}
       </div>
-      <form action={addPart}>
-        <PartForm actionLabel="Save" />
+
+      <form action={upsertPart}>
+        <PartForm part={part || undefined} actionLabel={part ? t("edit") : t("add")} />
       </form>
-      <DataTable rows={(data as Record<string, unknown>[]) || []} columns={[{ key: "slug", label: "Slug" }, { key: "part_number", label: "Part #" }, { key: "name_fr", label: "Name" }, { key: "price_mad", label: "Price" }]} />
+
+      <section className="ui-surface overflow-hidden rounded-2xl border border-border/80 shadow-card">
+        <table className="min-w-full text-sm">
+          <thead className="bg-muted/70">
+            <tr>
+              {["Slug", "Reference", "Name", "Price", "Stock", "Actions"].map((label) => (
+                <th key={label} className="px-4 py-3 text-left font-semibold text-foreground">
+                  {label}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {(data as SparePart[] | null)?.map((row) => (
+              <tr key={row.id} className="border-t border-border/70">
+                <td className="px-4 py-3 text-muted-foreground">{row.slug}</td>
+                <td className="px-4 py-3 text-muted-foreground">{row.part_number}</td>
+                <td className="px-4 py-3 text-muted-foreground">{row.name_fr}</td>
+                <td className="px-4 py-3 text-muted-foreground">{row.price_mad ?? 0}</td>
+                <td className="px-4 py-3 text-muted-foreground">
+                  {row.in_stock ? "In stock" : "On order"} {row.is_active ? "· Active" : "· Archived"}
+                </td>
+                <td className="px-4 py-3">
+                  <div className="flex flex-wrap gap-2">
+                    <Link href={`/${locale}/admin/parts?edit=${row.id}`} className="ui-btn-outline px-3 py-1.5 text-xs">
+                      {t("edit")}
+                    </Link>
+                    <form action={deletePart}>
+                      <input type="hidden" name="id" value={row.id} />
+                      <button className="ui-btn-primary px-3 py-1.5 text-xs" type="submit">
+                        {t("delete")}
+                      </button>
+                    </form>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </section>
     </div>
   );
 }

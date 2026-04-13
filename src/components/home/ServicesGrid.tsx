@@ -23,7 +23,7 @@ export default function ServicesGrid() {
             const Icon = icons[index];
             return (
               <article key={index} className="ui-surface card-hover rounded-xl p-6 shadow-card">
-                <Icon className="mb-4 text-blue" />
+                <Icon className="mb-4 text-accent" />
                 <h3 className="ui-text mb-2 text-lg font-bold">{t(`items.${index}.title`)}</h3>
                 <p className="ui-muted mb-4 text-sm">{t(`items.${index}.desc`)}</p>
                 <Link href={`/${locale}/services`} className="ui-link text-sm font-semibold">

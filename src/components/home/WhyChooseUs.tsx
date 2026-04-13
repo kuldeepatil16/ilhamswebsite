@@ -18,7 +18,7 @@ export default function WhyChooseUs() {
             const Icon = icons[idx];
             return (
               <article key={idx} className="ui-surface card-hover rounded-xl p-6 text-center shadow-card">
-                <Icon className="mx-auto mb-3 text-blue" />
+                <Icon className="mx-auto mb-3 text-accent" />
                 <h3 className="ui-text mb-2 font-bold">{t(`items.${idx}.title`)}</h3>
                 <p className="ui-muted text-sm">{t(`items.${idx}.desc`)}</p>
               </article>

@@ -400,10 +400,12 @@
     },
     "dashboard": {
       "title": "لوحة التحكم",
+      "subtitle": "تابع العملاء المحتملين وطلبات الخدمة والمحتوى وحالة الكتالوج بسرعة.",
       "newLeads": "عملاء محتملون جدد",
       "pendingRequests": "طلبات معلقة",
       "totalProducts": "إجمالي المنتجات",
       "totalParts": "إجمالي القطع",
+      "totalBlogPosts": "المنشورات المنشورة",
       "recentLeads": "العملاء المحتملون الأخيرون",
       "recentRequests": "الطلبات الأخيرة"
     },
@@ -449,6 +451,28 @@
       "publish": "نشر",
       "unpublish": "إلغاء النشر",
       "delete": "حذف"
+    },
+    "form": {
+      "slug": "المعرف",
+      "brand": "العلامة التجارية",
+      "category": "الفئة",
+      "priceMad": "السعر بالدرهم",
+      "nameFr": "الاسم بالفرنسية",
+      "descriptionFr": "الوصف بالفرنسية",
+      "imageUrl": "رابط الصورة الرئيسية",
+      "galleryUrls": "روابط صور المعرض",
+      "metaTitleFr": "العنوان التعريفي بالفرنسية",
+      "metaDescriptionFr": "الوصف التعريفي بالفرنسية",
+      "sortOrder": "الترتيب",
+      "active": "نشط",
+      "featured": "مميز",
+      "partNumber": "رقم القطعة",
+      "compatibleBrands": "العلامات التجارية المتوافقة",
+      "compatibleCategories": "الفئات المتوافقة",
+      "inStock": "متوفر",
+      "titleFr": "العنوان بالفرنسية",
+      "excerptFr": "مقتطف بالفرنسية",
+      "contentFr": "المحتوى بالفرنسية"
     },
     "nav": {
       "dashboard": "لوحة التحكم",

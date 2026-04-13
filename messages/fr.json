@@ -400,10 +400,12 @@
     },
     "dashboard": {
       "title": "Tableau de Bord",
+      "subtitle": "Suivez les prospects, les demandes de service, le contenu et l'Ã©tat du catalogue en un coup d'oeil.",
       "newLeads": "Nouveaux Prospects",
       "pendingRequests": "Demandes en Attente",
       "totalProducts": "Total Produits",
       "totalParts": "Total Pièces",
+      "totalBlogPosts": "Articles publiés",
       "recentLeads": "Prospects Récents",
       "recentRequests": "Demandes Récentes"
     },
@@ -449,6 +451,28 @@
       "publish": "Publier",
       "unpublish": "Dépublier",
       "delete": "Supprimer"
+    },
+    "form": {
+      "slug": "Slug",
+      "brand": "Marque",
+      "category": "CatÃ©gorie",
+      "priceMad": "Prix en MAD",
+      "nameFr": "Nom en franÃ§ais",
+      "descriptionFr": "Description en franÃ§ais",
+      "imageUrl": "URL de l'image principale",
+      "galleryUrls": "URLs des images de la galerie",
+      "metaTitleFr": "Meta title franÃ§ais",
+      "metaDescriptionFr": "Meta description franÃ§ais",
+      "sortOrder": "Ordre",
+      "active": "Actif",
+      "featured": "Mis en avant",
+      "partNumber": "RÃ©fÃ©rence",
+      "compatibleBrands": "Marques compatibles",
+      "compatibleCategories": "CatÃ©gories compatibles",
+      "inStock": "En stock",
+      "titleFr": "Titre en franÃ§ais",
+      "excerptFr": "Extrait en franÃ§ais",
+      "contentFr": "Contenu en franÃ§ais"
     },
     "nav": {
       "dashboard": "Tableau de Bord",
