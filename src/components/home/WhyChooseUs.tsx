@@ -18,19 +18,19 @@ export default function WhyChooseUs() {
     <section className="ui-page py-20">
       <div className="mx-auto grid max-w-7xl gap-6 px-4 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
         <div className="ui-hero-shell ui-hero-ring rounded-[2rem] p-8 md:p-10">
-          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-secondary-container">Why Vereen Electro Froid</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-muted-foreground">Why Vereen Electro Froid</p>
           <h2 className="mt-3 text-3xl font-black tracking-tight text-contrast md:text-5xl font-manrope">{t("title")}</h2>
           <p className="mt-4 max-w-xl text-base leading-8 text-contrast-muted">{t("subtitle")}</p>
 
           <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
-            {[
+            {[ 
               { value: "10+", label: "Years" },
               { value: "2000+", label: "Clients" },
               { value: "8", label: "Brands" },
               { value: "24h", label: "Response" },
             ].map((item) => (
               <div key={item.label} className="ui-hero-chip rounded-[1.4rem] p-4">
-                <div className="text-3xl font-black text-secondary-container font-manrope">{item.value}</div>
+                <div className="text-3xl font-black text-foreground font-manrope">{item.value}</div>
                 <div className="mt-2 text-xs font-semibold uppercase tracking-[0.2em] text-contrast-muted">{item.label}</div>
               </div>
             ))}

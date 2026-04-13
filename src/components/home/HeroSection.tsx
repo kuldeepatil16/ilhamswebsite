@@ -58,7 +58,7 @@ export default function HeroSection() {
                 key={key}
                 className="ui-hero-chip inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-semibold"
               >
-                <Icon size={14} className="text-secondary-container" />
+                <Icon size={14} className="text-accent" />
                 {tp(key as never)}
               </span>
             ))}

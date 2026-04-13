@@ -67,7 +67,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
               <div className="grid gap-4 md:grid-cols-[0.98fr_1.02fr]">
                 <div className="ui-hero-chip rounded-[1.6rem] p-5">
                   <div className="mb-5 grid h-14 w-14 place-items-center rounded-2xl bg-[rgb(var(--contrast)/0.12)]">
-                    <MapPin className="text-secondary-container" size={24} />
+                    <MapPin className="text-accent" size={24} />
                   </div>
                   <p className="text-xs font-semibold uppercase tracking-[0.22em] text-contrast-muted">Visit us</p>
                   <p className="mt-2 text-2xl font-black leading-tight text-contrast font-manrope">Al Hoceima, Morocco</p>
@@ -126,7 +126,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
             </div>
 
             <div className="ui-hero-shell ui-hero-ring rounded-[2rem] p-6 md:p-8">
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-secondary-container">Response route</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-muted-foreground">Response route</p>
               <h2 className="mt-3 text-3xl font-black tracking-tight md:text-4xl font-manrope">Fast support, original parts, and service follow-up</h2>
               <p className="mt-4 leading-8 text-contrast-muted">
                 Send the equipment type, issue details, and location. The team will route you to the correct service path and next steps.

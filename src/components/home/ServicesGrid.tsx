@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import type { Locale } from "@/types";
 import type { Product, SparePart } from "@/types";
 import { getLocalizedField } from "@/lib/utils";
+import { getPartImageUrl, getProductImageUrl } from "@/lib/visuals";
 
 const iconMap = [Snowflake, Wind, SunMedium, Wrench, Building2, ShieldCheck];
 
@@ -29,31 +30,62 @@ export default function ServicesGrid() {
   }, []);
 
   const items = t.raw("items") as Array<{ title: string; desc: string; includes: string[] }>;
+  const refrigerationProduct = featuredProducts.find((product) => product.category === "refrigeration") || featuredProducts[0];
+  const airProduct =
+    featuredProducts.find((product) => product.brand === "Samsung" && product.category === "climatisation") ||
+    featuredProducts.find((product) => product.category === "climatisation") ||
+    featuredProducts[1];
+  const solarProduct = featuredProducts.find((product) => product.category === "solar") || featuredProducts[2];
+  const sparePart = featuredParts[0];
+  const hvacProduct =
+    featuredProducts.find((product) => product.brand === "Carrier" || product.brand === "Daikin") ||
+    featuredProducts.find((product) => product.category === "climatisation" && product.brand !== airProduct?.brand) ||
+    featuredProducts[3];
+  const applianceProduct =
+    featuredProducts.find((product) => product.brand === "Bosch" && product.category === "dishwasher") ||
+    featuredProducts.find((product) => product.category === "washing_machine") ||
+    featuredProducts[4];
+
   const serviceVisuals = [
     {
-      label: getLocalizedField(featuredProducts.find((product) => product.category === "refrigeration") || {}, "name", locale),
-      image: featuredProducts.find((product) => product.category === "refrigeration")?.image_url,
+      label: getLocalizedField(refrigerationProduct || {}, "name", locale),
+      image: refrigerationProduct ? getProductImageUrl(refrigerationProduct, "service-0") : "/images/og-image.jpg",
+      brand: refrigerationProduct?.brand,
     },
     {
-      label: getLocalizedField(featuredProducts.find((product) => product.brand === "Samsung" && product.category === "climatisation") || {}, "name", locale),
-      image: featuredProducts.find((product) => product.brand === "Samsung" && product.category === "climatisation")?.image_url,
+      label: getLocalizedField(airProduct || {}, "name", locale),
+      image: airProduct ? getProductImageUrl(airProduct, "service-1") : "/images/og-image.jpg",
+      brand: airProduct?.brand,
     },
     {
-      label: getLocalizedField(featuredProducts.find((product) => product.category === "solar") || {}, "name", locale),
-      image: featuredProducts.find((product) => product.category === "solar")?.image_url,
+      label: getLocalizedField(solarProduct || {}, "name", locale),
+      image: solarProduct ? getProductImageUrl(solarProduct, "service-2") : "/images/og-image.jpg",
+      brand: solarProduct?.brand,
     },
     {
-      label: featuredParts[0] ? getLocalizedField(featuredParts[0], "name", locale) : "",
-      image: featuredParts[0]?.image_url,
+      label: sparePart ? getLocalizedField(sparePart, "name", locale) : "",
+      image: sparePart ? getPartImageUrl(sparePart, "service-3") : "/images/og-image.jpg",
+      brand: sparePart?.compatible_brands[0],
     },
     {
-      label: getLocalizedField(featuredProducts.find((product) => product.brand === "Carrier" || product.brand === "Daikin") || {}, "name", locale),
-      image: featuredProducts.find((product) => product.brand === "Carrier" || product.brand === "Daikin")?.image_url,
+      label: getLocalizedField(hvacProduct || {}, "name", locale),
+      image: hvacProduct ? getProductImageUrl(hvacProduct, "service-4") : "/images/og-image.jpg",
+      brand: hvacProduct?.brand,
     },
     {
-      label: getLocalizedField(featuredProducts.find((product) => product.brand === "Bosch" && product.category === "dishwasher") || {}, "name", locale),
-      image: featuredProducts.find((product) => product.brand === "Bosch" && product.category === "dishwasher")?.image_url,
+      label: getLocalizedField(applianceProduct || {}, "name", locale),
+      image: applianceProduct ? getProductImageUrl(applianceProduct, "service-5") : "/images/og-image.jpg",
+      brand: applianceProduct?.brand,
     },
+  ];
+
+  const spans = [
+    "xl:col-span-3 xl:row-span-2",
+    "xl:col-span-3",
+    "xl:col-span-2",
+    "xl:col-span-2",
+    "xl:col-span-2",
+    "xl:col-span-6",
   ];
 
   return (
@@ -70,7 +102,7 @@ export default function ServicesGrid() {
           </div>
         </div>
 
-        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-6 xl:auto-rows-[220px]">
           {items.map((item, index) => {
             const Icon = iconMap[index];
             const visual = serviceVisuals[index];
@@ -79,15 +111,15 @@ export default function ServicesGrid() {
             return (
               <article
                 key={index}
-                className="group overflow-hidden rounded-[1.75rem] border border-border/70 bg-surface-container-lowest shadow-card transition duration-300 hover:-translate-y-1"
+                className={`group overflow-hidden rounded-[1.75rem] border border-border/70 bg-surface-container-lowest shadow-card transition duration-300 hover:-translate-y-1 ${spans[index] || "xl:col-span-2"}`}
               >
-                <div className="relative aspect-[16/10] overflow-hidden bg-surface-container">
+                <div className={`relative overflow-hidden bg-surface-container ${index === 0 ? "h-full" : index === 5 ? "aspect-[16/7]" : "aspect-[16/10]"}`}>
                   <img
                     src={productImage}
                     alt={visualLabel || item.title}
                     className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/85 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/10 to-transparent" />
                   <div className="absolute left-4 top-4 flex items-center gap-2 rounded-full bg-background/90 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-foreground shadow-sm backdrop-blur">
                     <Icon size={14} className="text-accent" />
                     {item.title}
@@ -97,11 +129,19 @@ export default function ServicesGrid() {
                       {visualLabel}
                     </div>
                   ) : null}
+                  {visual?.brand ? (
+                    <div className="absolute right-4 top-4 rounded-full bg-foreground/90 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-background shadow-sm backdrop-blur">
+                      {visual.brand}
+                    </div>
+                  ) : null}
                 </div>
 
-                <div className="space-y-5 p-6">
+                <div className={`space-y-5 p-6 ${index === 0 || index === 5 ? "md:p-7" : ""}`}>
                   <div>
-                    <h3 className="text-xl font-black tracking-tight text-foreground font-manrope">{item.title}</h3>
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+                      {visual?.brand || "Selected from the catalog"}
+                    </p>
+                    <h3 className="mt-2 text-xl font-black tracking-tight text-foreground font-manrope">{item.title}</h3>
                     <p className="mt-3 text-sm leading-7 text-muted-foreground md:text-base">
                       {item.desc}
                     </p>
@@ -114,11 +154,7 @@ export default function ServicesGrid() {
                       </span>
                     ))}
                   </div>
-                  {visualLabel ? (
-                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
-                      Example: {visualLabel}
-                    </p>
-                  ) : null}
+                  {visualLabel ? <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">Example: {visualLabel}</p> : null}
                   <Link href={`/${locale}/services`} className="ui-link inline-flex items-center gap-2 text-sm font-semibold">
                     {t("learnMore")}
                     <Timer size={14} />

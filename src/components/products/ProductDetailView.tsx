@@ -6,6 +6,7 @@ import { useLocale, useTranslations } from "next-intl";
 import QuoteModal from "@/components/products/QuoteModal";
 import type { Locale, Product, QuoteItem, SparePart } from "@/types";
 import { formatPrice, getLocalizedField, getWhatsAppLink } from "@/lib/utils";
+import { getProductImageUrl, isPlaceholderImage } from "@/lib/visuals";
 
 interface ProductDetailViewProps {
   product: Product;
@@ -31,7 +32,15 @@ export default function ProductDetailView({ product, relatedProducts, compatible
   const [activeImage, setActiveImage] = useState(0);
 
   const gallery = useMemo(
-    () => [product.image_url, ...(product.gallery_urls ?? [])].filter((url): url is string => Boolean(url)),
+    () =>
+      [product.image_url, ...(product.gallery_urls ?? [])]
+        .map((url, index) => {
+          if (!url || isPlaceholderImage(url)) {
+            return getProductImageUrl(product, `detail-${index}`);
+          }
+          return url;
+        })
+        .filter((url): url is string => Boolean(url)),
     [product.gallery_urls, product.image_url]
   );
 
@@ -169,7 +178,7 @@ export default function ProductDetailView({ product, relatedProducts, compatible
         <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
           {relatedProducts.map((item) => (
             <article key={item.id} className="ui-surface overflow-hidden rounded-[1.75rem] border border-border/80 shadow-card">
-              <img src={item.image_url || "/images/og-image.jpg"} alt={getLocalizedField(item, "name", locale)} className="h-44 w-full object-cover" />
+              <img src={getProductImageUrl(item, "related")} alt={getLocalizedField(item, "name", locale)} className="h-44 w-full object-cover" />
               <div className="p-5">
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">{item.brand}</p>
                 <h3 className="mt-2 text-lg font-bold text-foreground">{getLocalizedField(item, "name", locale)}</h3>

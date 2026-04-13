@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 import type { Locale, Product } from "@/types";
 import { formatPrice, getLocalizedField } from "@/lib/utils";
+import { getProductImageUrl } from "@/lib/visuals";
 
 export default function ProductCard({ product, locale }: { product: Product; locale: Locale }) {
   const t = useTranslations("products");
@@ -13,7 +14,7 @@ export default function ProductCard({ product, locale }: { product: Product; loc
     <article className="group ui-surface card-hover overflow-hidden rounded-[1.5rem] border border-border/80 shadow-card transition duration-300">
       <div className="relative aspect-[4/3] overflow-hidden bg-muted">
         <img
-          src={product.image_url || "/images/og-image.jpg"}
+          src={getProductImageUrl(product, "catalog")}
           alt={getLocalizedField(product, "name", locale)}
           className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.04]"
         />

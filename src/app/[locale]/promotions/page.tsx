@@ -101,10 +101,10 @@ export default function PromotionsPage({
             <div className="ui-hero-surface ui-hero-ring rounded-[2rem] p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.24em] text-secondary-container">Offer ends soon</p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.24em] text-muted-foreground">Offer ends soon</p>
                   <h2 className="mt-2 text-2xl font-black text-contrast font-manrope">Summer prep event</h2>
                 </div>
-                <Timer className="text-secondary-container" />
+                <Timer className="text-accent" />
               </div>
               <div className="mt-6 grid grid-cols-4 gap-3 text-center">
                 {[
@@ -126,7 +126,7 @@ export default function PromotionsPage({
             </div>
             <div className="ui-hero-chip rounded-[1.6rem] p-5">
               <div className="flex items-center gap-3">
-                <ShieldCheck className="text-secondary-container" />
+                <ShieldCheck className="text-accent" />
                 <div>
                   <p className="text-sm font-semibold text-contrast">Authorized service center</p>
                   <p className="text-sm text-contrast-muted">Fast replies, clear pricing, and follow-up from the same technical team.</p>
@@ -195,7 +195,7 @@ export default function PromotionsPage({
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
             <div className="ui-hero-shell ui-hero-ring rounded-[2rem] p-8 md:p-10">
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-secondary-container">Platinum access</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-muted-foreground">Platinum access</p>
               <h2 className="mt-3 text-3xl font-black tracking-tight md:text-5xl font-manrope">Maintenance membership for predictable service</h2>
               <p className="mt-4 max-w-xl leading-8 text-contrast-muted">
                 A preventive maintenance circle for homes and businesses that prefer priority scheduling, original parts access, and cleaner follow-through.
@@ -264,7 +264,7 @@ export default function PromotionsPage({
           <div className="ui-hero-shell ui-hero-ring rounded-[2rem] p-8 md:p-10">
             <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-secondary-container">Support route</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-muted-foreground">Support route</p>
                 <h2 className="mt-3 text-3xl font-black tracking-tight md:text-5xl font-manrope">Need a quote, a maintenance plan, or a service call?</h2>
                 <p className="mt-4 max-w-2xl leading-8 text-contrast-muted">
                   Send the project details and our team will respond with the right route, timeline, and parts plan.

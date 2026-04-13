@@ -60,7 +60,7 @@ export default async function ProductsPage({ params }: { params: Promise<{ local
               <div className="grid gap-4 md:grid-cols-[0.98fr_1.02fr]">
                 <div className="ui-hero-chip rounded-[1.6rem] p-5">
                   <div className="mb-5 grid h-14 w-14 place-items-center rounded-2xl bg-[rgb(var(--contrast)/0.12)]">
-                    <PackageSearch className="text-secondary-container" size={24} />
+                    <PackageSearch className="text-accent" size={24} />
                   </div>
                   <p className="text-xs font-semibold uppercase tracking-[0.22em] text-contrast-muted">Catalog scope</p>
                   <p className="mt-2 text-2xl font-black leading-tight text-contrast font-manrope">Appliances, comfort systems, and project hardware.</p>

@@ -377,7 +377,7 @@ textarea::placeholder {
 }
 
 .ui-link {
-  color: var(--blue);
+  color: rgb(var(--foreground));
 }
 
 .ui-link:hover {
@@ -397,13 +397,13 @@ textarea::placeholder {
 
 .ui-btn-primary {
   border-radius: 9999px;
-  background-color: var(--blue);
-  color: rgb(var(--contrast));
+  background-color: rgb(var(--foreground));
+  color: rgb(var(--background));
   font-weight: 700;
 }
 
 .ui-btn-primary:hover {
-  background-color: var(--dark-blue);
+  background-color: rgb(var(--muted-foreground));
 }
 
 .ui-btn-outline {

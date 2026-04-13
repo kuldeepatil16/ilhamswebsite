@@ -2,16 +2,7 @@ import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import { createClient } from "@/lib/supabase/server";
 import { BRANDS } from "@/lib/constants";
-
-function getBrandLogoUrl(websiteUrl?: string | null): string | null {
-  if (!websiteUrl) return null;
-  try {
-    const hostname = new URL(websiteUrl).hostname.replace(/^www\./, "");
-    return `https://logo.clearbit.com/${hostname}`;
-  } catch {
-    return null;
-  }
-}
+import { getBrandLogoUrl } from "@/lib/visuals";
 
 export default async function BrandsSection() {
   const t = await getTranslations("brands");
@@ -45,21 +36,22 @@ export default async function BrandsSection() {
               {brands.map((brand) => (
                 <article
                   key={brand.name}
-                  className="group rounded-[1.4rem] border border-border/70 bg-surface-container-low p-4 transition duration-300 hover:-translate-y-0.5 hover:bg-surface-container"
+                  className="group overflow-hidden rounded-[1.6rem] border border-border/70 bg-surface-container-low transition duration-300 hover:-translate-y-0.5 hover:bg-surface-container"
                 >
-                  <div className="flex flex-col items-center gap-3 text-center">
-                    <div className="grid h-16 w-16 flex-none place-items-center overflow-hidden rounded-2xl bg-surface-container-highest text-sm font-black text-foreground shadow-sm">
+                  <div className="flex h-full flex-col gap-4 p-4 text-center">
+                    <div className="relative overflow-hidden rounded-[1.3rem] border border-border/60 bg-surface-container-highest p-4 shadow-sm">
                       <img
                         src={brand.logo_url || getBrandLogoUrl(brand.website_url) || "/images/logo-monogram.svg"}
                         alt={brand.name}
-                        className="h-full w-full object-contain p-1.5"
+                        className="mx-auto h-14 w-auto object-contain"
                         loading="lazy"
                       />
+                      <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-foreground/5" />
                     </div>
                     <div className="min-w-0 space-y-1">
                       <h3 className="text-base font-bold leading-tight text-foreground">{brand.name}</h3>
                       {brand.website_url ? (
-                        <Link href={brand.website_url} target="_blank" rel="noreferrer" className="ui-link text-sm font-semibold">
+                        <Link href={brand.website_url} target="_blank" rel="noreferrer" className="text-sm font-semibold text-muted-foreground transition hover:text-accent">
                           {brand.website_url.replace(/^https?:\/\//, "")}
                         </Link>
                       ) : (

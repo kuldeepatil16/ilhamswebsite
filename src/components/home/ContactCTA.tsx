@@ -23,14 +23,14 @@ export default function ContactCTA() {
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
           <div className="ui-hero-shell ui-hero-ring rounded-[2rem] p-8 md:p-10">
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-secondary-container">Contact and support</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-muted-foreground">Contact and support</p>
             <h2 className="mt-3 text-3xl font-black tracking-tight text-contrast md:text-5xl font-manrope">{t("title")}</h2>
             <p className="mt-4 max-w-xl text-base leading-8 text-contrast-muted">{t("subtitle")}</p>
 
             <div className="mt-8 space-y-3">
               {contactPoints.map(({ icon: Icon, value }, idx) => (
                 <div key={`${idx}-${value}`} className="ui-hero-chip flex items-center gap-3 rounded-[1.2rem] px-4 py-3">
-                  <Icon size={16} className="text-secondary-container" />
+                  <Icon size={16} className="text-accent" />
                   <span className="text-sm text-contrast">{idx === 3 ? t("addressFull") : value}</span>
                 </div>
               ))}
@@ -48,7 +48,7 @@ export default function ContactCTA() {
 
             <div className="ui-hero-chip mt-8 rounded-[1.4rem] p-5">
               <div className="flex items-center gap-3">
-                <ShieldCheck className="text-secondary-container" />
+                <ShieldCheck className="text-accent" />
                 <div>
                   <p className="text-sm font-semibold text-contrast">Authorized service center</p>
                   <p className="text-sm text-contrast-muted">Fast replies, clear pricing, and follow-up from the same technical team.</p>

@@ -134,7 +134,7 @@ export default function AboutPage({
             </article>
             <article className="rounded-[1.6rem] border border-border bg-surface-container-low p-6">
               <div className="mb-5 grid h-14 w-14 place-items-center rounded-2xl bg-surface">
-                <Users2 className="text-secondary-container" />
+                <Users2 className="text-accent" />
               </div>
               <h2 className="text-2xl font-bold text-foreground">Coverage</h2>
               <p className="mt-3 leading-8 text-muted-foreground">
@@ -225,7 +225,7 @@ export default function AboutPage({
       <section className="ui-page py-20">
         <div className="mx-auto grid max-w-7xl gap-6 px-4 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
           <div className="ui-hero-shell ui-hero-ring rounded-[2rem] p-8 md:p-10">
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-secondary-container">Core philosophy</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-muted-foreground">Core philosophy</p>
             <h2 className="mt-3 text-3xl font-black tracking-tight md:text-5xl font-manrope">A company built around trust, precision, and continuity.</h2>
             <p className="mt-4 max-w-xl leading-8 text-contrast-muted">
               From installation to preventive maintenance, every service is designed to keep the support chain simple and the operating environment stable.

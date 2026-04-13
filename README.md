@@ -95,3 +95,4 @@ npm run build
 - The standalone `vereen_electro_froid_website.jsx` file is a reference artifact.
 - The production app lives in `src/`.
 - Supabase live data should be treated as the source of truth for catalog and content data after seeding.
+- Keep the existing brand language, but make the product/service/partner imagery editorial and data-driven instead of repeating the same card shapes and design.

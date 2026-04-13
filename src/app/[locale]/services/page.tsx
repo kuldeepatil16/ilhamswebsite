@@ -56,7 +56,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
             <div className="ui-hero-surface ui-hero-ring rounded-[2rem] p-5">
               <div className="grid gap-4 md:grid-cols-[0.94fr_1.06fr]">
                 <div className="ui-hero-chip rounded-[1.6rem] p-5">
-                  <p className="text-xs font-semibold uppercase tracking-[0.24em] text-secondary-container">Priority support</p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.24em] text-muted-foreground">Priority support</p>
                   <h2 className="mt-3 text-2xl font-black text-contrast font-manrope">Installation, maintenance, repair, and sourcing.</h2>
                   <p className="mt-3 text-sm leading-6 text-contrast-muted">
                     Complete support for HVAC, refrigeration, solar, and appliances under one team.
@@ -121,7 +121,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
           <div className="ui-hero-shell ui-hero-ring rounded-[2rem] p-8 md:p-10">
             <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-secondary-container">Support route</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-muted-foreground">Support route</p>
                 <h2 className="mt-3 text-3xl font-black tracking-tight md:text-5xl font-manrope">Need a system review, a quote, or a seasonal check?</h2>
                 <p className="mt-4 max-w-2xl text-base leading-8 text-contrast-muted">
                   Send the project details and our team will respond with the right route, timeline, and parts plan.
