@@ -61,7 +61,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-border py-4 text-center text-xs text-muted-foreground">
-        Â© {new Date().getFullYear()} {COMPANY.name}. {t("footer.rights")}
+        © {new Date().getFullYear()} {COMPANY.name}. {t("footer.rights")}
       </div>
     </footer>
   );

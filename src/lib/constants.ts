@@ -66,7 +66,7 @@ export const STATS = [
 
 export const WHATSAPP_DEFAULT_MESSAGE = {
   fr: "Bonjour, je souhaite obtenir un devis pour ",
-  ar: "?????? ???? ?????? ??? ??? ??? ??",
+  ar: "مرحباً، أود الحصول على عرض سعر لـ ",
   en: "Hello, I would like to get a quote for ",
 };
 

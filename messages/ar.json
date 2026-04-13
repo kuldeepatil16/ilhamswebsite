@@ -504,16 +504,16 @@
     "whatsappContact": "التواصل عبر واتساب",
     "logoAlt": "فيرين إلكترو فرويد - الشعار",
     "productImageAlt": "صورة",
-    "toggleTheme": "????? ??????"
+    "toggleTheme": "تبديل المظهر"
   },
   "common": {
     "learnMore": "اعرف أكثر",
     "viewAll": "عرض جميع المنتجات",
     "loading": "جارٍ التحميل...",
-    "back": "????",
+    "back": "رجوع",
     "home": "الرئيسية",
-    "submit": "?????",
-    "close": "?????"
+    "submit": "إرسال",
+    "close": "إغلاق"
   },
   "seo": {
     "defaultTitle": "فيرين إلكترو فرويد | تكييف وتبريد الحسيمة",

@@ -28,13 +28,29 @@ export default function ProductsCatalog() {
   );
 
   return (
-    <div className="ui-page mx-auto grid max-w-7xl gap-6 px-4 py-10 lg:grid-cols-[280px_1fr] lg:px-8">
-      <ProductFilter category={category} brand={brand} onCategory={setCategory} onBrand={setBrand} />
-      <section className="space-y-4">
-        <div className="ui-surface rounded-xl p-5">
-          <h1 className="ui-text text-3xl font-extrabold">{t("title")}</h1>
-          <p className="ui-muted mt-2">{t("subtitle")}</p>
+    <div className="ui-page mx-auto max-w-7xl px-4 py-10 lg:px-8">
+      <section className="grid gap-6 lg:grid-cols-[280px_1fr]">
+        <div className="ui-surface overflow-hidden rounded-[2rem] border border-border/80 p-5 shadow-card">
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-muted-foreground">Catalog</p>
+          <h1 className="mt-3 text-3xl font-black tracking-tight text-foreground">{t("title")}</h1>
+          <p className="mt-3 text-sm leading-6 text-muted-foreground">{t("subtitle")}</p>
+          <div className="mt-5 grid grid-cols-2 gap-3 text-sm">
+            <div className="rounded-2xl border border-border/70 bg-muted/40 p-3">
+              <p className="text-xs text-muted-foreground">Products</p>
+              <p className="mt-1 font-bold text-foreground">{filtered.length}</p>
+            </div>
+            <div className="rounded-2xl border border-border/70 bg-muted/40 p-3">
+              <p className="text-xs text-muted-foreground">Brands</p>
+              <p className="mt-1 font-bold text-foreground">{new Set(data.map((item) => item.brand)).size}</p>
+            </div>
+          </div>
+          <div className="mt-5 rounded-2xl border border-border/70 bg-surface-soft p-4 text-sm text-muted-foreground">
+            Installation, maintenance, spare parts and product sourcing in one place.
+          </div>
         </div>
+        <ProductFilter category={category} brand={brand} onCategory={setCategory} onBrand={setBrand} />
+      </section>
+      <section className="mt-8 space-y-4">
         {loading ? <p className="ui-muted">{t("noProducts")}</p> : null}
         <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
           {filtered.map((product) => (
