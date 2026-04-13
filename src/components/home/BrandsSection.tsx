@@ -23,7 +23,7 @@ export default async function BrandsSection() {
   return (
     <section className="ui-page py-6">
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
-        <div className="overflow-hidden rounded-[2rem] bg-surface-container-lowest/90 px-6 py-8 shadow-[0_18px_40px_rgb(var(--shadow)/0.06)] md:px-8">
+        <div className="overflow-hidden rounded-[2rem] bg-surface-container-lowest/90 px-6 py-8 shadow-card md:px-8">
           <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
             <div className="max-w-xl">
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-muted-foreground">Authorized partner network</p>
@@ -35,18 +35,18 @@ export default async function BrandsSection() {
               {brands.map((brand) => (
                 <article
                   key={brand.name}
-                  className="group rounded-[1.2rem] bg-surface-container-low p-4 transition duration-300 hover:-translate-y-0.5 hover:bg-surface-container"
+                  className="group rounded-[1.4rem] border border-border/70 bg-surface-container-low p-4 transition duration-300 hover:-translate-y-0.5 hover:bg-surface-container"
                 >
-                  <div className="flex items-center gap-3">
-                    <div className="grid h-11 w-11 flex-none place-items-center overflow-hidden rounded-2xl bg-surface-container-highest text-sm font-black text-foreground shadow-sm">
+                  <div className="flex flex-col items-center gap-3 text-center">
+                    <div className="grid h-16 w-16 flex-none place-items-center overflow-hidden rounded-2xl bg-surface-container-highest text-sm font-black text-foreground shadow-sm">
                       {brand.logo_url ? (
                         <img src={brand.logo_url} alt={brand.name} className="h-full w-full object-contain p-1.5" />
                       ) : (
                         brand.name.slice(0, 2).toUpperCase()
                       )}
                     </div>
-                    <div className="min-w-0">
-                      <h3 className="truncate text-base font-bold text-foreground">{brand.name}</h3>
+                    <div className="min-w-0 space-y-1">
+                      <h3 className="text-base font-bold leading-tight text-foreground">{brand.name}</h3>
                       {brand.website_url ? (
                         <Link href={brand.website_url} target="_blank" rel="noreferrer" className="ui-link text-sm font-semibold">
                           {brand.website_url.replace(/^https?:\/\//, "")}

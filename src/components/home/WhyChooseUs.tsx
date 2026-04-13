@@ -45,12 +45,12 @@ export default function WhyChooseUs() {
         </div>
 
         <div className="grid gap-5 sm:grid-cols-2">
-          {Array.from({ length: 4 }).map((_, idx) => {
-            const Icon = icons[idx];
-            return (
+            {Array.from({ length: 4 }).map((_, idx) => {
+              const Icon = icons[idx];
+              return (
               <article
                 key={idx}
-                className="rounded-[1.5rem] bg-surface-container-lowest p-6 shadow-[0_18px_40px_rgb(var(--shadow)/0.06)]"
+                className="rounded-[1.5rem] bg-surface-container-lowest p-6 shadow-card"
               >
                 <div className="flex items-center justify-between">
                   <div className="grid h-14 w-14 place-items-center rounded-2xl bg-muted">

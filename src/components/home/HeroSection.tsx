@@ -39,7 +39,7 @@ export default function HeroSection() {
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
               href={`/${locale}/contact`}
-              className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3.5 text-sm font-bold text-accent-foreground shadow-[0_12px_28px_rgb(var(--shadow)/0.12)] transition hover:translate-y-[-1px] hover:bg-accent-light"
+              className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3.5 text-sm font-bold text-accent-foreground shadow-card transition hover:translate-y-[-1px] hover:bg-accent-light"
             >
               {t("cta1")}
               <ArrowRight size={16} />

@@ -57,7 +57,7 @@ export default function ContactCTA() {
             </div>
           </div>
 
-          <div className="rounded-[2rem] bg-surface-container-lowest p-5 shadow-[0_20px_50px_rgb(var(--shadow)/0.08)] md:p-6">
+          <div className="rounded-[2rem] bg-surface-container-lowest p-5 shadow-card md:p-6">
             <ContactForm sourcePage="home" />
           </div>
         </div>
