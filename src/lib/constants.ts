@@ -1,6 +1,6 @@
 export const SITE_NAME = "Vereen Electro Froid";
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://vereenelectrofroid.ma";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://stevereenelectrofroid.com";
 
 export const COMPANY = {
   name: "Societe Vereen Electro Froid",

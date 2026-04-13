@@ -43,7 +43,7 @@ export default function HomePage() {
       longitude: COMPANY.geo.lng,
     },
     telephone: [COMPANY.phone1, COMPANY.phone2],
-    url: "https://vereenelectrofroid.ma",
+    url: "https://stevereenelectrofroid.com",
     email: COMPANY.email,
     sameAs: [COMPANY.instagramUrl],
     areaServed: "Morocco",

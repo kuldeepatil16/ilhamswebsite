@@ -67,7 +67,7 @@ export function isRTL(locale: Locale): boolean {
 
 export function getOgImageUrl(path?: string): string {
   const baseUrl =
-    process.env.NEXT_PUBLIC_SITE_URL || "https://vereenelectrofroid.ma";
+    process.env.NEXT_PUBLIC_SITE_URL || "https://stevereenelectrofroid.com";
   return path ? `${baseUrl}${path}` : `${baseUrl}/images/og-image.jpg`;
 }
 
