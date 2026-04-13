@@ -51,12 +51,6 @@ export default async function BrandsSection() {
                           className="mx-auto h-16 w-full max-w-[11rem] object-contain"
                           loading="lazy"
                           decoding="async"
-                          onError={(event) => {
-                            const image = event.currentTarget;
-                            if (image.src !== fallbackLogo) {
-                              image.src = fallbackLogo;
-                            }
-                          }}
                         />
                         <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-foreground/5" />
                       </div>

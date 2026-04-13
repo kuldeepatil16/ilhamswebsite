@@ -33,13 +33,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ local
         src={post.cover_image_url || getHeroVisualUrl(getLocalizedField(post, "title", locale as Locale), getLocalizedField(post, "excerpt", locale as Locale), post.slug)}
         alt={getLocalizedField(post, "title", locale as Locale)}
         className="ui-border my-5 w-full rounded-xl"
-        onError={(event) => {
-          event.currentTarget.src = getHeroVisualUrl(
-            getLocalizedField(post, "title", locale as Locale),
-            getLocalizedField(post, "excerpt", locale as Locale),
-            post.slug
-          );
-        }}
       />
       <BlogContent content={getLocalizedField(post, "content", locale as Locale)} />
     </div>
