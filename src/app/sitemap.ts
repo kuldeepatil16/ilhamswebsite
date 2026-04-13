@@ -3,7 +3,7 @@ import { LOCALES, SITE_URL } from "@/lib/constants";
 import { createAdminClient } from "@/lib/supabase/admin";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const basePages = ["", "/services", "/products", "/parts", "/about", "/contact", "/blog"];
+  const basePages = ["", "/services", "/products", "/parts", "/about", "/promotions", "/contact", "/blog"];
 
   const entries: MetadataRoute.Sitemap = [];
   for (const locale of LOCALES) {

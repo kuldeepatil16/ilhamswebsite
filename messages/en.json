@@ -37,6 +37,7 @@
     "products": "Products",
     "parts": "Parts",
     "about": "About",
+    "promotions": "Promotions",
     "contact": "Contact",
     "blog": "Blog",
     "requestQuote": "Request a Quote",
@@ -520,5 +521,72 @@
   "seo": {
     "defaultTitle": "Vereen Electro Froid | HVAC & Refrigeration Al Hoceima",
     "defaultDescription": "Professional solutions in refrigeration, air conditioning, solar energy, and spare parts in Al Hoceima, Morocco. Authorized distributor for Whirlpool, Samsung, Ariston, Bosch, AUX, LG, Daikin, Carrier."
+  },
+  "showcase": {
+    "badge": "Thermal architecture",
+    "title1": "Engineering",
+    "title2": "Atmospheres",
+    "subtitle": "High-performance refrigeration, HVAC, and solar systems built for homes, hospitality, and industrial workspaces across northern Morocco.",
+    "ctaPrimary": "Explore services",
+    "ctaSecondary": "View promotions",
+    "tickerLabel": "Trusted brands",
+    "servicesTitle": "Operational systems, not generic cards",
+    "servicesSubtitle": "A compact service orbit built around installation, maintenance, sourcing, and after-sales support.",
+    "productsTitle": "Precision line",
+    "productsSubtitle": "Featured systems selected for stability, efficiency, and real-world support.",
+    "metricsTitle": "Numbers that define reliability",
+    "teamTitle": "Engineers behind the atmosphere",
+    "teamSubtitle": "Certified technicians, project leads, and service coordinators working as one delivery system.",
+    "finalTitle": "Need a system review, a quote, or a seasonal check?",
+    "finalSubtitle": "Send the project details and our team will respond with the right route, timeline, and parts plan.",
+    "finalCta": "Start the conversation",
+    "metrics": [
+      { "value": "10+", "label": "Years active" },
+      { "value": "2000+", "label": "Projects handled" },
+      { "value": "8", "label": "Brand partners" },
+      { "value": "24h", "label": "Response target" }
+    ]
+  },
+  "promotions": {
+    "badge": "Seasonal offers",
+    "title": "Promotions and service campaigns",
+    "subtitle": "Curated offers for summer prep, maintenance plans, and premium equipment rollouts.",
+    "primaryCta": "Claim priority service",
+    "secondaryCta": "Book an audit",
+    "deadline": "Offer ends soon",
+    "sectionTitle": "Current seasonal discounts",
+    "sectionSubtitle": "Selected deals built around the highest-impact equipment categories and maintenance services.",
+    "membershipTitle": "Platinum access",
+    "membershipSubtitle": "A preventive maintenance circle for homes and businesses that prefer predictable service and priority scheduling.",
+    "auditTitle": "Complete system wellness audit",
+    "auditSubtitle": "A flat-rate inspection for HVAC, refrigeration, and solar installations.",
+    "offers": [
+      { "tag": "Save 450", "title": "Advanced multi-zone refrigeration", "price": "$2,499", "oldPrice": "$2,949", "action": "Claim offer" },
+      { "tag": "15% OFF", "title": "Split-system AC unit", "price": "$899", "oldPrice": "$1,050", "action": "Buy now" },
+      { "tag": "Bundle deal", "title": "Eco-silent washing pro", "price": "$1,150", "oldPrice": "$1,400", "action": "View details" }
+    ]
+  },
+  "aboutShowcase": {
+    "badge": "About Vereen Electro Froid",
+    "title": "Built for trust, precision, and continuity",
+    "subtitle": "A regional HVAC, refrigeration, solar, and appliance partner serving Al Hoceima and the wider north of Morocco.",
+    "storyTitle": "Our story",
+    "storyBody": "From a focused technical workshop to a trusted service center, Vereen Electro Froid grew by solving real operational problems for homes, retailers, and industrial clients.",
+    "missionTitle": "Mission",
+    "missionBody": "Deliver dependable thermal systems, genuine parts, and follow-through that keeps equipment running and customers informed.",
+    "visionTitle": "Vision",
+    "visionBody": "Become the reference independent service platform for HVAC and appliances across Morocco.",
+    "valuesTitle": "Values",
+    "values": ["Technical excellence", "Transparency", "Customer respect", "Continuous improvement", "Environmental responsibility"],
+    "timelineTitle": "A legacy of stability",
+    "timeline": [
+      { "year": "1998", "title": "Foundation in electrofroid", "body": "The workshop opens with a focus on refrigeration repair and local support." },
+      { "year": "2005", "title": "Expansion into HVAC", "body": "The team adds split systems, maintenance contracts, and project delivery." },
+      { "year": "2018", "title": "Solar integration", "body": "Solar water heating and hybrid energy systems are added to the service line." }
+    ],
+    "teamTitle": "Certified team",
+    "teamSubtitle": "Engineers and technicians trained to work as one delivery system.",
+    "coverageTitle": "Service coverage",
+    "coverageBody": "Primary coverage in Al Hoceima with projects and service support across northern Morocco."
   }
 }

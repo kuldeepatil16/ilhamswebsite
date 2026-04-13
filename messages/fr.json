@@ -37,6 +37,7 @@
     "products": "Produits",
     "parts": "Pièces",
     "about": "À Propos",
+    "promotions": "Promotions",
     "contact": "Contact",
     "blog": "Blog",
     "requestQuote": "Demander un Devis",
@@ -518,5 +519,72 @@
   "seo": {
     "defaultTitle": "Vereen Electro Froid | Climatisation & Réfrigération Al Hoceima",
     "defaultDescription": "Solutions professionnelles en froid, climatisation, énergie solaire et pièces de rechange à Al Hoceima, Maroc. Distributeur agréé Whirlpool, Samsung, Ariston, Bosch, AUX, LG, Daikin, Carrier."
+  },
+  "showcase": {
+    "badge": "Architecture thermique",
+    "title1": "Créer des",
+    "title2": "Atmosphères",
+    "subtitle": "Systèmes frigorifiques, HVAC et solaires haute performance pour les maisons, l’hôtellerie et les espaces industriels du nord du Maroc.",
+    "ctaPrimary": "Découvrir les services",
+    "ctaSecondary": "Voir les promotions",
+    "tickerLabel": "Marques de confiance",
+    "servicesTitle": "Des systèmes opérables, pas de simples cartes",
+    "servicesSubtitle": "Un ensemble compact centré sur l’installation, la maintenance, l’approvisionnement et le service après-vente.",
+    "productsTitle": "Ligne de précision",
+    "productsSubtitle": "Des équipements choisis pour leur stabilité, leur efficacité et leur support réel.",
+    "metricsTitle": "Des chiffres qui définissent la fiabilité",
+    "teamTitle": "Les ingénieurs derrière l’atmosphère",
+    "teamSubtitle": "Techniciens certifiés, chefs de projet et coordinateurs SAV qui travaillent comme un seul système.",
+    "finalTitle": "Besoin d’un audit, d’un devis ou d’un contrôle saisonnier ?",
+    "finalSubtitle": "Envoyez les détails du projet et notre équipe vous répondra avec la bonne approche, le bon délai et le bon plan de pièces.",
+    "finalCta": "Lancer la conversation",
+    "metrics": [
+      { "value": "10+", "label": "Années d’activité" },
+      { "value": "2000+", "label": "Projets traités" },
+      { "value": "8", "label": "Marques partenaires" },
+      { "value": "24h", "label": "Délai de réponse" }
+    ]
+  },
+  "promotions": {
+    "badge": "Offres saisonnières",
+    "title": "Promotions et campagnes SAV",
+    "subtitle": "Des offres sélectionnées pour la préparation d’été, les contrats d’entretien et les déploiements d’équipements premium.",
+    "primaryCta": "Obtenir le service prioritaire",
+    "secondaryCta": "Réserver un audit",
+    "deadline": "L’offre se termine bientôt",
+    "sectionTitle": "Remises saisonnières actuelles",
+    "sectionSubtitle": "Des offres centrées sur les catégories d’équipements et les services de maintenance les plus impactants.",
+    "membershipTitle": "Accès Platinum",
+    "membershipSubtitle": "Un cercle de maintenance préventive pour les particuliers et les entreprises qui veulent une priorité de traitement.",
+    "auditTitle": "Audit complet de performance",
+    "auditSubtitle": "Une inspection à tarif fixe pour les installations HVAC, froid et solaire.",
+    "offers": [
+      { "tag": "Économisez 450", "title": "Réfrigération multi-zone avancée", "price": "$2,499", "oldPrice": "$2,949", "action": "Profiter de l’offre" },
+      { "tag": "15 % RÉDUC.", "title": "Climatiseur split-system", "price": "$899", "oldPrice": "$1,050", "action": "Acheter" },
+      { "tag": "Offre groupée", "title": "Lave-linge éco-silencieux pro", "price": "$1,150", "oldPrice": "$1,400", "action": "Voir les détails" }
+    ]
+  },
+  "aboutShowcase": {
+    "badge": "À propos de Vereen Electro Froid",
+    "title": "Conçu pour la confiance, la précision et la continuité",
+    "subtitle": "Un partenaire régional HVAC, froid, solaire et électroménager au service d’Al Hoceima et du nord du Maroc.",
+    "storyTitle": "Notre histoire",
+    "storyBody": "D’un atelier technique spécialisé à un centre de service reconnu, Vereen Electro Froid s’est développé en résolvant des problèmes opérationnels concrets pour les particuliers, les commerces et les industriels.",
+    "missionTitle": "Mission",
+    "missionBody": "Fournir des systèmes thermiques fiables, des pièces d’origine et un suivi clair qui maintient les équipements en service.",
+    "visionTitle": "Vision",
+    "visionBody": "Devenir la plateforme de service indépendante de référence pour le HVAC et l’électroménager au Maroc.",
+    "valuesTitle": "Valeurs",
+    "values": ["Excellence technique", "Transparence", "Respect client", "Amélioration continue", "Responsabilité environnementale"],
+    "timelineTitle": "Une histoire de stabilité",
+    "timeline": [
+      { "year": "1998", "title": "Fondation en électrofroid", "body": "L’atelier ouvre avec une spécialisation dans la réparation frigorifique et l’assistance locale." },
+      { "year": "2005", "title": "Extension vers le HVAC", "body": "L’équipe ajoute les splits, les contrats d’entretien et la gestion de projets." },
+      { "year": "2018", "title": "Intégration solaire", "body": "Les chauffe-eau solaires et les systèmes hybrides rejoignent l’offre de service." }
+    ],
+    "teamTitle": "Équipe certifiée",
+    "teamSubtitle": "Ingénieurs et techniciens formés pour fonctionner comme un seul système de livraison.",
+    "coverageTitle": "Zone de service",
+    "coverageBody": "Couverture principale à Al Hoceima avec des projets et un support service dans tout le nord du Maroc."
   }
 }
