@@ -28,7 +28,7 @@ export default function HeroSection() {
           </p>
           <h1 className="mt-6 text-4xl font-black leading-[0.95] tracking-tight text-contrast md:text-6xl xl:text-7xl font-manrope">
             {t("title1")}
-            <span className="block bg-gradient-to-r from-secondary-container via-contrast to-accent-light bg-clip-text text-transparent">
+            <span className="block text-foreground">
               {t("title2")}
             </span>
           </h1>

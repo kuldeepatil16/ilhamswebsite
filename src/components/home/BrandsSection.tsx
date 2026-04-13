@@ -3,6 +3,16 @@ import { getTranslations } from "next-intl/server";
 import { createClient } from "@/lib/supabase/server";
 import { BRANDS } from "@/lib/constants";
 
+function getBrandLogoUrl(websiteUrl?: string | null): string | null {
+  if (!websiteUrl) return null;
+  try {
+    const hostname = new URL(websiteUrl).hostname.replace(/^www\./, "");
+    return `https://logo.clearbit.com/${hostname}`;
+  } catch {
+    return null;
+  }
+}
+
 export default async function BrandsSection() {
   const t = await getTranslations("brands");
   const supabase = await createClient();
@@ -39,11 +49,12 @@ export default async function BrandsSection() {
                 >
                   <div className="flex flex-col items-center gap-3 text-center">
                     <div className="grid h-16 w-16 flex-none place-items-center overflow-hidden rounded-2xl bg-surface-container-highest text-sm font-black text-foreground shadow-sm">
-                      {brand.logo_url ? (
-                        <img src={brand.logo_url} alt={brand.name} className="h-full w-full object-contain p-1.5" />
-                      ) : (
-                        brand.name.slice(0, 2).toUpperCase()
-                      )}
+                      <img
+                        src={brand.logo_url || getBrandLogoUrl(brand.website_url) || "/images/logo-monogram.svg"}
+                        alt={brand.name}
+                        className="h-full w-full object-contain p-1.5"
+                        loading="lazy"
+                      />
                     </div>
                     <div className="min-w-0 space-y-1">
                       <h3 className="text-base font-bold leading-tight text-foreground">{brand.name}</h3>
