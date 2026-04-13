@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import HeroSection from "@/components/home/HeroSection";
+import BrandsSection from "@/components/home/BrandsSection";
 import StatsBar from "@/components/home/StatsBar";
 import ServicesGrid from "@/components/home/ServicesGrid";
-import BrandsSection from "@/components/home/BrandsSection";
 import ProductsPreview from "@/components/home/ProductsPreview";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
 import ContactCTA from "@/components/home/ContactCTA";
@@ -29,9 +29,9 @@ export default async function HomePage() {
   return (
     <main className="ui-page">
       <HeroSection />
+      <BrandsSection />
       <StatsBar />
       <ServicesGrid />
-      <BrandsSection />
       <ProductsPreview />
       <WhyChooseUs />
       <ContactCTA />
