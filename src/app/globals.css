@@ -14,11 +14,11 @@
   --secondary-fixed: #75fca5;
   --tertiary: #3e1b00;
   --tertiary-container: #5e2d00;
-  --surface-container-lowest: #ffffff;
-  --surface-container-low: #f0f3ff;
-  --surface-container: #e7eeff;
-  --surface-container-high: #dee8ff;
-  --surface-container-highest: #d8e3fb;
+  --surface-container-lowest: 255 255 255;
+  --surface-container-low: 240 243 255;
+  --surface-container: 231 238 255;
+  --surface-container-high: 222 232 255;
+  --surface-container-highest: 216 227 251;
   --radius: 12px;
   --whatsapp: #25d366;
   --accent-foreground: 6 27 46;
@@ -157,10 +157,6 @@ html[data-theme="dark"] body {
   color: rgb(var(--foreground));
 }
 
-.bg-white {
-  background-color: rgb(var(--surface)) !important;
-}
-
 .bg-slate-50 {
   background-color: rgb(var(--surface-soft)) !important;
 }
@@ -188,10 +184,6 @@ html[data-theme="dark"] body {
 .border-slate-100,
 .border-slate-200,
 .border-slate-300,
-.border-white\/10 {
-  border-color: rgb(var(--border)) !important;
-}
-
 .shadow-sm,
 .shadow,
 .shadow-md,

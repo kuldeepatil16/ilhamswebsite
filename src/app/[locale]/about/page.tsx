@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { buildPageMetadata } from "@/lib/seo";
-import { ArrowRight, Award, CircleDot, Clock3, ShieldCheck, Sparkles, Users2, Wrench } from "lucide-react";
+import { ArrowRight, Award, ShieldCheck, Sparkles, Users2 } from "lucide-react";
 
 export async function generateMetadata({
   params,
@@ -25,10 +25,30 @@ const timeline = [
   { year: "2018", title: "Solar integration", body: "Solar water heating and hybrid energy systems are added to the service line." },
 ];
 const team = [
-  { name: "Technical audit", role: "Site assessment and sizing", icon: CircleDot },
-  { name: "Installation", role: "Commissioning and handover", icon: Wrench },
-  { name: "Support", role: "Preventive maintenance", icon: Clock3 },
-  { name: "Quality control", role: "Warranty and follow-up", icon: ShieldCheck },
+  {
+    name: "Steve Reen",
+    role: "Founder & Lead Architect",
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuA2aRteCNTaBdwZhLILbn0_3Bon3lXOxEuK6jO-Pj6BZFgW2uv5tQ-_HgpMsPmA9CQhUQnuQ5pz4gnNYocc71WWlhUOAKXCOCX4Fi6dh024SLOw_vxBTiSKbAT8WtgnWXeZx_TLUonssLpQU-3PP54h7k8BALDr4L_wdqAb_7gWSTj3BRFiO7QSAUcFbvwbAK-2WF5Sg-V3caw1igs8pmCq7HPZGfnj8FfD6-lQq3DTAkBfC_ReNpSJGF58xf_-sfQOsMCAWMJzlAsN",
+  },
+  {
+    name: "Elena Vance",
+    role: "Solar Systems Engineer",
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuBKlLgbwaweVJgZJ6BRCdw0CHUWlEa8XUQ-NXlsQ2MjSmPwZUh3NYOYeHQ4bxuSTNb55uCffEpk6Gc_Vf92h28o4UAMuY8lmV3xXsoBOS27V1GTU1WaQCFDJjpSa_yWFNycD48osajryLgvzXkITYBC7m4-3ZxbqLSlM1PpZY0U7r2iI5UXAoYpbj_sTQUiVI5x7T0G9mXFfNu0lDeRyfQdsahnJeeQ8sPv5jw63DSmyW-cmCm-q2dMXrbKyaa4Uo0scQS8wz45XA2l",
+  },
+  {
+    name: "Marcus Thorne",
+    role: "HVAC Implementation Head",
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuBYr25PBoj0bzN5O9cghM7gBpwab3t80ZzKe1YwZAdjUzqshqDw90JQwelv0Zo5fYlpmJ73QNNpi_bSYxB2XLjbSblLOqGXoMSMfRX6UtdGT_d62GEnOFzNRyFnmmKt96bly_tdQ_sdD7478ReYgRvkfbglh4fZZOb46zkEKcOrkTpefbyQXr129Qm9R7Sej91ezdWzQ97LIz1E3LGVIcnnPX_C3nCxwl8eS3yC8T9GaCX9VrATPhhHkrR5tIKcgwpb4k4uKcEoOyVr",
+  },
+  {
+    name: "Sofia Chen",
+    role: "Maintenance Logistics",
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuC2tSb4gWFtrSeNXMI3IJxRrc_IcMgfFdGEboRn5-Bs5yqTMi_U2hTbESdk_SkigjSqt5jT_E_psWZVDxqn83CTnjMgrs_56Bss9qDAC-CyzQfKlfg5ZuMmvLb7dMat1BijcGEyWPR5G8RfF75OB8PepHIDFu51P9Qm9dZGbM7ZbEwrn8XWsN3lv1Q7HC9Zgf6keKIu5To-UKyuLJwjdnLwECHLQHZ6sasqSNZlb1u05B8h86aLT9vexpC4_JdtO5U8OJnmVZ7YWqSh",
+  },
 ];
 
 export default function AboutPage({
@@ -150,6 +170,59 @@ export default function AboutPage({
       </section>
 
       <section className="ui-page py-20">
+        <div className="mx-auto max-w-7xl px-4 lg:px-8">
+          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-secondary">Technical excellence</p>
+              <h2 className="mt-3 text-4xl font-black tracking-tight text-foreground md:text-5xl font-manrope">Precision work, solar integration, and industrial service</h2>
+            </div>
+          </div>
+          <div className="mt-10 grid gap-4 md:grid-cols-4 md:grid-rows-2">
+            <article className="group relative overflow-hidden rounded-[1.6rem] md:col-span-2 md:row-span-2">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrwsLbm1OjAzx-jBhhpewimpVnAvZgL5BXMxOGb7BNylMMgd9_HU6UUqauPsCfXJqkXscMQQ67sBDbd3XZMMi2IqjeHk3Z9BTyYO00eMJ25w3ndgts-OXlnwG6W2ANKwVhIArssOauUKSCx8Ez6U6PP9Tcnat9R1KZzOoIVQedY2XhsZN593H3nVGdRMJfNt_Eu5N2xTaB9HX70HGbdyDBVD36BhZ0NAKm3wCfky7dGbKzp_duJ6dvKSzeX_qKB3m3SO3tiqUoSzyv"
+                alt="Solar farm"
+                className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 flex items-end bg-[linear-gradient(to_top,rgba(6,27,46,0.8),transparent_70%)] p-6 text-contrast">
+                <div>
+                  <h3 className="text-2xl font-black font-manrope">Renewable thermal grids</h3>
+                  <p className="text-sm text-contrast-muted">Solar-powered cold storage engineering.</p>
+                </div>
+              </div>
+            </article>
+            <article className="group relative overflow-hidden rounded-[1.6rem] md:col-span-2">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUA3F32Bd8tV0VpSnjpZcJ-LWMftzM7CzAI6X5gz-J34_NSU7yTs1pUl0Lx6GIHKa8mPma4LkzSApM2_6HEtsGc_UrNlAh9mI9LI2tZ1jUhfjAX_bcw3MPQdKPAbHNzYzJOS68CocRFCTYXJzleFSQyDg2_5T6UR0RE-coDlZ7MF7kIub6gEQPC2TrkprYX4_JFPqDwuRm0wBb14YN3zO_VKhU42PdHQ5VLGOCSkmHfXX_0DK7zI8BpES4qh2_zirWzhjHEqpp8uhT"
+                alt="Industrial chillers"
+                className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 flex items-end bg-[linear-gradient(to_top,rgba(6,27,46,0.8),transparent_70%)] p-6 text-contrast">
+                <div>
+                  <h3 className="text-xl font-black font-manrope">Cold-chain logistics</h3>
+                  <p className="text-sm text-contrast-muted">Precision temperature control for pharmaceuticals.</p>
+                </div>
+              </div>
+            </article>
+            <article className="group relative overflow-hidden rounded-[1.6rem]">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZ38onbCaP1Ou-YNQHQ74u3HFp2h7E4D9hmPuzS8ya-m-utPTZZ6PvuHYhYvJT7xwpzDXqJ64FYQWXJBT81SB-wUMYbsw2ElVtk-dUv4kbDQFF5um2R4QkD6eRY9R9SBVGKV8QiCBR5Ou8SQctEpPoyDCcANWKwt0OOTUS6AAVbdkHOM4wLk7gRdiJ-kgR0G9eqBSSAnAAb0GPqgeKkYfmKKKb6g0mfxIgP_IvjkPFzSniY91Ph-8MbezdjYLLr66EyPUNnowJP3Nt"
+                alt="Welding precision"
+                className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+              />
+            </article>
+            <article className="group relative overflow-hidden rounded-[1.6rem]">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuChQiFUgI6bq6DUmD3zxgWxaMfjYQLH_0Mr1VVVDxJxeviHFcADuAhCQirjLEirmH9Qys23NCDCGxPCg16NQTeZ0gC9xhaJEEv4w73LtpH6ezXYnrBKxUksufTto10AiMR9h_pcha6CZmiWg3-ruomHnlw3Z0OTwVt_NeefEmm56g2UYNdd1cqNtFCcndGfKKxxVH7WxsGVrAek0sLlxMOebowuHb4OubPPL3p4Nl1JIl6lVMAGMsNKUk3juDGxbk6MWjxK-JPwiFIr"
+                alt="Tech analysis"
+                className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+              />
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="ui-page py-20">
         <div className="mx-auto grid max-w-7xl gap-6 px-4 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
           <div className="rounded-[2rem] bg-[linear-gradient(135deg,rgb(var(--hero-start))_0%,rgb(var(--hero-mid))_100%)] p-8 text-contrast shadow-[0_24px_60px_rgb(var(--shadow)/0.18)] md:p-10">
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-secondary-container">Core philosophy</p>
@@ -168,14 +241,15 @@ export default function AboutPage({
 
           <div className="grid gap-5 sm:grid-cols-2">
             {team.map((item) => {
-              const Icon = item.icon;
               return (
-                <article key={item.name} className="rounded-[1.6rem] border border-border bg-surface-container-low p-6">
-                  <div className="grid h-14 w-14 place-items-center rounded-2xl bg-surface">
-                    <Icon className="text-accent" />
+                <article key={item.name} className="group overflow-hidden rounded-[1.6rem] border border-border bg-surface-container-low shadow-card">
+                  <div className="aspect-square overflow-hidden">
+                    <img src={item.image} alt={item.name} className="h-full w-full object-cover grayscale transition duration-500 group-hover:grayscale-0" />
                   </div>
-                  <h3 className="mt-5 text-xl font-bold text-foreground">{item.name}</h3>
-                  <p className="mt-2 text-sm leading-7 text-muted-foreground">{item.role}</p>
+                  <div className="p-5">
+                    <h3 className="text-lg font-bold text-foreground">{item.name}</h3>
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-secondary">{item.role}</p>
+                  </div>
                 </article>
               );
             })}

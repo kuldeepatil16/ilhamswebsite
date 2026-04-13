@@ -53,20 +53,20 @@ const metrics = [
 
 const products = [
   {
-    name: "ArcticFlow X1",
-    category: "Variable Refrigerant Flow System",
+    name: "Whirlpool French Door Refrigerator",
+    category: "Refrigeration",
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuBLlmQp9yQTW_dYyFIqyieJLm7vFLflVF74YYm3b5PGQBL-2BssFUhxmRuKNN8t8c6UgyJdHE_5_16lFkDr4j53tp9wrT84owLsc-LvzXCPSptIih7prrYW58nAsGKPWCNcUSQIc6Xm9T1MjkvUAuO7yJO6CKRvzaMUeUUJQr30wyW4bxr4aSi-qkGEms7n4L-WRtZ9MEknkkK1XzIifpXszZ7MUgHssQXJrG_secepLbteYEmI4TNKC2PS-KR4LBtztuMK911Jho6b",
   },
   {
-    name: "CryoNode 500",
-    category: "Modular Industrial Chiller",
+    name: "Samsung WindFree Split AC",
+    category: "Air Conditioning",
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuC5WmG9bM6xKBHTulfQlEt0Q04H_qTkO6KgmJjigP0bv8FMpiYuh7uu6lGOLCL6D06Tv1la45k7NajeNSCW-tPgNNw7ctvQY8weJohssp_ExeJtUegXcVGR6lYDl6gU89smPI4M-4bY_ilf-gFLouwN7elrQ2rvzeu2tWoREjkVYPvwMD7XEJ7EMGMSwi4zjY87nYoRCEBqnWXnfk4ow26BtPCg0ZJQWb1TJedQd-jQhVHGtke9qbaTJTe7MDLjd1V2wWf-RPg3UeCc",
   },
   {
-    name: "Sentinel-Core",
-    category: "IoT Thermal Monitoring Hub",
+    name: "Ariston Kairos Solar Water Heater",
+    category: "Solar Energy",
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuB1ZvZgV4K-jLIIm650Ctntw9Tm11bMiEnPhhc_aTb6-4fLqMWyf1eEhN3Amio88fT8BvFNT-Ya1koGijvLKX2BQ5dJlkpH6HdRkXBsYZ0nzZYkPisGH2aIQXvdMA7MV-9sd8IXofkUWXoPYpOLK3miHasHOwSp6usufvtLGEZdh1SvVmn3mk-5ut-bDPZeyJY97Nh9PWAbXB0ChlSz0tjaDsCTSxTs6YZ5kh0CpuuJ-h1polEXG0bURa7958dbREj9CEYC5T8elgLH",
   },
@@ -337,38 +337,54 @@ export default function HomePage({
 
       <section className="ui-page py-20">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
-          <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
-            <div className="rounded-[2rem] bg-[linear-gradient(135deg,rgb(var(--hero-start))_0%,rgb(var(--hero-mid))_100%)] p-8 text-contrast shadow-[0_24px_60px_rgb(var(--shadow)/0.18)] md:p-10">
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-secondary-container">Performance metrics</p>
-              <h2 className="mt-3 text-3xl font-black tracking-tight md:text-5xl font-manrope">Numbers that define reliability</h2>
-              <p className="mt-4 max-w-xl text-base leading-8 text-contrast-muted">
+          <div className="grid gap-16 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-secondary">Numbers that define reliability</p>
+              <h2 className="mt-3 text-4xl font-black tracking-tight text-foreground md:text-5xl font-manrope">
                 Beyond installation, we provide a lifecycle of performance monitoring and technical optimization.
-              </p>
+              </h2>
               <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
                 {metrics.map((item) => (
-                  <div key={item.label} className="rounded-[1.4rem] bg-[rgb(var(--contrast)/0.08)] p-4 backdrop-blur">
-                    <div className="text-3xl font-black text-secondary-container font-manrope">{item.value}</div>
-                    <div className="mt-2 text-xs font-semibold uppercase tracking-[0.2em] text-contrast-muted">{item.label}</div>
+                  <div key={item.label} className="rounded-[1.4rem] bg-surface-container-lowest p-4 shadow-card">
+                    <div className="text-3xl font-black text-secondary font-manrope">{item.value}</div>
+                    <div className="mt-2 text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">{item.label}</div>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="rounded-[2rem] bg-surface-container-lowest p-6 shadow-card md:p-8">
-              <div className="grid gap-5 sm:grid-cols-2">
-                {team.map((member) => (
-                  <article key={member.name} className="group overflow-hidden rounded-[1.5rem] border border-border bg-surface">
-                    <div className="aspect-square overflow-hidden bg-surface-container-high">
-                      <img src={member.image} alt={member.name} className="h-full w-full object-cover grayscale transition duration-500 group-hover:grayscale-0" />
+            <div className="relative">
+              <div className="absolute top-0 right-0 h-32 w-32 rounded-full bg-secondary-container/15 blur-3xl" />
+              <div className="absolute bottom-0 left-0 h-28 w-28 rounded-full bg-accent/15 blur-3xl" />
+              <div className="rounded-full border border-border/60 p-10 shadow-card">
+                <div className="rounded-full border border-secondary/30 p-8">
+                  <div className="relative overflow-hidden rounded-full bg-[linear-gradient(135deg,rgb(var(--hero-start))_0%,rgb(var(--hero-mid))_100%)]">
+                    <img
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCC1z3cBoblrAIZwaic6C1kMXGVpb140qWPz9xzNkfZRz7dchqWFj3uBzsL4qaGgvunzHLzrt54wK5KLWBQ-6hf12GoRcH5lqqhYz6AO0-JdwLYkTuVDxH5bzfwwtDsZhv5fhD-FePDknmXIw2wLkQjF_MP_YHhMjVOmOMENqimf1ulRWbnPlj0ZKy3ZyyIccokoDCWHrE-3UEUe5VEre0QseqP1bXmoh7XYjjg5S1D_QBVD9bxzLX3tJaMQigbdCUob9iBmD_Zg7pi"
+                      alt="Technician portrait"
+                      className="aspect-square w-full object-cover mix-blend-overlay"
+                    />
+                    <div className="absolute inset-0 flex flex-col items-center justify-center bg-[rgb(var(--hero-start)/0.45)] text-center text-contrast">
+                      <ShieldCheck size={48} className="mb-4 text-secondary-container" />
+                      <p className="text-xl font-black uppercase tracking-tight font-manrope">Precision Guaranteed</p>
+                      <p className="mt-2 text-xs uppercase tracking-[0.24em] text-contrast-muted">Certified support and after-sales continuity</p>
                     </div>
-                    <div className="p-4">
-                      <h3 className="text-lg font-bold text-foreground">{member.name}</h3>
-                      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-secondary">{member.role}</p>
-                    </div>
-                  </article>
-                ))}
+                  </div>
+                </div>
               </div>
             </div>
+          </div>
+
+          <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {team.map((member) => (
+              <article key={member.name} className="group overflow-hidden rounded-[1.5rem] bg-surface-container-lowest p-4 shadow-card">
+                <div className="aspect-square overflow-hidden rounded-[1.2rem] bg-surface-container-high">
+                  <img src={member.image} alt={member.name} className="h-full w-full object-cover grayscale transition duration-500 group-hover:grayscale-0" />
+                </div>
+                <h3 className="mt-4 text-lg font-bold text-foreground">{member.name}</h3>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-secondary">{member.role}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>

@@ -22,27 +22,27 @@ export async function generateMetadata({
 const offers = [
   {
     tag: "Save 450",
-    title: "Advanced multi-zone refrigeration",
-    price: "$2,499",
-    oldPrice: "$2,949",
+    title: "Whirlpool French Door Refrigerator",
+    price: "15 900 MAD",
+    oldPrice: "16 350 MAD",
     action: "Claim offer",
-    desc: "High-capacity cold-chain systems for demanding commercial spaces.",
+    desc: "Large-capacity refrigeration for families and shops, now with priority installation.",
   },
   {
     tag: "15% OFF",
-    title: "Split-system AC unit",
-    price: "$899",
-    oldPrice: "$1,050",
+    title: "Samsung WindFree Split AC",
+    price: "6 290 MAD",
+    oldPrice: "7 390 MAD",
     action: "Buy now",
-    desc: "Ultra-quiet cooling for premium residential spaces.",
+    desc: "Quiet comfort with gentle airflow diffusion and smart control.",
   },
   {
     tag: "Bundle deal",
-    title: "Eco-silent washing pro",
-    price: "$1,150",
-    oldPrice: "$1,400",
+    title: "Ariston Kairos Solar Water Heater",
+    price: "8 990 MAD",
+    oldPrice: "9 490 MAD",
     action: "View details",
-    desc: "Efficient household performance with a stronger operating margin.",
+    desc: "Thermal solar hot water solution designed for Moroccan homes.",
   },
 ];
 
@@ -235,6 +235,27 @@ export default function PromotionsPage({
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="bg-secondary-container py-16">
+        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 px-4 md:flex-row md:items-center lg:px-8">
+          <div className="flex items-center gap-5">
+            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-secondary text-contrast">
+              <Wrench size={26} />
+            </div>
+            <div>
+              <h3 className="text-2xl font-black text-secondary">Need an emergency fix?</h3>
+              <p className="text-sm text-secondary/80">Our seasonal response team is currently on-call in your area.</p>
+            </div>
+          </div>
+          <a
+            href={COMPANY.phone1 ? `tel:${COMPANY.phone1}` : `/${locale}/contact`}
+            className="inline-flex items-center gap-2 rounded-full bg-secondary px-6 py-3.5 text-sm font-bold text-contrast transition hover:bg-secondary/90"
+          >
+            Call now
+            <ArrowRight size={16} />
+          </a>
         </div>
       </section>
 
