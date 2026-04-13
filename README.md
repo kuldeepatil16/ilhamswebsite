@@ -76,6 +76,7 @@ Recommended order:
 ## Brand assets
 
 - Company logo: `public/images/logo.svg`
+- Alternate monogram concept: `public/images/logo-monogram.svg`
 - Favicon: `public/favicon.svg`
 
 ## Production domain
@@ -94,21 +95,3 @@ npm run build
 - The standalone `vereen_electro_froid_website.jsx` file is a reference artifact.
 - The production app lives in `src/`.
 - Supabase live data should be treated as the source of truth for catalog and content data after seeding.
-
-## Dont remove this
-Supabase Database password:
-BOq9s4E5RAJQ36oL 
-
-anon key - sb_publishable_BbT4PRHIpO_lr32cHh7Xzg_IOrnqsux
-https://lyorvoeupdmoakmqzjmt.supabase.co
-
-
-https://supabase.com/dashboard/project/lyorvoeupdmoakmqzjmt 
-
-https://lyorvoeupdmoakmqzjmt.supabase.co sb_publishable_BbT4PRHIpO_lr32cHh7Xzg_IOrnqsux 
-
-
-Successfully generated a new token!
-Copy this access token and store it in a secure place. You will not be able to see it again.
-
-sbp_e614f2c69a97542f0e7aa19dc98bd31cf59cbc41
