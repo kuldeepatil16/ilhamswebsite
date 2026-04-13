@@ -5,10 +5,10 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://stevereenelectrofroid.com"),
   title: "Vereen Electro Froid",
-  description:
-    "Vereen Electro Froid - Climatisation, réfrigération, solaire, pièces et SAV à Al Hoceima.",
+  description: "Vereen Electro Froid - Climatisation, refrigeration, solaire, pieces et SAV a Al Hoceima.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon.svg",
+    apple: "/favicon.svg",
   },
 };
 

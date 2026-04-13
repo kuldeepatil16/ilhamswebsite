@@ -1,67 +1,114 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Vereen Electro Froid
 
-## Getting Started
+Production Next.js 16 website for Vereen Electro Froid, an HVAC, refrigeration, solar energy, and home appliance company based in Al Hoceima, Morocco.
 
-First, run the development server:
+## Stack
+
+- Next.js App Router
+- TypeScript
+- Tailwind CSS v4
+- next-intl for `fr`, `ar`, and `en`
+- Supabase for database, auth, and storage
+- Resend for notifications
+- Vercel Analytics
+
+## What the app includes
+
+- Multilingual public website
+- RTL support for Arabic
+- Theme-aware light/dark UI
+- Product and spare parts catalogs
+- Product detail pages with quote flows
+- Blog and SEO pages
+- Admin dashboard with CRUD for products, parts, posts, leads, and service requests
+- Supabase-backed data layer
+
+## Local development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Required:
 
-## Learn More
+```bash
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_ANON_KEY=
+SUPABASE_SERVICE_ROLE_KEY=
+RESEND_API_KEY=
+NOTIFICATION_EMAIL=
+NEXT_PUBLIC_SITE_URL=
+NEXT_PUBLIC_WHATSAPP_NUMBER=
+NEXT_PUBLIC_GA_ID=
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Database
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Schema and seed files live in `supabase/`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `supabase/migrations/001_initial_schema.sql`
+- `supabase/seed.sql`
 
-## Deploy on Vercel
+The seed file is intended for content tables:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `brand_partners`
+- `products`
+- `spare_parts`
+- `blog_posts`
+- `site_settings`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Remote Supabase seeding
+
+Use the live Supabase project credentials and a Postgres client to execute the seed SQL directly against the database. The project connection details are configured in `.env.local` during development.
+
+Recommended order:
+
+1. Apply the migration SQL to the live project.
+2. Run the seed SQL for production content.
+3. Verify row counts and sample pages.
+4. Confirm storage buckets and admin access.
+
+## Brand assets
+
+- Company logo: `public/images/logo.svg`
+- Favicon: `public/favicon.svg`
+
+## Production domain
+
+The canonical domain for this deployment is `https://stevereenelectrofroid.com`.
+
+## Quality checks
+
+```bash
+npm run lint
+npm run build
+```
+
+## Notes
+
+- The standalone `vereen_electro_froid_website.jsx` file is a reference artifact.
+- The production app lives in `src/`.
+- Supabase live data should be treated as the source of truth for catalog and content data after seeding.
+
+## Dont remove this
+Supabase Database password:
+BOq9s4E5RAJQ36oL 
+
+anon key - sb_publishable_BbT4PRHIpO_lr32cHh7Xzg_IOrnqsux
+https://lyorvoeupdmoakmqzjmt.supabase.co
 
 
-## Update Todos here
+https://supabase.com/dashboard/project/lyorvoeupdmoakmqzjmt 
 
-Initialize Next.js 15 project with TypeScript, Tailwind CSS v4, and install dependencies
+https://lyorvoeupdmoakmqzjmt.supabase.co sb_publishable_BbT4PRHIpO_lr32cHh7Xzg_IOrnqsux 
 
-Create project configuration files and middleware
 
-Create translation files (messages/fr.json, messages/ar.json, messages/en.json)
+Successfully generated a new token!
+Copy this access token and store it in a secure place. You will not be able to see it again.
 
-Create TypeScript types and lib utilities
-
-Create layout components (Navbar, Footer, WhatsAppFloat)
-
-Create home page components (Hero, Stats, Services, Brands, Products, WhyChooseUs, ContactCTA)
-
-Create root layout and homepage ([locale]/layout.tsx, [locale]/page.tsx)
-
-Create public pages (services, products, parts, about, contact, blog)
-
-Create product/parts/form components
-
-Create API routes (contact, quote, service-request)
-
-Create admin panel (layout, dashboard, CRUD pages, admin components)
-
-Create hooks (useProducts, useParts, useBlog)
-
-Create Supabase migration SQL and seed data
-
-Create public assets (logo SVG, robots.txt, .env.example, sitemap)
+sbp_e614f2c69a97542f0e7aa19dc98bd31cf59cbc41
