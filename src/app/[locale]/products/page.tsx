@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import ProductsCatalog from "@/components/products/ProductsCatalog";
 import { buildPageMetadata } from "@/lib/seo";
+import { ArrowRight, PackageSearch, ShieldCheck, Sparkles } from "lucide-react";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -9,6 +11,89 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return buildPageMetadata({ title: t("title"), description: t("description"), locale, path: "/products" });
 }
 
-export default function ProductsPage() {
-  return <ProductsCatalog />;
+export default async function ProductsPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations("products");
+
+  return (
+    <div className="ui-page">
+      <section className="relative overflow-hidden bg-[linear-gradient(135deg,rgb(var(--hero-start))_0%,rgb(var(--hero-mid))_46%,rgb(var(--hero-end))_100%)] text-contrast">
+        <div className="absolute inset-0 opacity-60">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLlmQp9yQTW_dYyFIqyieJLm7vFLflVF74YYm3b5PGQBL-2BssFUhxmRuKNN8t8c6UgyJdHE_5_16lFkDr4j53tp9wrT84owLsc-LvzXCPSptIih7prrYW58nAsGKPWCNcUSQIc6Xm9T1MjkvUAuO7yJO6CKRvzaMUeUUJQr30wyW4bxr4aSi-qkGEms7n4L-WRtZ9MEknkkK1XzIifpXszZ7MUgHssQXJrG_secepLbteYEmI4TNKC2PS-KR4LBtztuMK911Jho6b"
+            alt="Product showcase"
+            className="h-full w-full object-cover"
+          />
+        </div>
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,27,46,0.92)_0%,rgba(10,46,77,0.7)_50%,transparent_100%)]" />
+        <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-20 lg:grid-cols-[1.04fr_0.96fr] lg:px-8 lg:py-24">
+          <div className="max-w-3xl">
+            <p className="inline-flex items-center gap-2 rounded-full bg-[rgb(var(--contrast)/0.1)] px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-contrast-muted backdrop-blur">
+              <Sparkles size={14} />
+              Product line
+            </p>
+            <h1 className="mt-6 text-5xl font-black leading-[0.94] tracking-tight md:text-7xl xl:text-8xl font-manrope">
+              {t("title")}
+            </h1>
+            <p className="mt-6 max-w-2xl text-base leading-8 text-contrast-muted md:text-lg">{t("subtitle")}</p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link
+                href="#catalog"
+                className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3.5 text-sm font-bold text-accent-foreground transition hover:bg-accent-light"
+              >
+                Browse catalog
+                <ArrowRight size={16} />
+              </Link>
+              <Link
+                href={`/${locale}/contact`}
+                className="inline-flex items-center gap-2 rounded-full border border-[rgb(var(--contrast)/0.2)] bg-[rgb(var(--contrast)/0.05)] px-6 py-3.5 text-sm font-semibold text-contrast backdrop-blur"
+              >
+                Request guidance
+              </Link>
+            </div>
+          </div>
+
+          <div className="relative">
+            <div className="absolute -left-6 top-10 h-28 w-28 rounded-full bg-secondary-container/15 blur-3xl" />
+            <div className="absolute -bottom-10 right-4 h-40 w-40 rounded-full bg-accent/20 blur-3xl" />
+            <div className="rounded-[2rem] border border-[rgb(var(--contrast)/0.1)] bg-[rgb(var(--contrast)/0.08)] p-5 shadow-[0_24px_56px_rgb(var(--shadow)/0.22)] backdrop-blur-xl">
+              <div className="grid gap-4 md:grid-cols-[0.98fr_1.02fr]">
+                <div className="rounded-[1.6rem] bg-[rgb(var(--contrast)/0.08)] p-5">
+                  <div className="mb-5 grid h-14 w-14 place-items-center rounded-2xl bg-[rgb(var(--contrast)/0.1)]">
+                    <PackageSearch className="text-secondary-container" size={24} />
+                  </div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-contrast-muted">Catalog scope</p>
+                  <p className="mt-2 text-2xl font-black leading-tight text-contrast font-manrope">Appliances, comfort systems, and project hardware.</p>
+                  <p className="mt-3 text-sm leading-6 text-contrast-muted">
+                    Built around the product families already seeded in the repo, with pricing, sourcing, and after-sales support.
+                  </p>
+                </div>
+                <div className="grid gap-3">
+                  <div className="rounded-[1.4rem] bg-surface-container-lowest/95 p-4 text-foreground">
+                    <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">Brands</p>
+                    <p className="mt-2 text-2xl font-black font-manrope">8 partners</p>
+                  </div>
+                  <div className="rounded-[1.4rem] bg-surface-container-lowest/95 p-4 text-foreground">
+                    <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">Coverage</p>
+                    <p className="mt-2 text-2xl font-black font-manrope">Morocco-wide</p>
+                  </div>
+                  <div className="rounded-[1.4rem] bg-surface-container-lowest/95 p-4 text-foreground">
+                    <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">Support</p>
+                    <div className="mt-2 flex items-center gap-2 text-sm font-semibold text-secondary">
+                      <ShieldCheck size={16} />
+                      Genuine parts and service continuity
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="catalog" className="ui-page py-10">
+        <ProductsCatalog />
+      </section>
+    </div>
+  );
 }
