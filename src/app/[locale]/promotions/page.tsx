@@ -62,7 +62,7 @@ export default function PromotionsPage({
 
   return (
     <div className="ui-page">
-      <section className="relative overflow-hidden bg-[linear-gradient(135deg,rgb(var(--hero-start))_0%,rgb(var(--hero-mid))_48%,rgb(var(--hero-end))_100%)] text-contrast">
+      <section className="ui-hero-shell">
         <div className="absolute inset-0 opacity-50">
           <img
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxfAVwDySsQK8TLVGUYS7L4ixFZo7J2XAGTskjcCeuqc9tMUcbV9llret6sU5KEQtJaCQB85Tbo_kOsCt4i4pK0l5j44fiDj8ke4VC4iVbLYx0TDPpJuj8u--D2wSVHx82EDn8nMZXJSnBw_tOgHgA6gDLRF4TVlePohsQD9YG2RwGfHnoGMp-tTcUZhP17rN1HsQmXut_AJ3SLnKBT0vhB-HG3nrQEoTUxqmZ1DEMZuGeB8dIGs-lKOajQVaP4WdX594ir-d9kcgg"
@@ -70,10 +70,10 @@ export default function PromotionsPage({
             className="h-full w-full object-cover"
           />
         </div>
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,27,46,0.92)_0%,rgba(10,46,77,0.7)_52%,transparent_100%)]" />
+        <div className="absolute inset-0 ui-hero-overlay" />
         <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-20 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:py-24">
           <div className="max-w-3xl">
-            <p className="inline-flex items-center gap-2 rounded-full bg-[rgb(var(--contrast)/0.1)] px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-contrast-muted backdrop-blur">
+            <p className="ui-hero-chip inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em]">
               <Flame size={14} />
               Seasonal offers
             </p>
@@ -98,7 +98,7 @@ export default function PromotionsPage({
           </div>
 
           <div className="grid gap-5">
-            <div className="rounded-[2rem] border border-[rgb(var(--contrast)/0.1)] bg-[rgb(var(--contrast)/0.08)] p-6 shadow-[0_24px_56px_rgb(var(--shadow)/0.22)] backdrop-blur-xl">
+            <div className="ui-hero-surface ui-hero-ring rounded-[2rem] p-6">
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-[0.24em] text-secondary-container">Offer ends soon</p>
@@ -113,7 +113,7 @@ export default function PromotionsPage({
                   ["42", "Mins"],
                   ["19", "Secs"],
                 ].map(([value, label]) => (
-                  <div key={label} className="rounded-[1.2rem] bg-[rgb(var(--contrast)/0.08)] p-3">
+                  <div key={label} className="ui-hero-chip rounded-[1.2rem] p-3">
                     <div className="text-2xl font-black text-contrast font-manrope">{value}</div>
                     <div className="mt-1 text-[10px] font-bold uppercase tracking-[0.2em] text-contrast-muted">{label}</div>
                   </div>
@@ -124,7 +124,7 @@ export default function PromotionsPage({
               </div>
               <p className="mt-3 text-center text-xs font-medium text-contrast-muted">Limited slots available for June maintenance</p>
             </div>
-            <div className="rounded-[1.6rem] bg-[rgb(var(--contrast)/0.08)] p-5 backdrop-blur">
+            <div className="ui-hero-chip rounded-[1.6rem] p-5">
               <div className="flex items-center gap-3">
                 <ShieldCheck className="text-secondary-container" />
                 <div>
@@ -194,7 +194,7 @@ export default function PromotionsPage({
       <section id="audit" className="ui-page py-20">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
-            <div className="rounded-[2rem] bg-[linear-gradient(135deg,rgb(var(--hero-start))_0%,rgb(var(--hero-mid))_100%)] p-8 text-contrast shadow-[0_24px_60px_rgb(var(--shadow)/0.18)] md:p-10">
+            <div className="ui-hero-shell ui-hero-ring rounded-[2rem] p-8 md:p-10">
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-secondary-container">Platinum access</p>
               <h2 className="mt-3 text-3xl font-black tracking-tight md:text-5xl font-manrope">Maintenance membership for predictable service</h2>
               <p className="mt-4 max-w-xl leading-8 text-contrast-muted">
@@ -261,7 +261,7 @@ export default function PromotionsPage({
 
       <section className="ui-page py-20">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
-          <div className="overflow-hidden rounded-[2rem] bg-[linear-gradient(135deg,rgb(var(--hero-start))_0%,rgb(var(--hero-mid))_100%)] p-8 text-contrast shadow-[0_24px_60px_rgb(var(--shadow)/0.18)] md:p-10">
+          <div className="ui-hero-shell ui-hero-ring rounded-[2rem] p-8 md:p-10">
             <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.24em] text-secondary-container">Support route</p>

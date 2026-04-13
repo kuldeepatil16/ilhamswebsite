@@ -10,7 +10,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   return buildPageMetadata({
-    title: "About Vereen Electro Froid | Thermal Architecture and Service",
+    title: "About Vereen Electro Froid | HVAC and Service",
     description:
       "Discover Vereen Electro Froid's history, mission, values, and team. Premium HVAC, refrigeration, solar energy, and appliance service based in Al Hoceima.",
     locale,
@@ -60,11 +60,11 @@ export default function AboutPage({
 
   return (
     <div className="ui-page">
-      <section className="relative overflow-hidden bg-[linear-gradient(135deg,rgb(var(--hero-start))_0%,rgb(var(--hero-mid))_55%,rgb(var(--hero-end))_100%)] text-contrast">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(117,252,165,0.12),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(242,138,31,0.16),transparent_30%)]" />
+      <section className="ui-hero-shell">
+        <div className="absolute inset-0 ui-hero-grid" />
         <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-20 lg:grid-cols-[1fr_0.9fr] lg:px-8 lg:py-24">
           <div className="max-w-3xl">
-            <p className="inline-flex items-center gap-2 rounded-full bg-[rgb(var(--contrast)/0.1)] px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-contrast-muted backdrop-blur">
+            <p className="ui-hero-chip inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em]">
               <Sparkles size={14} />
               About Vereen Electro Froid
             </p>
@@ -91,7 +91,7 @@ export default function AboutPage({
           <div className="relative">
             <div className="absolute -left-6 top-10 h-32 w-32 rounded-full bg-secondary-container/15 blur-3xl" />
             <div className="absolute -bottom-8 right-0 h-40 w-40 rounded-full bg-accent/20 blur-3xl" />
-            <div className="overflow-hidden rounded-[2rem] border border-[rgb(var(--contrast)/0.1)] bg-[rgb(var(--contrast)/0.08)] shadow-[0_24px_56px_rgb(var(--shadow)/0.22)] backdrop-blur-xl">
+            <div className="ui-hero-surface ui-hero-ring overflow-hidden rounded-[2rem]">
               <img
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUXO_yPhf62DMOE69kAYtkajVbpd-OIVuhJr9VKDkXrp2c-I9oi1Fhdvu4A9SPeTcxn8lj6A_4waATHiDfS6NZwugtEfEoGVXxpWUYbvFySfnpN-lYyWQb-8A-4PK4o5h3PY9nUF_-Zx01XFqAS8gZnoFAPJ6uFrbs8aEHBMAOfveGUnOWeFV05LcOaPh-E8SbBtxkC4gpF_0tjhO6L7uuj9kdKQDeVblng7wgdg3_pgjJkGaVtjA1NpEoZxQ713QtdR5jGaNeAnbz"
                 alt="Industrial cooling systems"
@@ -113,7 +113,7 @@ export default function AboutPage({
 
       <section className="ui-page py-20">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
-          <div className="grid gap-6 lg:grid-cols-3">
+              <div className="grid gap-6 lg:grid-cols-3">
             <article className="rounded-[1.6rem] border border-border bg-surface-container-low p-6">
               <div className="mb-5 grid h-14 w-14 place-items-center rounded-2xl bg-surface">
                 <Award className="text-secondary" />
@@ -177,14 +177,14 @@ export default function AboutPage({
               <h2 className="mt-3 text-4xl font-black tracking-tight text-foreground md:text-5xl font-manrope">Precision work, solar integration, and industrial service</h2>
             </div>
           </div>
-          <div className="mt-10 grid gap-4 md:grid-cols-4 md:grid-rows-2">
+              <div className="mt-10 grid gap-4 md:grid-cols-4 md:grid-rows-2">
             <article className="group relative overflow-hidden rounded-[1.6rem] md:col-span-2 md:row-span-2">
               <img
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrwsLbm1OjAzx-jBhhpewimpVnAvZgL5BXMxOGb7BNylMMgd9_HU6UUqauPsCfXJqkXscMQQ67sBDbd3XZMMi2IqjeHk3Z9BTyYO00eMJ25w3ndgts-OXlnwG6W2ANKwVhIArssOauUKSCx8Ez6U6PP9Tcnat9R1KZzOoIVQedY2XhsZN593H3nVGdRMJfNt_Eu5N2xTaB9HX70HGbdyDBVD36BhZ0NAKm3wCfky7dGbKzp_duJ6dvKSzeX_qKB3m3SO3tiqUoSzyv"
                 alt="Solar farm"
                 className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
               />
-              <div className="absolute inset-0 flex items-end bg-[linear-gradient(to_top,rgba(6,27,46,0.8),transparent_70%)] p-6 text-contrast">
+              <div className="ui-hero-fade absolute inset-0 flex items-end p-6 text-contrast">
                 <div>
                   <h3 className="text-2xl font-black font-manrope">Renewable thermal grids</h3>
                   <p className="text-sm text-contrast-muted">Solar-powered cold storage engineering.</p>
@@ -197,7 +197,7 @@ export default function AboutPage({
                 alt="Industrial chillers"
                 className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
               />
-              <div className="absolute inset-0 flex items-end bg-[linear-gradient(to_top,rgba(6,27,46,0.8),transparent_70%)] p-6 text-contrast">
+              <div className="ui-hero-fade absolute inset-0 flex items-end p-6 text-contrast">
                 <div>
                   <h3 className="text-xl font-black font-manrope">Cold-chain logistics</h3>
                   <p className="text-sm text-contrast-muted">Precision temperature control for pharmaceuticals.</p>
@@ -224,7 +224,7 @@ export default function AboutPage({
 
       <section className="ui-page py-20">
         <div className="mx-auto grid max-w-7xl gap-6 px-4 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
-          <div className="rounded-[2rem] bg-[linear-gradient(135deg,rgb(var(--hero-start))_0%,rgb(var(--hero-mid))_100%)] p-8 text-contrast shadow-[0_24px_60px_rgb(var(--shadow)/0.18)] md:p-10">
+          <div className="ui-hero-shell ui-hero-ring rounded-[2rem] p-8 md:p-10">
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-secondary-container">Core philosophy</p>
             <h2 className="mt-3 text-3xl font-black tracking-tight md:text-5xl font-manrope">A company built around trust, precision, and continuity.</h2>
             <p className="mt-4 max-w-xl leading-8 text-contrast-muted">
@@ -232,7 +232,7 @@ export default function AboutPage({
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               {values.map((value) => (
-                <span key={value} className="rounded-full bg-[rgb(var(--contrast)/0.08)] px-4 py-2 text-xs font-semibold text-contrast-muted backdrop-blur">
+                <span key={value} className="ui-hero-chip rounded-full px-4 py-2 text-xs font-semibold">
                   {value}
                 </span>
               ))}

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 import { createClient } from "@/lib/supabase/client";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import type { Locale, Product } from "@/types";
 import { formatPrice, getLocalizedField } from "@/lib/utils";
 
@@ -24,7 +24,8 @@ export default function ProductsPreview() {
       .then(({ data }) => setItems((data as Product[]) || []));
   }, []);
 
-  const [featured, ...rest] = useMemo(() => items.slice(0, 4), [items]);
+  const featured = items[0];
+  const rest = items.slice(1, 4);
 
   if (!featured) return null;
 
@@ -43,7 +44,7 @@ export default function ProductsPreview() {
         </div>
 
         <div className="grid gap-5 lg:grid-cols-[1.2fr_0.8fr]">
-          <article className="group overflow-hidden rounded-[2rem] bg-surface-container-lowest shadow-[0_20px_50px_rgba(17,28,45,0.08)]">
+          <article className="group overflow-hidden rounded-[2rem] bg-surface-container-lowest shadow-[0_20px_50px_rgb(var(--shadow)/0.08)]">
             <div className="grid gap-0 md:grid-cols-[0.95fr_1.05fr]">
               <div className="relative min-h-[320px] bg-surface-container-low">
                 <img
@@ -82,7 +83,7 @@ export default function ProductsPreview() {
             {rest.map((item) => (
               <article
                 key={item.id}
-                className="group grid gap-4 rounded-[1.6rem] bg-surface-container-lowest p-4 shadow-[0_20px_40px_rgba(17,28,45,0.06)] md:grid-cols-[110px_1fr]"
+                className="group grid gap-4 rounded-[1.6rem] bg-surface-container-lowest p-4 shadow-[0_20px_40px_rgb(var(--shadow)/0.06)] md:grid-cols-[110px_1fr]"
               >
                 <img
                   src={item.image_url || "/images/og-image.jpg"}

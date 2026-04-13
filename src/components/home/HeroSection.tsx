@@ -17,11 +17,12 @@ export default function HeroSection() {
   const locale = useLocale() as Locale;
 
   return (
-    <section className="relative overflow-hidden bg-[linear-gradient(135deg,#061b2e_0%,#0a2e4d_48%,#144268_100%)] text-contrast">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(118,252,165,0.16),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(242,138,31,0.2),transparent_30%),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[length:auto,auto,52px_52px,52px_52px] opacity-80" />
+    <section className="ui-hero-shell">
+      <div className="absolute inset-0 ui-hero-overlay opacity-60" />
+      <div className="absolute inset-0 ui-hero-grid" />
       <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-16 lg:grid-cols-[1.06fr_0.94fr] lg:px-8 lg:py-24">
         <div className="max-w-3xl">
-          <p className="inline-flex items-center gap-2 rounded-full bg-[rgb(var(--contrast)/0.1)] px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-contrast-muted backdrop-blur">
+          <p className="ui-hero-chip inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em]">
             <ShieldCheck size={14} />
             {t("tagline")}
           </p>
@@ -55,7 +56,7 @@ export default function HeroSection() {
             {serviceChips.map(({ icon: Icon, key }) => (
               <span
                 key={key}
-                className="inline-flex items-center gap-2 rounded-full bg-[rgb(var(--contrast)/0.08)] px-4 py-2 text-xs font-semibold text-contrast-muted backdrop-blur"
+                className="ui-hero-chip inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-semibold"
               >
                 <Icon size={14} className="text-secondary-container" />
                 {tp(key as never)}
@@ -67,15 +68,15 @@ export default function HeroSection() {
         <div className="relative">
           <div className="absolute -left-8 top-8 h-28 w-28 rounded-full bg-secondary-container/15 blur-3xl" />
           <div className="absolute -bottom-8 right-0 h-40 w-40 rounded-full bg-accent/20 blur-3xl" />
-          <div className="relative overflow-hidden rounded-[2rem] border border-[rgb(var(--contrast)/0.1)] bg-[rgb(var(--contrast)/0.08)] p-5 shadow-[0_24px_56px_rgb(var(--shadow)/0.22)] backdrop-blur-xl">
+          <div className="ui-hero-surface ui-hero-ring relative rounded-[2rem] p-5">
             <div className="grid gap-4 md:grid-cols-[0.9fr_1.1fr]">
-              <div className="rounded-[1.6rem] bg-[rgb(var(--contrast)/0.1)] p-5">
+              <div className="ui-hero-surface rounded-[1.6rem] p-5">
                 <img src="/favicon.svg" alt="Vereen Electro Froid" className="h-16 w-16" />
                 <p className="mt-5 text-xs font-semibold uppercase tracking-[0.22em] text-contrast-muted">
-                  The Thermal Architect
+                  Comfort, performance, reliability
                 </p>
                 <p className="mt-2 text-2xl font-black leading-tight text-contrast font-manrope">
-                  Precision cooling, heating, and service.
+                  HVAC, refrigeration, solar, and parts support.
                 </p>
                 <p className="mt-3 text-sm leading-6 text-contrast-muted">
                   Built for Moroccan homes, shops, and industrial spaces that need reliable climate systems and real after-sales support.
@@ -83,17 +84,17 @@ export default function HeroSection() {
               </div>
 
               <div className="grid gap-4">
-                <div className="rounded-[1.4rem] bg-surface-container-lowest/95 p-4 text-foreground">
+                <div className="ui-hero-stat rounded-[1.4rem] p-4">
                   <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">Response</p>
                   <p className="mt-2 text-2xl font-black text-foreground font-manrope">24h</p>
                   <p className="mt-1 text-sm text-muted-foreground">Fast quotation and intervention follow-up.</p>
                 </div>
-                <div className="rounded-[1.4rem] bg-surface-container-lowest/95 p-4 text-foreground">
+                <div className="ui-hero-stat rounded-[1.4rem] p-4">
                   <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">Coverage</p>
                   <p className="mt-2 text-2xl font-black text-foreground font-manrope">Al Hoceima + Morocco</p>
                   <p className="mt-1 text-sm text-muted-foreground">Local service with national project support.</p>
                 </div>
-                <div className="rounded-[1.4rem] bg-surface-container-lowest/95 p-4 text-foreground">
+                <div className="ui-hero-stat rounded-[1.4rem] p-4">
                   <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">Partners</p>
                   <p className="mt-2 text-2xl font-black text-foreground font-manrope">8 brands</p>
                   <p className="mt-1 text-sm text-muted-foreground">Authorized distributor and service center network.</p>
@@ -107,7 +108,7 @@ export default function HeroSection() {
                 "Original spare parts",
                 "Preventive maintenance",
               ].map((item) => (
-                <div key={item} className="rounded-2xl bg-[rgb(var(--contrast)/0.1)] px-4 py-3 text-xs font-semibold text-contrast-muted backdrop-blur">
+                <div key={item} className="ui-hero-chip rounded-2xl px-4 py-3 text-xs font-semibold">
                   {item}
                 </div>
               ))}

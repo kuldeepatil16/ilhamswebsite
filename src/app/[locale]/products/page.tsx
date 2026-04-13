@@ -17,7 +17,7 @@ export default async function ProductsPage({ params }: { params: Promise<{ local
 
   return (
     <div className="ui-page">
-      <section className="relative overflow-hidden bg-[linear-gradient(135deg,rgb(var(--hero-start))_0%,rgb(var(--hero-mid))_46%,rgb(var(--hero-end))_100%)] text-contrast">
+      <section className="ui-hero-shell">
         <div className="absolute inset-0 opacity-60">
           <img
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLlmQp9yQTW_dYyFIqyieJLm7vFLflVF74YYm3b5PGQBL-2BssFUhxmRuKNN8t8c6UgyJdHE_5_16lFkDr4j53tp9wrT84owLsc-LvzXCPSptIih7prrYW58nAsGKPWCNcUSQIc6Xm9T1MjkvUAuO7yJO6CKRvzaMUeUUJQr30wyW4bxr4aSi-qkGEms7n4L-WRtZ9MEknkkK1XzIifpXszZ7MUgHssQXJrG_secepLbteYEmI4TNKC2PS-KR4LBtztuMK911Jho6b"
@@ -25,10 +25,10 @@ export default async function ProductsPage({ params }: { params: Promise<{ local
             className="h-full w-full object-cover"
           />
         </div>
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,27,46,0.92)_0%,rgba(10,46,77,0.7)_50%,transparent_100%)]" />
+        <div className="absolute inset-0 ui-hero-overlay" />
         <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-20 lg:grid-cols-[1.04fr_0.96fr] lg:px-8 lg:py-24">
           <div className="max-w-3xl">
-            <p className="inline-flex items-center gap-2 rounded-full bg-[rgb(var(--contrast)/0.1)] px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-contrast-muted backdrop-blur">
+            <p className="ui-hero-chip inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em]">
               <Sparkles size={14} />
               Product line
             </p>
@@ -56,10 +56,10 @@ export default async function ProductsPage({ params }: { params: Promise<{ local
           <div className="relative">
             <div className="absolute -left-6 top-10 h-28 w-28 rounded-full bg-secondary-container/15 blur-3xl" />
             <div className="absolute -bottom-10 right-4 h-40 w-40 rounded-full bg-accent/20 blur-3xl" />
-            <div className="rounded-[2rem] border border-[rgb(var(--contrast)/0.1)] bg-[rgb(var(--contrast)/0.08)] p-5 shadow-[0_24px_56px_rgb(var(--shadow)/0.22)] backdrop-blur-xl">
+            <div className="ui-hero-surface ui-hero-ring rounded-[2rem] p-5">
               <div className="grid gap-4 md:grid-cols-[0.98fr_1.02fr]">
-                <div className="rounded-[1.6rem] bg-[rgb(var(--contrast)/0.08)] p-5">
-                  <div className="mb-5 grid h-14 w-14 place-items-center rounded-2xl bg-[rgb(var(--contrast)/0.1)]">
+                <div className="ui-hero-chip rounded-[1.6rem] p-5">
+                  <div className="mb-5 grid h-14 w-14 place-items-center rounded-2xl bg-[rgb(var(--contrast)/0.12)]">
                     <PackageSearch className="text-secondary-container" size={24} />
                   </div>
                   <p className="text-xs font-semibold uppercase tracking-[0.22em] text-contrast-muted">Catalog scope</p>
@@ -69,15 +69,15 @@ export default async function ProductsPage({ params }: { params: Promise<{ local
                   </p>
                 </div>
                 <div className="grid gap-3">
-                  <div className="rounded-[1.4rem] bg-surface-container-lowest/95 p-4 text-foreground">
+                  <div className="ui-hero-stat rounded-[1.4rem] p-4">
                     <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">Brands</p>
                     <p className="mt-2 text-2xl font-black font-manrope">8 partners</p>
                   </div>
-                  <div className="rounded-[1.4rem] bg-surface-container-lowest/95 p-4 text-foreground">
+                  <div className="ui-hero-stat rounded-[1.4rem] p-4">
                     <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">Coverage</p>
                     <p className="mt-2 text-2xl font-black font-manrope">Morocco-wide</p>
                   </div>
-                  <div className="rounded-[1.4rem] bg-surface-container-lowest/95 p-4 text-foreground">
+                  <div className="ui-hero-stat rounded-[1.4rem] p-4">
                     <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">Support</p>
                     <div className="mt-2 flex items-center gap-2 text-sm font-semibold text-secondary">
                       <ShieldCheck size={16} />

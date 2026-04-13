@@ -23,7 +23,7 @@ export default async function BrandsSection() {
   return (
     <section className="ui-page py-6">
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
-        <div className="overflow-hidden rounded-[2rem] bg-surface-container-lowest/90 px-6 py-8 shadow-[0_18px_40px_rgba(17,28,45,0.06)] md:px-8">
+        <div className="overflow-hidden rounded-[2rem] bg-surface-container-lowest/90 px-6 py-8 shadow-[0_18px_40px_rgb(var(--shadow)/0.06)] md:px-8">
           <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
             <div className="max-w-xl">
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-muted-foreground">Authorized partner network</p>

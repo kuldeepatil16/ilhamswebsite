@@ -48,7 +48,7 @@ export default function StatsBar() {
         {STATS.map((item) => (
           <div
             key={item.key}
-            className="rounded-[1.5rem] border border-border/70 bg-surface-container-lowest/80 p-5 shadow-[0_18px_40px_rgba(17,28,45,0.06)]"
+            className="rounded-[1.5rem] border border-border/70 bg-surface-container-lowest/80 p-5 shadow-[0_18px_40px_rgb(var(--shadow)/0.06)]"
           >
             <Counter end={item.value} suffix={item.suffix} />
             <p className="mt-2 text-sm text-muted-foreground">{t(item.key as never)}</p>

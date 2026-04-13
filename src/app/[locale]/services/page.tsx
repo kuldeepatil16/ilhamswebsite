@@ -19,7 +19,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
 
   return (
     <div className="ui-page">
-      <section className="relative overflow-hidden bg-[linear-gradient(135deg,rgb(var(--hero-start))_0%,rgb(var(--hero-mid))_48%,rgb(var(--hero-end))_100%)] text-contrast">
+      <section className="ui-hero-shell">
         <div className="absolute inset-0 opacity-60">
           <img
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPv6r5KvL61p8g1G6TmBWRRijUh3Tn32mCk2uUy-ZCix1PpqQR7Ws8jFqdZ8AOpOXKJMZHqMIXgxbQkElTTUGTqzTYV03q5K69B0P8-KZwq1YPL7ILddsqV7QuC9zxHUG3FxMMxLK5QqMa0Ck-kc9eQyD1_rLM-o0aTWoNq6eXmcrlpsgU1ducIpGOYtFXvVU7ghANdGq3AvbFQdtK8iYWFjZP-rSODYWXO0d7qefDHwq6wdf3E2KoqNzCs-SutX7fk-rPh-7lGPgv"
@@ -27,10 +27,10 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
             className="h-full w-full object-cover"
           />
         </div>
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,27,46,0.92)_0%,rgba(10,46,77,0.72)_52%,transparent_100%)]" />
+        <div className="absolute inset-0 ui-hero-overlay" />
         <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-20 lg:grid-cols-[1.03fr_0.97fr] lg:px-8 lg:py-24">
           <div className="max-w-3xl">
-            <p className="inline-flex items-center gap-2 rounded-full bg-[rgb(var(--contrast)/0.1)] px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-contrast-muted backdrop-blur">
+            <p className="ui-hero-chip inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em]">
               <Sparkles size={14} />
               Complete service portfolio
             </p>
@@ -53,9 +53,9 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
 
           <div className="relative">
             <div className="absolute -left-6 top-8 h-32 w-32 rounded-full bg-secondary-container/15 blur-3xl" />
-            <div className="rounded-[2rem] border border-[rgb(var(--contrast)/0.1)] bg-[rgb(var(--contrast)/0.08)] p-5 shadow-[0_24px_56px_rgb(var(--shadow)/0.22)] backdrop-blur-xl">
+            <div className="ui-hero-surface ui-hero-ring rounded-[2rem] p-5">
               <div className="grid gap-4 md:grid-cols-[0.94fr_1.06fr]">
-                <div className="rounded-[1.6rem] bg-[rgb(var(--contrast)/0.08)] p-5">
+                <div className="ui-hero-chip rounded-[1.6rem] p-5">
                   <p className="text-xs font-semibold uppercase tracking-[0.24em] text-secondary-container">Priority support</p>
                   <h2 className="mt-3 text-2xl font-black text-contrast font-manrope">Installation, maintenance, repair, and sourcing.</h2>
                   <p className="mt-3 text-sm leading-6 text-contrast-muted">
@@ -75,7 +75,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
               </div>
               <div className="mt-4 grid gap-3 md:grid-cols-3">
                 {["Priority scheduling", "Original parts", "Warranty follow-up"].map((item) => (
-                  <span key={item} className="rounded-2xl bg-[rgb(var(--contrast)/0.08)] px-4 py-3 text-xs font-semibold text-contrast-muted backdrop-blur">
+                  <span key={item} className="ui-hero-chip rounded-2xl px-4 py-3 text-xs font-semibold">
                     {item}
                   </span>
                 ))}
@@ -118,7 +118,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
 
       <section className="ui-page py-20">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
-          <div className="overflow-hidden rounded-[2rem] bg-[linear-gradient(135deg,rgb(var(--hero-start))_0%,rgb(var(--hero-mid))_100%)] p-8 text-contrast shadow-[0_24px_60px_rgb(var(--shadow)/0.18)] md:p-10">
+          <div className="ui-hero-shell ui-hero-ring rounded-[2rem] p-8 md:p-10">
             <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.24em] text-secondary-container">Support route</p>

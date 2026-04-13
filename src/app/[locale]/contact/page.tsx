@@ -25,7 +25,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
 
   return (
     <div className="ui-page">
-      <section className="relative overflow-hidden bg-[linear-gradient(135deg,rgb(var(--hero-start))_0%,rgb(var(--hero-mid))_48%,rgb(var(--hero-end))_100%)] text-contrast">
+      <section className="ui-hero-shell">
         <div className="absolute inset-0 opacity-60">
           <img
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxfAVwDySsQK8TLVGUYS7L4ixFZo7J2XAGTskjcCeuqc9tMUcbV9llret6sU5KEQtJaCQB85Tbo_kOsCt4i4pK0l5j44fiDj8ke4VC4iVbLYx0TDPpJuj8u--D2wSVHx82EDn8nMZXJSnBw_tOgHgA6gDLRF4TVlePohsQD9YG2RwGfHnoGMp-tTcUZhP17rN1HsQmXut_AJ3SLnKBT0vhB-HG3nrQEoTUxqmZ1DEMZuGeB8dIGs-lKOajQVaP4WdX594ir-d9kcgg"
@@ -33,10 +33,10 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
             className="h-full w-full object-cover"
           />
         </div>
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,27,46,0.92)_0%,rgba(10,46,77,0.7)_50%,transparent_100%)]" />
+        <div className="absolute inset-0 ui-hero-overlay" />
         <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-20 lg:grid-cols-[1.04fr_0.96fr] lg:px-8 lg:py-24">
           <div className="max-w-3xl">
-            <p className="inline-flex items-center gap-2 rounded-full bg-[rgb(var(--contrast)/0.1)] px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-contrast-muted backdrop-blur">
+            <p className="ui-hero-chip inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em]">
               <Sparkles size={14} />
               Contact and support
             </p>
@@ -63,10 +63,10 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
           <div className="relative">
             <div className="absolute -left-6 top-10 h-28 w-28 rounded-full bg-secondary-container/15 blur-3xl" />
             <div className="absolute -bottom-10 right-2 h-40 w-40 rounded-full bg-accent/20 blur-3xl" />
-            <div className="rounded-[2rem] border border-[rgb(var(--contrast)/0.1)] bg-[rgb(var(--contrast)/0.08)] p-5 shadow-[0_24px_56px_rgb(var(--shadow)/0.22)] backdrop-blur-xl">
+            <div className="ui-hero-surface ui-hero-ring rounded-[2rem] p-5">
               <div className="grid gap-4 md:grid-cols-[0.98fr_1.02fr]">
-                <div className="rounded-[1.6rem] bg-[rgb(var(--contrast)/0.08)] p-5">
-                  <div className="mb-5 grid h-14 w-14 place-items-center rounded-2xl bg-[rgb(var(--contrast)/0.1)]">
+                <div className="ui-hero-chip rounded-[1.6rem] p-5">
+                  <div className="mb-5 grid h-14 w-14 place-items-center rounded-2xl bg-[rgb(var(--contrast)/0.12)]">
                     <MapPin className="text-secondary-container" size={24} />
                   </div>
                   <p className="text-xs font-semibold uppercase tracking-[0.22em] text-contrast-muted">Visit us</p>
@@ -125,7 +125,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
               </div>
             </div>
 
-            <div className="rounded-[2rem] bg-[linear-gradient(135deg,rgb(var(--hero-start))_0%,rgb(var(--hero-mid))_100%)] p-6 text-contrast shadow-[0_24px_60px_rgb(var(--shadow)/0.18)] md:p-8">
+            <div className="ui-hero-shell ui-hero-ring rounded-[2rem] p-6 md:p-8">
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-secondary-container">Response route</p>
               <h2 className="mt-3 text-3xl font-black tracking-tight md:text-4xl font-manrope">Fast support, original parts, and service follow-up</h2>
               <p className="mt-4 leading-8 text-contrast-muted">

@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local design/prototype artifacts
+CLAUDE_CODE_PROMPT.md
+Vereen_Electro_Froid_Business_Plan.*
+todo.md
+ui-redesign/
+unnamed*.jpg
+vereen_electro_froid_website.jsx
