@@ -2,7 +2,7 @@ import type { Product, SparePart } from "@/types";
 
 export function isPlaceholderImage(url?: string | null): boolean {
   if (!url) return true;
-  return /picsum\.photos|placehold|dummy|source\.unsplash|logo\.clearbit/i.test(url);
+  return /placehold|dummy|source\.unsplash|logo\.clearbit/i.test(url);
 }
 
 function hashString(value: string): number {
@@ -24,6 +24,10 @@ function escapeXml(value: string): string {
 
 function svgDataUri(svg: string): string {
   return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
+}
+
+export function getSeedImageUrl(seed: string, width = 1600, height = 1100): string {
+  return `https://picsum.photos/seed/${encodeURIComponent(seed)}/${width}/${height}`;
 }
 
 const PALETTES = [
@@ -148,12 +152,7 @@ export function getRenderableImageUrl(
     return url as string;
   }
 
-  return createVisualSvg({
-    title: fallbackTitle,
-    subtitle: fallbackSubtitle,
-    accent: "Vereen Electro Froid",
-    seed,
-  });
+  return getSeedImageUrl(`${fallbackTitle}-${fallbackSubtitle}-${seed}`);
 }
 
 export function getBrandLogoUrl(websiteUrl?: string | null, brandName?: string): string | null {
@@ -195,22 +194,11 @@ export function getPartImageUrl(part: Pick<SparePart, "image_url" | "slug" | "pa
 }
 
 export function getPortraitImageUrl(name: string, role: string, seed = name): string {
-  return createVisualSvg({
-    title: name,
-    subtitle: role,
-    accent: "Vereen Electro Froid",
-    seed,
-    wide: false,
-  });
+  return getSeedImageUrl(`${name}-${role}-${seed}`, 1200, 1500);
 }
 
 export function getHeroVisualUrl(title: string, subtitle: string, seed = title): string {
-  return createVisualSvg({
-    title,
-    subtitle,
-    accent: "Comfort / Performance / Reliability",
-    seed,
-  });
+  return getSeedImageUrl(`${title}-${subtitle}-${seed}`);
 }
 
 export function getExternalUrl(value?: string | null): string | null {

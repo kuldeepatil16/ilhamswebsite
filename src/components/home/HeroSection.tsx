@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 import { ArrowRight, ShieldCheck, Snowflake, Sparkles, SunMedium, Wind } from "lucide-react";
 import type { Locale } from "@/types";
-import { getHeroVisualUrl } from "@/lib/visuals";
+import { getSeedImageUrl } from "@/lib/visuals";
 
 const serviceChips = [
   { icon: Snowflake, key: "categories.climatisation" },
@@ -16,9 +16,9 @@ export default function HeroSection() {
   const t = useTranslations("hero");
   const tp = useTranslations("products");
   const locale = useLocale() as Locale;
-  const heroMain = getHeroVisualUrl("Comfort systems", "HVAC, refrigeration and solar service", "hero-main");
-  const heroSecondary = getHeroVisualUrl("Original parts", "Brand-backed replacement components", "hero-parts");
-  const heroTertiary = getHeroVisualUrl("24h response", "Fast quoting and intervention follow-up", "hero-response");
+  const heroMain = getSeedImageUrl("samsung-ac", 1600, 1100);
+  const heroSecondary = getSeedImageUrl("ariston-solar", 1200, 900);
+  const heroTertiary = getSeedImageUrl("whirlpool-fridge", 1200, 900);
 
   return (
     <section className="ui-hero-shell overflow-hidden">
