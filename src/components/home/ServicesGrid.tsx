@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import type { Locale } from "@/types";
 import type { Product, SparePart } from "@/types";
 import { getLocalizedField } from "@/lib/utils";
-import { getPartImageUrl, getProductImageUrl } from "@/lib/visuals";
+import { getHeroVisualUrl, getPartImageUrl, getProductImageUrl } from "@/lib/visuals";
 
 const iconMap = [Snowflake, Wind, SunMedium, Wrench, Building2, ShieldCheck];
 
@@ -107,6 +107,7 @@ export default function ServicesGrid() {
             const Icon = iconMap[index];
             const visual = serviceVisuals[index];
             const productImage = visual?.image || "/images/og-image.jpg";
+            const fallbackImage = getHeroVisualUrl(item.title, item.desc, `service-fallback-${index}`);
             const visualLabel = visual?.label?.trim() || null;
             return (
               <article
@@ -118,6 +119,14 @@ export default function ServicesGrid() {
                     src={productImage}
                     alt={visualLabel || item.title}
                     className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                    loading="lazy"
+                    decoding="async"
+                    onError={(event) => {
+                      const image = event.currentTarget;
+                      if (image.src !== fallbackImage) {
+                        image.src = fallbackImage;
+                      }
+                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/10 to-transparent" />
                   <div className="absolute left-4 top-4 flex items-center gap-2 rounded-full bg-background/90 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-foreground shadow-sm backdrop-blur">

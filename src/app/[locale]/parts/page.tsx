@@ -4,6 +4,7 @@ import { getTranslations } from "next-intl/server";
 import PartsCatalog from "@/components/parts/PartsCatalog";
 import { buildPageMetadata } from "@/lib/seo";
 import { ArrowRight, Cog, ShieldCheck, Sparkles } from "lucide-react";
+import { getHeroVisualUrl } from "@/lib/visuals";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -20,7 +21,7 @@ export default async function PartsPage({ params }: { params: Promise<{ locale: 
       <section className="ui-hero-shell">
         <div className="absolute inset-0 opacity-55">
           <img
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCC1z3cBoblrAIZwaic6C1kMXGVpb140qWPz9xzNkfZRz7dchqWFj3uBzsL4qaGgvunzHLzrt54wK5KLWBQ-6hf12GoRcH5lqqhYz6AO0-JdwLYkTuVDxH5bzfwwtDsZhv5fhD-FePDknmXIw2wLkQjF_MP_YHhMjVOmOMENqimf1ulRWbnPlj0ZKy3ZyyIccokoDCWHrE-3UEUe5VEre0QseqP1bXmoh7XYjjg5S1D_QBVD9bxzLX3tJaMQigbdCUob9iBmD_Zg7pi"
+            src={getHeroVisualUrl("Spare parts and logistics", "Compatibility, stock and dispatch support", "parts-hero")}
             alt="Spare parts and warehouse support"
             className="h-full w-full object-cover"
           />

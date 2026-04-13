@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server";
 import Link from "next/link";
 import { ArrowRight, ShieldCheck, Sparkles, Timer, Wind, Waves, SunMedium, Building2 } from "lucide-react";
 import { buildPageMetadata } from "@/lib/seo";
+import { getHeroVisualUrl } from "@/lib/visuals";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -22,7 +23,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
       <section className="ui-hero-shell">
         <div className="absolute inset-0 opacity-60">
           <img
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPv6r5KvL61p8g1G6TmBWRRijUh3Tn32mCk2uUy-ZCix1PpqQR7Ws8jFqdZ8AOpOXKJMZHqMIXgxbQkElTTUGTqzTYV03q5K69B0P8-KZwq1YPL7ILddsqV7QuC9zxHUG3FxMMxLK5QqMa0Ck-kc9eQyD1_rLM-o0aTWoNq6eXmcrlpsgU1ducIpGOYtFXvVU7ghANdGq3AvbFQdtK8iYWFjZP-rSODYWXO0d7qefDHwq6wdf3E2KoqNzCs-SutX7fk-rPh-7lGPgv"
+            src={getHeroVisualUrl("Service architecture", "Installation, maintenance and repair", "services-hero")}
             alt="Service hero"
             className="h-full w-full object-cover"
           />

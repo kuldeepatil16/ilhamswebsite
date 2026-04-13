@@ -3,6 +3,7 @@ import Link from "next/link";
 import { COMPANY } from "@/lib/constants";
 import { buildPageMetadata } from "@/lib/seo";
 import { ArrowRight, Flame, ShieldCheck, Sparkles, Timer, Wrench } from "lucide-react";
+import { getHeroVisualUrl } from "@/lib/visuals";
 
 export async function generateMetadata({
   params,
@@ -65,7 +66,7 @@ export default function PromotionsPage({
       <section className="ui-hero-shell">
         <div className="absolute inset-0 opacity-50">
           <img
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxfAVwDySsQK8TLVGUYS7L4ixFZo7J2XAGTskjcCeuqc9tMUcbV9llret6sU5KEQtJaCQB85Tbo_kOsCt4i4pK0l5j44fiDj8ke4VC4iVbLYx0TDPpJuj8u--D2wSVHx82EDn8nMZXJSnBw_tOgHgA6gDLRF4TVlePohsQD9YG2RwGfHnoGMp-tTcUZhP17rN1HsQmXut_AJ3SLnKBT0vhB-HG3nrQEoTUxqmZ1DEMZuGeB8dIGs-lKOajQVaP4WdX594ir-d9kcgg"
+            src={getHeroVisualUrl("Seasonal offers", "Maintenance plans and premium equipment rollouts", "promotions-hero")}
             alt="Promotion hero"
             className="h-full w-full object-cover"
           />
@@ -150,7 +151,7 @@ export default function PromotionsPage({
             <article className="group relative overflow-hidden rounded-[2rem] bg-surface-container-lowest p-6 shadow-card xl:col-span-2">
               <div className="absolute inset-y-0 right-0 w-2/3 overflow-hidden">
                 <img
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcZLbucKVSaLUljysLjAez6sbvcLUjvnPZ4KCuSvvPzoOAjMaXCv51EjFYqc3x9C1b6ZcGYG507xColsxo_qzig3OM1pV5w9AxlinYSoNR8tRfHscN53vofUDOMTSlbtU5lGr8Bsb4dOIXL4ETJoywl3aMqa_zvSgtVB0kFSGxO08Ovx_p0Oya22Ui6l5qScGl0WIlvLwfCoqkfddXbihkb6dOKSEupiFRfbkf_RLqmQ4nXq2I2VbBN3AT9VObV23N1m7E2xNxlBsL"
+                  src={getHeroVisualUrl("Refrigeration promotion", "Priority installation and family cooling", "promotions-offer")}
                   alt="Refrigeration promotion"
                   className="h-full w-full object-contain object-right-bottom opacity-90 transition duration-700 group-hover:scale-105"
                 />

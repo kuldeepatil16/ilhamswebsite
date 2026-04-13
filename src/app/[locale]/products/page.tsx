@@ -4,6 +4,7 @@ import { getTranslations } from "next-intl/server";
 import ProductsCatalog from "@/components/products/ProductsCatalog";
 import { buildPageMetadata } from "@/lib/seo";
 import { ArrowRight, PackageSearch, ShieldCheck, Sparkles } from "lucide-react";
+import { getHeroVisualUrl } from "@/lib/visuals";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -20,7 +21,7 @@ export default async function ProductsPage({ params }: { params: Promise<{ local
       <section className="ui-hero-shell">
         <div className="absolute inset-0 opacity-60">
           <img
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLlmQp9yQTW_dYyFIqyieJLm7vFLflVF74YYm3b5PGQBL-2BssFUhxmRuKNN8t8c6UgyJdHE_5_16lFkDr4j53tp9wrT84owLsc-LvzXCPSptIih7prrYW58nAsGKPWCNcUSQIc6Xm9T1MjkvUAuO7yJO6CKRvzaMUeUUJQr30wyW4bxr4aSi-qkGEms7n4L-WRtZ9MEknkkK1XzIifpXszZ7MUgHssQXJrG_secepLbteYEmI4TNKC2PS-KR4LBtztuMK911Jho6b"
+            src={getHeroVisualUrl("Product showcase", "Appliances, comfort systems and project hardware", "products-hero")}
             alt="Product showcase"
             className="h-full w-full object-cover"
           />

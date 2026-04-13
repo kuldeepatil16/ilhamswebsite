@@ -8,17 +8,17 @@ type ThemeMode = "light" | "dark";
 
 function applyTheme(mode: ThemeMode) {
   document.documentElement.setAttribute("data-theme", mode);
+  document.documentElement.style.colorScheme = mode;
   localStorage.setItem("theme", mode);
 }
 
 export default function ThemeToggle() {
   const t = useTranslations("accessibility");
-  const [theme, setTheme] = useState<ThemeMode>("light");
+  const [theme, setTheme] = useState<ThemeMode>("dark");
 
   useEffect(() => {
     const stored = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const initial = stored === "dark" || stored === "light" ? stored : prefersDark ? "dark" : "light";
+    const initial = stored === "dark" || stored === "light" ? stored : "dark";
     setTheme(initial);
     applyTheme(initial);
   }, []);

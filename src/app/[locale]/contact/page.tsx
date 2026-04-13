@@ -5,6 +5,7 @@ import ContactForm from "@/components/forms/ContactForm";
 import { COMPANY } from "@/lib/constants";
 import { buildPageMetadata } from "@/lib/seo";
 import { ArrowRight, Building2, Mail, MapPin, PhoneCall, Sparkles, Wrench } from "lucide-react";
+import { getHeroVisualUrl } from "@/lib/visuals";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -28,7 +29,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
       <section className="ui-hero-shell">
         <div className="absolute inset-0 opacity-60">
           <img
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxfAVwDySsQK8TLVGUYS7L4ixFZo7J2XAGTskjcCeuqc9tMUcbV9llret6sU5KEQtJaCQB85Tbo_kOsCt4i4pK0l5j44fiDj8ke4VC4iVbLYx0TDPpJuj8u--D2wSVHx82EDn8nMZXJSnBw_tOgHgA6gDLRF4TVlePohsQD9YG2RwGfHnoGMp-tTcUZhP17rN1HsQmXut_AJ3SLnKBT0vhB-HG3nrQEoTUxqmZ1DEMZuGeB8dIGs-lKOajQVaP4WdX594ir-d9kcgg"
+            src={getHeroVisualUrl("Contact and support", "Direct access to the service team", "contact-hero")}
             alt="Contact and service desk"
             className="h-full w-full object-cover"
           />

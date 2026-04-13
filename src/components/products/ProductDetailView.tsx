@@ -60,6 +60,9 @@ export default function ProductDetailView({ product, relatedProducts, compatible
               src={gallery[activeImage] || "/images/og-image.jpg"}
               alt={getLocalizedField(product, "name", locale)}
               className="h-full w-full object-cover"
+              onError={(event) => {
+                event.currentTarget.src = getProductImageUrl(product, `detail-${activeImage}`);
+              }}
             />
           </div>
           {gallery.length > 1 ? (
@@ -73,7 +76,14 @@ export default function ProductDetailView({ product, relatedProducts, compatible
                   }`}
                   onClick={() => setActiveImage(index)}
                 >
-                  <img src={image} alt="" className="h-full w-full object-cover" />
+                  <img
+                    src={image}
+                    alt=""
+                    className="h-full w-full object-cover"
+                    onError={(event) => {
+                      event.currentTarget.src = getProductImageUrl(product, `detail-thumb-${index}`);
+                    }}
+                  />
                 </button>
               ))}
             </div>
@@ -178,7 +188,14 @@ export default function ProductDetailView({ product, relatedProducts, compatible
         <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
           {relatedProducts.map((item) => (
             <article key={item.id} className="ui-surface overflow-hidden rounded-[1.75rem] border border-border/80 shadow-card">
-              <img src={getProductImageUrl(item, "related")} alt={getLocalizedField(item, "name", locale)} className="h-44 w-full object-cover" />
+              <img
+                src={getProductImageUrl(item, "related")}
+                alt={getLocalizedField(item, "name", locale)}
+                className="h-44 w-full object-cover"
+                onError={(event) => {
+                  event.currentTarget.src = getProductImageUrl(item, `related-fallback-${item.slug}`);
+                }}
+              />
               <div className="p-5">
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">{item.brand}</p>
                 <h3 className="mt-2 text-lg font-bold text-foreground">{getLocalizedField(item, "name", locale)}</h3>

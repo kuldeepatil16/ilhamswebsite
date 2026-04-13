@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { buildPageMetadata } from "@/lib/seo";
 import { ArrowRight, Award, ShieldCheck, Sparkles, Users2 } from "lucide-react";
+import { getHeroVisualUrl, getPortraitImageUrl } from "@/lib/visuals";
 
 export async function generateMetadata({
   params,
@@ -28,26 +29,22 @@ const team = [
   {
     name: "Steve Reen",
     role: "Founder & Lead Architect",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuA2aRteCNTaBdwZhLILbn0_3Bon3lXOxEuK6jO-Pj6BZFgW2uv5tQ-_HgpMsPmA9CQhUQnuQ5pz4gnNYocc71WWlhUOAKXCOCX4Fi6dh024SLOw_vxBTiSKbAT8WtgnWXeZx_TLUonssLpQU-3PP54h7k8BALDr4L_wdqAb_7gWSTj3BRFiO7QSAUcFbvwbAK-2WF5Sg-V3caw1igs8pmCq7HPZGfnj8FfD6-lQq3DTAkBfC_ReNpSJGF58xf_-sfQOsMCAWMJzlAsN",
+    image: getPortraitImageUrl("Steve Reen", "Founder & Lead Architect", "team-steve"),
   },
   {
     name: "Elena Vance",
     role: "Solar Systems Engineer",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBKlLgbwaweVJgZJ6BRCdw0CHUWlEa8XUQ-NXlsQ2MjSmPwZUh3NYOYeHQ4bxuSTNb55uCffEpk6Gc_Vf92h28o4UAMuY8lmV3xXsoBOS27V1GTU1WaQCFDJjpSa_yWFNycD48osajryLgvzXkITYBC7m4-3ZxbqLSlM1PpZY0U7r2iI5UXAoYpbj_sTQUiVI5x7T0G9mXFfNu0lDeRyfQdsahnJeeQ8sPv5jw63DSmyW-cmCm-q2dMXrbKyaa4Uo0scQS8wz45XA2l",
+    image: getPortraitImageUrl("Elena Vance", "Solar Systems Engineer", "team-elena"),
   },
   {
     name: "Marcus Thorne",
     role: "HVAC Implementation Head",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBYr25PBoj0bzN5O9cghM7gBpwab3t80ZzKe1YwZAdjUzqshqDw90JQwelv0Zo5fYlpmJ73QNNpi_bSYxB2XLjbSblLOqGXoMSMfRX6UtdGT_d62GEnOFzNRyFnmmKt96bly_tdQ_sdD7478ReYgRvkfbglh4fZZOb46zkEKcOrkTpefbyQXr129Qm9R7Sej91ezdWzQ97LIz1E3LGVIcnnPX_C3nCxwl8eS3yC8T9GaCX9VrATPhhHkrR5tIKcgwpb4k4uKcEoOyVr",
+    image: getPortraitImageUrl("Marcus Thorne", "HVAC Implementation Head", "team-marcus"),
   },
   {
     name: "Sofia Chen",
     role: "Maintenance Logistics",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuC2tSb4gWFtrSeNXMI3IJxRrc_IcMgfFdGEboRn5-Bs5yqTMi_U2hTbESdk_SkigjSqt5jT_E_psWZVDxqn83CTnjMgrs_56Bss9qDAC-CyzQfKlfg5ZuMmvLb7dMat1BijcGEyWPR5G8RfF75OB8PepHIDFu51P9Qm9dZGbM7ZbEwrn8XWsN3lv1Q7HC9Zgf6keKIu5To-UKyuLJwjdnLwECHLQHZ6sasqSNZlb1u05B8h86aLT9vexpC4_JdtO5U8OJnmVZ7YWqSh",
+    image: getPortraitImageUrl("Sofia Chen", "Maintenance Logistics", "team-sofia"),
   },
 ];
 
@@ -93,7 +90,7 @@ export default function AboutPage({
             <div className="absolute -bottom-8 right-0 h-40 w-40 rounded-full bg-accent/20 blur-3xl" />
             <div className="ui-hero-surface ui-hero-ring overflow-hidden rounded-[2rem]">
               <img
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUXO_yPhf62DMOE69kAYtkajVbpd-OIVuhJr9VKDkXrp2c-I9oi1Fhdvu4A9SPeTcxn8lj6A_4waATHiDfS6NZwugtEfEoGVXxpWUYbvFySfnpN-lYyWQb-8A-4PK4o5h3PY9nUF_-Zx01XFqAS8gZnoFAPJ6uFrbs8aEHBMAOfveGUnOWeFV05LcOaPh-E8SbBtxkC4gpF_0tjhO6L7uuj9kdKQDeVblng7wgdg3_pgjJkGaVtjA1NpEoZxQ713QtdR5jGaNeAnbz"
+                src={getHeroVisualUrl("Industrial cooling systems", "Reliable service delivery for Morocco", "about-hero")}
                 alt="Industrial cooling systems"
                 className="h-[520px] w-full object-cover"
               />
@@ -180,7 +177,7 @@ export default function AboutPage({
               <div className="mt-10 grid gap-4 md:grid-cols-4 md:grid-rows-2">
             <article className="group relative overflow-hidden rounded-[1.6rem] md:col-span-2 md:row-span-2">
               <img
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrwsLbm1OjAzx-jBhhpewimpVnAvZgL5BXMxOGb7BNylMMgd9_HU6UUqauPsCfXJqkXscMQQ67sBDbd3XZMMi2IqjeHk3Z9BTyYO00eMJ25w3ndgts-OXlnwG6W2ANKwVhIArssOauUKSCx8Ez6U6PP9Tcnat9R1KZzOoIVQedY2XhsZN593H3nVGdRMJfNt_Eu5N2xTaB9HX70HGbdyDBVD36BhZ0NAKm3wCfky7dGbKzp_duJ6dvKSzeX_qKB3m3SO3tiqUoSzyv"
+                src={getHeroVisualUrl("Renewable thermal grids", "Solar-powered cold storage engineering", "about-solar")}
                 alt="Solar farm"
                 className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
               />
@@ -193,7 +190,7 @@ export default function AboutPage({
             </article>
             <article className="group relative overflow-hidden rounded-[1.6rem] md:col-span-2">
               <img
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUA3F32Bd8tV0VpSnjpZcJ-LWMftzM7CzAI6X5gz-J34_NSU7yTs1pUl0Lx6GIHKa8mPma4LkzSApM2_6HEtsGc_UrNlAh9mI9LI2tZ1jUhfjAX_bcw3MPQdKPAbHNzYzJOS68CocRFCTYXJzleFSQyDg2_5T6UR0RE-coDlZ7MF7kIub6gEQPC2TrkprYX4_JFPqDwuRm0wBb14YN3zO_VKhU42PdHQ5VLGOCSkmHfXX_0DK7zI8BpES4qh2_zirWzhjHEqpp8uhT"
+                src={getHeroVisualUrl("Cold-chain logistics", "Precision temperature control for pharmaceuticals", "about-coldchain")}
                 alt="Industrial chillers"
                 className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
               />
@@ -206,14 +203,14 @@ export default function AboutPage({
             </article>
             <article className="group relative overflow-hidden rounded-[1.6rem]">
               <img
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZ38onbCaP1Ou-YNQHQ74u3HFp2h7E4D9hmPuzS8ya-m-utPTZZ6PvuHYhYvJT7xwpzDXqJ64FYQWXJBT81SB-wUMYbsw2ElVtk-dUv4kbDQFF5um2R4QkD6eRY9R9SBVGKV8QiCBR5Ou8SQctEpPoyDCcANWKwt0OOTUS6AAVbdkHOM4wLk7gRdiJ-kgR0G9eqBSSAnAAb0GPqgeKkYfmKKKb6g0mfxIgP_IvjkPFzSniY91Ph-8MbezdjYLLr66EyPUNnowJP3Nt"
+                src={getHeroVisualUrl("Precision tools", "Field diagnostics and installation support", "about-tools")}
                 alt="Welding precision"
                 className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
               />
             </article>
             <article className="group relative overflow-hidden rounded-[1.6rem]">
               <img
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuChQiFUgI6bq6DUmD3zxgWxaMfjYQLH_0Mr1VVVDxJxeviHFcADuAhCQirjLEirmH9Qys23NCDCGxPCg16NQTeZ0gC9xhaJEEv4w73LtpH6ezXYnrBKxUksufTto10AiMR9h_pcha6CZmiWg3-ruomHnlw3Z0OTwVt_NeefEmm56g2UYNdd1cqNtFCcndGfKKxxVH7WxsGVrAek0sLlxMOebowuHb4OubPPL3p4Nl1JIl6lVMAGMsNKUk3juDGxbk6MWjxK-JPwiFIr"
+                src={getHeroVisualUrl("Technical analysis", "Trusted diagnostics and planning", "about-analysis")}
                 alt="Tech analysis"
                 className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
               />
