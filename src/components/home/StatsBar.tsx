@@ -1,6 +1,5 @@
 "use client";
 
-
 import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { STATS } from "@/lib/constants";
@@ -33,7 +32,7 @@ function Counter({ end, suffix }: { end: number; suffix: string }) {
   }, [end]);
 
   return (
-    <div ref={ref} className="text-4xl font-black text-accent md:text-5xl">
+    <div ref={ref} className="text-4xl font-black text-accent md:text-5xl font-manrope">
       {value}
       {suffix}
     </div>
@@ -44,12 +43,15 @@ export default function StatsBar() {
   const t = useTranslations("stats");
 
   return (
-    <section className="ui-hero py-12">
-      <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 text-center text-contrast md:grid-cols-4 lg:px-8">
+    <section className="ui-page py-10">
+      <div className="mx-auto grid max-w-7xl gap-4 px-4 md:grid-cols-2 xl:grid-cols-4 lg:px-8">
         {STATS.map((item) => (
-          <div key={item.key}>
+          <div
+            key={item.key}
+            className="rounded-[1.5rem] border border-border/70 bg-surface-container-lowest/80 p-5 shadow-[0_18px_40px_rgba(17,28,45,0.06)]"
+          >
             <Counter end={item.value} suffix={item.suffix} />
-            <p className="mt-2 text-sm text-contrast-muted">{t(item.key as never)}</p>
+            <p className="mt-2 text-sm text-muted-foreground">{t(item.key as never)}</p>
           </div>
         ))}
       </div>

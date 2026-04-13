@@ -7,21 +7,31 @@
   --blue: #1b6fae;
   --light-blue: #61b4e8;
   --ice: #e8f4fd;
-  --accent: #f7931e;
-  --accent-light: #fdb540;
+  --accent: #f28a1f;
+  --accent-light: #f6b25d;
+  --secondary: #006d3a;
+  --secondary-container: #75fca5;
+  --secondary-fixed: #75fca5;
+  --tertiary: #3e1b00;
+  --tertiary-container: #5e2d00;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #f0f3ff;
+  --surface-container: #e7eeff;
+  --surface-container-high: #dee8ff;
+  --surface-container-highest: #d8e3fb;
   --radius: 12px;
   --whatsapp: #25d366;
   --accent-foreground: 6 27 46;
-  --background: 248 250 252;
-  --foreground: 11 29 47;
+  --background: 249 249 255;
+  --foreground: 17 28 45;
   --surface: 255 255 255;
-  --surface-soft: 241 245 249;
-  --surface-border: 226 232 240;
-  --muted: 241 245 249;
+  --surface-soft: 240 243 255;
+  --surface-border: 216 227 251;
+  --muted: 231 238 255;
   --muted-foreground: 71 85 105;
-  --border: 203 213 225;
+  --border: 194 199 205;
   --input: 191 205 219;
-  --ring: 27 111 174;
+  --ring: 0 109 58;
   --overlay: 6 11 18;
   --contrast: 248 250 252;
   --contrast-muted: 207 220 232;
@@ -43,7 +53,7 @@ body {
   min-height: 100vh;
   background: rgb(var(--background));
   color: rgb(var(--foreground));
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   transition: background-color 220ms ease, color 220ms ease;
 }
 
@@ -51,8 +61,12 @@ body {
   box-sizing: border-box;
 }
 
-.font-dm {
-  font-family: "DM Sans", sans-serif;
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
+
+.font-manrope {
+  font-family: "Manrope", sans-serif;
 }
 
 .font-arabic {
@@ -117,6 +131,11 @@ html[data-theme="dark"] body {
   --surface: 11 29 47;
   --surface-soft: 8 24 39;
   --surface-border: 31 58 82;
+  --surface-container-lowest: 11 29 47;
+  --surface-container-low: 8 24 39;
+  --surface-container: 13 36 56;
+  --surface-container-high: 17 38 59;
+  --surface-container-highest: 24 50 77;
   --muted: 17 38 59;
   --muted-foreground: 183 201 218;
   --border: 31 58 82;

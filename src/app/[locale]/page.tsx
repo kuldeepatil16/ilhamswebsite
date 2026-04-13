@@ -49,8 +49,8 @@ export default function HomePage() {
     areaServed: "Morocco",
     makesOffer: [
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Climatisation" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Réfrigération" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Énergie solaire" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Refrigeration" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Energie solaire" } },
     ],
   };
 
@@ -58,9 +58,9 @@ export default function HomePage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <HeroSection />
+      <BrandsSection />
       <StatsBar />
       <ServicesGrid />
-      <BrandsSection />
       <ProductsPreview />
       <WhyChooseUs />
       <ContactCTA />

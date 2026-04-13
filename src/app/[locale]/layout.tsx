@@ -46,7 +46,7 @@ export default async function LocaleLayout({
 
   return (
     <NextIntlClientProvider messages={messages}>
-      <div dir={isRTL ? "rtl" : "ltr"} lang={locale} className={isRTL ? "font-arabic" : "font-dm"}>
+      <div dir={isRTL ? "rtl" : "ltr"} lang={locale} className={isRTL ? "font-arabic" : "font-inter"}>
         <LocaleDocumentSync locale={locale} dir={isRTL ? "rtl" : "ltr"} />
         <Navbar />
         <main className="pt-16 lg:pt-20">{children}</main>
